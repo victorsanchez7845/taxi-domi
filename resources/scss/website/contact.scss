@@ -1,0 +1,106 @@
+@import "../base/variables";
+@import "../header/before_menu";
+@import "../header/index";
+@import "../footer/index";
+
+.parallax-container{
+    background-image: url("/assets/img/banners/general.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    > div{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        h1{
+            color: white;
+            text-align: left;
+        }
+    }
+}
+
+.contact-information{
+    padding-top: 25px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
+    > div.left{
+        div#message{
+            &.success{
+                position: relative;
+                padding: 1rem 1rem;
+                margin-bottom: 1rem;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                color: #0f5132;
+                background-color: #d1e7dd;
+                border-color: #badbcc;
+            }
+            &.error{
+                position: relative;
+                padding: 1rem 1rem;
+                margin-bottom: 1rem;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                color: #842029;
+                background-color: #f8d7da;
+                border-color: #f5c2c7;
+            }
+        }
+        > h3{
+            font-size: 18pt;
+            margin-bottom: 15px;
+        }
+        > p{
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        > form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            > div{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                label{
+                    color: #555;
+                    font-weight: bold;
+                    font-size: 10pt;
+                }
+                &.two{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 25px;
+                    > div{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                }
+            }
+            > button{
+                background-color: #2d57a5;
+                border: 1px solid #2d57a5;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 5px;
+                &:disabled{
+                    background-color: #425466;
+                    cursor: no-drop;
+                }
+            }
+        }        
+    }
+    > div.right{
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

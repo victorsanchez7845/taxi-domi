@@ -1,0 +1,105 @@
+@import "../base/variables";
+@import "../header/index";
+@import "../components/bookingbox/vertical";
+@import "../components/breadcrumb/index";
+@import "../components/tables/option-one";
+@import "../footer/index";
+
+div.hotel-container{
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-column-gap: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    > div.left{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        > picture{
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+            }
+        }
+        > table{
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            background-color: transparent;
+            tbody{
+                tr{
+                    &:nth-of-type(odd){
+                        background-color: rgba(0, 123, 255, 0.05);
+                    }
+                }
+                th, td{
+                    padding: 0.75rem;
+                    vertical-align: top;
+                    border-top: 1px solid #dee2e6;
+                    font-size: 10pt;
+                }
+                th{
+                    text-align: left;
+                }
+            }
+        }
+        h1{
+            font-size: 23pt;
+            font-weight: 500;
+        }
+        h2, h3, h4, h5{
+            font-weight: 500;
+        }
+    }
+    > div.right{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        > div.bookingbox{
+            box-shadow: 0 0 40px 0 rgba(145, 161, 180, 0.502);
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 16px;
+        }
+        > div.hotels-list{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            > a{
+                color: #425466;
+                display: flex;
+                border-bottom: 1px solid #C3CCE8;
+                padding: 15px 0px;
+                gap: 10px;
+                position: relative;
+                padding-right: 15px;
+                &::before{
+                    content: '';
+                    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFpSURBVHgBtZa7TsMwGIWPIwbGdmRLRzaakYmWDRbeIJVgYwGxIkglNgZ4AJDgDZgYU56AsjGmndiajN2Mj0Ko0lycWvEnRbL+2D72f5NFtJDydQor+B4g3HspZwms4HYAB5ZxJqfAQQ+twz0nZ0rA7doTKHXRqA/Iu/Tz++b2jIIAb5TR65rbKwVm8Wocxeb2DCEV4xAIQrRKMARu1be1/oOBGXnp+OVTnTAxs2cUBDiZyv8nCc3sGdYLrXADXrONcaUAfVgW8LmyMxlkw/mVAmUMVFXeKD/v7QCdbeAjAi7fga8f/VptDFid4V+/4uaE4+l5eeVuJMAUDA6r/z8er0SNBOgSilTBzU92UUttDOjrcU0A4yXw9g1zgWSZzxCBYhbpaFxoF/vA4lo1tKt85WoF2AHpijoYh4ej1Odsz2xkuuByT9aIM3xuIFDS55kAOoHBkxIQsIto8i6ii3wvb2PfmWueO1zzC+VIiebZOnpTAAAAAElFTkSuQmCC');
+                    background-size: cover;
+                    width: 15px;
+                    height: 15px;
+                    align-self: center;
+                }
+                &::after{
+                    content: '';
+                    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEMSURBVHgB7ZU9CsIwFMdfWuPsDayLg+Ak7tETOHgEEW9hjyE6OeugF9AeQKWTuDWjo6PgR+yruqhp0sSxfwhteY/fj9B8AORRhMgKrDPwHHpf4/v94rSCxYiDQRxphd5KIMDDgSIUgkFcWYHvd8dKrYEzZPEoEVd0ytXmkh82J/iHABPtt4GtxFU12EqUAluJlsBGoi0wlWQSyCX1KT+E51/9DhhkNR/7AkiQfOBeodST9RbAIO1ufxiTWcInwIPZJJT1Zp7BEw7+Gy7iYyStn4A+GB9fcNUZpSV4wf2XQBuuJbCBKwW2cIz0J7Nu7xMeCYN7IW0VsQ942+TSke+D6zUUtBglAkN4Hq08AHvopjf/dI9eAAAAAElFTkSuQmCC');
+                    background-size: cover;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            > a:last-child{
+                border: 0px;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 35px;
+    }
+}

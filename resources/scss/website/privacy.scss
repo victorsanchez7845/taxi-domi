@@ -1,0 +1,33 @@
+@import "../base/variables";
+@import "../header/before_menu";
+@import "../header/index";
+@import "../footer/index";
+
+.parallax-container{
+    background-image: url("/assets/img/banners/general.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    > div{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        h1{
+            color: white;
+            text-align: left;
+        }
+    }
+}
+
+div.items_privacy{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    h2, h3{
+        margin-bottom: 15px;
+    }
+    p{
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+}

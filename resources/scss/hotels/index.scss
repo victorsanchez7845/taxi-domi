@@ -1,0 +1,107 @@
+@import "../base/variables";
+@import "../header/before_menu";
+@import "../header/index";
+@import "../components/bookingbox/horizontal";
+@import "../components/tables/option-one";
+@import "../components/reviews/general";
+@import "../components/faqs/general";
+@import "../footer/index";
+@import "../components/breadcrumb/index";
+
+div.heading{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #FDC90D;
+    > div{
+        > .top{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            h1{
+                font-weight: normal;
+            }            
+        }
+        > div.bottom{
+            padding-top: 15px;
+            iframe{
+                box-shadow: 0 0 40px 0 rgba(145,161,180,.502);
+                background-color: #fff;
+                border-radius: 8px;
+                min-height: 270px;
+                @media (max-width: 811px) {
+                    min-height: 450px;
+                }
+                @media (max-width: 540px) {
+                    min-height: 650px;
+                }
+            }      
+        }
+    }
+}
+
+div.destinations-list{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    > div.top{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 25px;
+    }
+    > div.bottom{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+        > div.item{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            > div.one_{
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+            > div.two_{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                *:nth-child(1){
+                    padding-left: 15px;
+                }
+                *:nth-child(2){
+                    border-left: 3px solid #FDC90D;
+                    padding-left: 15px;
+                }
+                *:nth-child(3){
+                    padding-left: 15px;
+                    color: #2A84FC;
+                }
+                *:nth-child(4){
+                    color: #425466;
+                    > span{
+                        font-size: 14pt;
+                        color: #16161D;
+                        font-weight: bold;
+                        &::before{
+                            content: '';
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width: 550px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 350px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import "../base/variables";
+@import "../header/before_menu";
+@import "../header/index";
+@import "../footer/index";
+
+.thank-you-content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 45px;
+    padding-top: 35px;
+    > div.left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: right;
+        gap: 25px;
+        > div.one{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            a{
+                color: #16161d;
+                &.link{
+                    color: #876B03;
+                    font-weight: bold;
+                }
+            }
+            @media (max-width: 767px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: 335px) {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+        > div.two{
+            display: flex;
+            flex-direction: row;            
+            gap: 15px;
+            a{
+                display: flex;
+                padding: 15px 25px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                color: #16161D;
+                transition: all 0.3s;
+                border-radius: 4px;
+                &:hover{
+                    transform: scale(1.03);
+                }
+            }
+            > a:nth-child(1){                
+                border: 1px solid #16161D;
+            }
+            > a:nth-child(2){
+                border: 1px solid #16161D;
+                background: #FDC90D;
+            }
+        }
+        @media (max-width: 767px) {
+            text-align: center;
+            align-items: center;
+        }
+    }
+    > div.right{
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            @media (max-width: 767px) {
+                max-width: 350px;
+            }
+        }
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+    }
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}

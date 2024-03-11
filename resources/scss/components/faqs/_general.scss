@@ -1,0 +1,69 @@
+.faqs_section{
+    padding-top: 15px;
+    > div.top{
+        margin-bottom: 25px;
+        text-align: center;
+        h2{
+            font-size: 23pt;
+            font-weight: 500;
+        }
+    }
+    > div.bottom{
+        display: flex;
+        flex-direction: column;        
+        border-radius: 10px;
+        padding-bottom: 50px;
+        gap: 25px;
+        > div{            
+            border-radius: 15px;
+            border: 1px solid #C3CCE8;
+            
+            > h3{
+                border-bottom: 1px solid #C3CCE8;                
+                cursor: pointer;
+                display: grid;
+                grid-template-columns: 1fr 25px;
+                grid-column-gap: 15px;
+                padding: 20px;
+                &::after{
+                    content: "";
+                    transition: transform 0.3s ease-in-out;
+                    transform: rotate(180deg);
+                    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD7SURBVHgB7dNLDgFBEAbgvybY2DiCI3ADXAQ3YGGDRXvFlhPgIriBG+AGrEm0mpfMo4YeK5L5k+5kJl31TXdngCxZ/joUe9PTFRRxhaIz0kZpey45I1BvhRYNdAcFHHDHjgvKSJM+AzdUufbE44ihrsnIw/kKO+VUUN/ZQZXPZevtJJQwMifF8yYVJAGEMaa095eQWDjQa56b3tMZedTFO5KBEQMquExGTCAZUAyMoq2SERda8dx6QTk0uOLEFxwFbLGLGS2lNu+RJOjOjYOAhTYmtElq8RmRIP9fMADMkTgEU8COBdPMqM2ftIB7/hdT4Lt0dMkZWbL8RJ650VuJPQ9MkgAAAABJRU5ErkJggg==');
+                    display: flex;
+                    align-self: center;
+                    width: 25px;
+                    height: 21px;
+                }
+            }
+            > div{
+                padding: 20px;
+                > p{
+                    line-height: 1.5;
+                    margin-bottom: 15px;
+                }
+                > ul, > ol{
+                    li{
+                        line-height: 1.5;
+                        margin-bottom: 15px;
+                    }
+                }
+                > h3{
+                    margin-bottom: 15px;
+                }
+            }
+            &.hidden{
+                > h3{
+                    border-bottom: 0px;                    
+                    &::after{
+                        transition: transform 0.3s ease-in-out;
+                        transform: rotate(0deg);
+                    }
+                }
+                > div{
+                    display: none;
+                }
+            }
+        }
+    }
+}

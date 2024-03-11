@@ -1,0 +1,21 @@
+<?php
+    return [
+        "name" => "NOMBRE",
+        "lastname" => "APELLIDOS",
+        "phone" => "TELÉFONO",
+        "transportation_data" => "Datos del traslado",
+        "transportation_type" => "TIPO DE TRASLADO",
+        "round_trip" => "Redondo",
+        "one_way" => "Sencillo",
+        "origin" => "ORIGEN",
+        "destination" => "DESTINO",
+        "no_passengers" => "No. PASAJEROS",
+        "arrival_information" => "Información de llegada",
+        "arrival_date" => "FECHA LLEGADA",
+        "airline" => "AEROLÍNEA",
+        "departure_date" => "FECHA REGRESO",
+        "flight_number" => "Nº DE VUELO",
+        "departure_information" => "Información de regreso",
+        "notes" => "NOTAS / REQUERIMIENTOS ESPECIALES",
+        "send" => "ENVIAR",
+    ];

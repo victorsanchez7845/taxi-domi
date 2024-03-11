@@ -1,0 +1,56 @@
+@import "../base/variables";
+@import "../header/index";
+@import "../footer/index";
+
+div.blue-container{
+    padding: 25px;
+    background-color: #007BFF;
+    text-align: center;
+    color: white;
+}
+div.container.elements{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    > form{
+        width: 400px;
+        border: 1px solid #dde5fd;
+        background-color: white;
+        border-radius: 5px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        > h2{
+            font-size: 16pt;;
+        }
+        > div{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        > button{
+            background-color: #4DBC34;
+            color: white;
+            padding: 15px;
+            border: 1px solid #4DBC34;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s;
+            &:hover{
+                transform: scale(1.03);
+            }
+        }
+        > div.badge-error{
+            position: relative;
+            padding: 0.75rem 1.25rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+    }
+}

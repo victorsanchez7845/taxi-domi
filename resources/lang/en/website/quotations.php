@@ -1,0 +1,21 @@
+<?php
+    return [
+        "name" => "NAME",
+        "lastname" => "APELLIDOS",
+        "phone" => "PHONE",
+        "transportation_data" => "Transfer details",
+        "transportation_type" => "TYPE OF TRANSFER",
+        "round_trip" => "Round Trip",
+        "one_way" => "One Way",
+        "origin" => "ORIGIN",
+        "destination" => "DESTINATION",
+        "no_passengers" => "No. PASSENGERS",
+        "arrival_information" => "Arrival information",
+        "arrival_date" => "ARRIVAL DATE",
+        "airline" => "AIRLINE",
+        "departure_date" => "DEPARTURE DATE",
+        "flight_number" => "FLIGHT NUMBER",
+        "departure_information" => "Departure information",
+        "notes" => "NOTES / SPECIAL REQUIREMENTS",
+        "send" => "SUBMIT",
+    ];
