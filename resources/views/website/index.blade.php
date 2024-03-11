@@ -4,7 +4,7 @@
 @extends('layout.master')
 
 @push("push-top")
-    <link rel="preload" as="image" href="/assets/img/banners/home/home-mobile.webp" media="(max-width: 767px)">
+    <link rel="preload" as="image" href="/assets/img/banners/home/home-mobile-{{ app()->getLocale() }}.webp" media="(max-width: 767px)">
     <link href="{{ mix('/assets/css/website/index.min.css') }}" rel="preload" as="style" >
     <link href="{{ mix('/assets/css/website/index.min.css') }}" rel="stylesheet">
 @endpush
