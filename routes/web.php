@@ -26,7 +26,9 @@ Route::middleware('locale')->group(function () {
     Route::get('/cancun-to-tulum-shuttle', [WebsiteController::class, 'destinationTulum'])->name('destination.tulum.en');
     Route::get('/cancun-airport-transportation', [WebsiteController::class, 'destinationCancun'])->name('destination.cancun.en');
     Route::get('/transportation-from-cancun-airport-to-playa-del-carmen', [WebsiteController::class, 'destinationPDC'])->name('destination.pdc.en');
-    Route::get('/traslado-a-hotel', [HotelsController::class, 'destinationHotels'])->name('destinations.hotel');    
+    Route::get('/destinations', [HotelsController::class, 'index'])->name('destinations.en');
+    Route::get('/tulum', [HotelsController::class, 'destinationTulum'])->name('destinations.tulum.en');
+    Route::get('/shuttle-to-{slug}', [HotelsController::class, 'hotel'])->name('destinations.hotel.en');
 
     Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact.en');
     Route::get('/terms-and-conditions', [WebsiteController::class, 'terms'])->name('terms.en');
@@ -53,6 +55,9 @@ Route::middleware('locale')->group(function () {
         Route::get('/traslado-de-cancun-a-tulum', [WebsiteController::class, 'destinationTulum'])->name('destination.tulum.es');
         Route::get('/traslado-cancun-aeropuerto', [WebsiteController::class, 'destinationCancun'])->name('destination.cancun.es');
         Route::get('/transporte-de-cancun-a-playa-del-carmen', [WebsiteController::class, 'destinationPDC'])->name('destination.pdc.es');
+        Route::get('/destinos', [HotelsController::class, 'index'])->name('destinations');
+        Route::get('/tulum', [HotelsController::class, 'destinationTulum'])->name('destinations.tulum.es');
+        Route::get('/traslado-a-{slug}', [HotelsController::class, 'hotel'])->name('destinations.hotel.es');
 
         Route::get('/contacto', [WebsiteController::class, 'contact'])->name('contact');
         Route::get('/terminos-y-condiciones', [WebsiteController::class, 'terms'])->name('terms.es');

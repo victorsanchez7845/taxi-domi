@@ -30,11 +30,13 @@
             <div>
                 @if(app()->getLocale() == "en")
                     <h4>Popular destinations</h4>
+                    <a href="@lang('link.destinations')" title="Destinations">Destinations</a>
                     <a href="@lang('link.tulum')" title="Cancun to Tulum Shuttle">Cancun to Tulum Shuttle</a>
                     <a href="@lang('link.cancun')" title="Cancun Airport Transportation">Cancun Airport Transportation</a>
                     <a href="@lang('link.pdc')" title="Transportation from Cancun to Playa del Carmen">Transportation from Cancun to Playa del Carmen</a>                                        
                 @else
                     <h4>Destinos populares</h4>
+                    <a href="@lang('link.destinations')" title="Destinos">Destinos</a>
                     <a href="@lang('link.tulum')" title="Traslado de Cancún a Tulum">Traslado de Cancún a Tulum</a>
                     <a href="@lang('link.cancun')" title="Traslado Aeropuerto Cancún">Traslado Aeropuerto Cancún</a>
                     <a href="@lang('link.pdc')" title="Transporte de Cancún a Playa del Carmen">Transporte de Cancún a Playa del Carmen</a>

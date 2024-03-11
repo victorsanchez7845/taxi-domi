@@ -10,4 +10,11 @@
         "quotations" => "Quotations",
         "my-reservation" => "My reservation",        
         "akumal" => "Akumal Transportation",
+        "phone" => "Phone",
+        "close" => "Close",
+        "menu" => "Menu",
+        "translate" => "Translate website",
+        "mex_phone" => "Mexico phone",
+        "usa_phone" => "Phone USA &amp; Canada",
+        "my_reservation" => "My reservation",
     ];

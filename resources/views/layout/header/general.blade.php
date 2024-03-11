@@ -1,9 +1,9 @@
 <header class="header_full_width_container">
     <nav class="navbar">
-        <a class="navbar-brand" href="@lang('link.home')" title="Taxi Riviera Maya">
+        <a class="navbar-brand" href="@lang('link.home')" title="Tulum Airport Cab">
             <picture>
                 <source srcset="/assets/img/logo.webp" type="image/webp">
-                <img src="/assets/img/logo.png" width="150" height="50" loading="lazy" alt="Logo | Taxi Riviera Maya" title="Logo | Taxi Riviera Maya">
+                <img src="/assets/img/logo.png" width="150" height="50" loading="lazy" alt="Logo | Tulum Airport Cab" title="Logo | Tulum Airport Cab">
             </picture>
         </a>
         <ul class="list-menu">
@@ -13,7 +13,7 @@
         </ul>
         <ul class="list-menu-right">            
             <li>
-                <a href="tel:+529983870234" class="phone" title="Llámanos">
+                <a href="tel:+529983870234" class="phone" title="@lang('menu.phone')">
                     <svg width="15" height="15"><use xlink:href="/assets/img/svg/icons.svg#phone"></use></svg>
                 </a>
             </li>
@@ -34,42 +34,54 @@
     <div class="mobile-menu">
         <div class="top">
             <div>
-                <img src="/assets/img/svg/bars.svg" alt="Menu | Taxi Riviera Maya" title="Menu | Taxi Riviera Maya" width="25" height="25" loading="lazy">
-                Menú
+                <img src="/assets/img/svg/bars.svg" alt="Menu | Tulum Airport Cab" title="Menu | Tulum Airport Cab" width="25" height="25" loading="lazy">
+                @lang('menu.menu')
             </div>
             <button id="closeMenuButton">
-                <img src="/assets/img/svg/close.svg" width="35" height="35" alt="close" title="close" loading="lazy"/>
+                <img src="/assets/img/svg/close.svg" width="35" height="35" alt="@lang('menu.close')" title="@lang('menu.close')" loading="lazy"/>
             </button>
         </div>
         <div class="content">
             <div class="items">
-                <a href="/" title="Inicio">Inicio</a>
-                <a href="/taxi-aeropuerto-cancun" title="Traslado a Cancún">Traslado a Cancún</a>
-                <a href="/traslado-de-cancun-tulum" title="Traslado a Tulum">Traslado a Tulum</a>
-                <a href="/transporte-cancun-a-playa-del-carmen" title="Traslado a Playa del Carmen">Traslado a Playa del Carmen</a>
-                <a href="/transporte-cancun-a-akumal" title="Transporte de Cancún a Akumal">Transporte de Cancún a Akumal</a>
-                <a href="/cotizaciones" title="Cotizaciones">Cotizaciones</a>
+                @if(app()->getLocale() == "en")
+                    <a href="@lang('link.tulum')" title="Cancun to Tulum Shuttle">Cancun to Tulum Shuttle</a>
+                    <a href="@lang('link.cancun')" title="Cancun Airport Transportation">Cancun Airport Transportation</a>
+                    <a href="@lang('link.pdc')" title="Transportation from Cancun to Playa del Carmen">Transportation from Cancun to Playa del Carmen</a>
+                @else
+                    <a href="@lang('link.tulum')" title="Traslado de Cancún a Tulum">Traslado de Cancún a Tulum</a>
+                    <a href="@lang('link.cancun')" title="Traslado Aeropuerto Cancún">Traslado Aeropuerto Cancún</a>
+                    <a href="@lang('link.pdc')" title="Transporte de Cancún a Playa del Carmen">Transporte de Cancún a Playa del Carmen</a>
+                @endif
             </div>
             <div class="items">
                 <div class="info">
-                    <p>Traducir sitio</p>
+                    <p>@lang('menu.translate')</p>
                 </div>
-                <a href="/en" title="View in english">English</a>
+                @if(app()->getLocale() == "en")
+                    <a href="{{ $link }}" title="Cambiar a español">Español</a>
+                @else
+                    <a href="{{ $link }}" title="Change to english">English</a>
+                @endif
             </div>
             <div class="items">
                 <div class="info">
-                    <p>Atención a clientes</p>
-                    <p>Para más información sobre tu reservación, comunícate con nosotros. ¡Te ayudaremos!</p>
+                    @if(app()->getLocale() == "en")
+                        <p>Customer service</p>
+                        <p>For more information about your reservation, please contact us, we will help you!</p>                        
+                    @else
+                        <p>Atención a clientes</p>
+                        <p>Para más información sobre tu reservación, comunícate con nosotros. ¡Te ayudaremos!</p>
+                    @endif
                 </div>
-                <a href="tel:+529983870234" title="Teléfono México | Taxi Riviera Maya">+52 (998) 387 0234</a>
-                <a href="tel:+13237635379" title="Teléfono USA &amp; Canada | Taxi Riviera Maya">+1 (323) 763-5379</a>
+                <a href="tel:+529983870234" title="@lang('menu.mex_phone') | Tulum Airport Cab">+52 (998) 387 0234</a>
+                <a href="tel:+13237635379" title="@lang('menu.usa_phone') | Tulum Airport Cab">+1 (323) 763-5379</a>
             </div>
             <div class="items">
                 <a href="https://api.whatsapp.com/send?phone=5219982942389&amp;text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio" class="whatsapp">
                     <svg width="30" height="30"><use xlink:href="/assets/img/svg/icons.svg#social-whatsapp"></use></svg>
                     Whatsapp
                 </a>
-                <a href="/reserva" class="my-booking" title="Mi reserva">Mi reserva</a>
+                <a href="@lang('link.reservation')" class="my-booking" title="@lang('menu.my_reservation')">@lang('menu.my_reservation')</a>
             </div>
         </div>        
     </div>

@@ -479,28 +479,52 @@
             "en": "/destinations"
         }
     },
-    "silos-destination-hotel": {
+    "silos-destination-tulum": {
         "languages": {
             "es": {
-                "path": "/es/$slug_es",
+                "path": "/es/tulum",
                 "metas": {
-                    "title": "Traslado de Cancún a $name | Taxi Riviera Maya",
-                    "description": "El precio más bajo en Transporte de Cancún a $name, Traslado a $name desde $$price $currency sólo en Taxi Riviera Maya.",
+                    "title": "Taxi Riviera Maya: Traslados Seguro y Confiable Desde y Hacia $destination",
+                    "description": "Servicio de Traslado Privado desde y hacia $destination con Taxi Riviera Maya Hoteles y destinos principales en $destination. Reserva ahora el servicio más confiable.",
                     "keywords": ""
                 }
             },
             "en": {
-                "path": "/$slug_en",
+                "path": "/tulum",
                 "metas": {
-                    "title": "Shuttle from Cancun to $name | Taxi Riviera Maya",
-                    "description": "The lowest price on a shuttle from Cancun to $name. Transfer to $name from $$price $currency only at Taxi Riviera Maya.",
+                    "title": "Taxi Riviera Maya: Safe and Reliable Transfers To and From $destination",
+                    "description": "Private Shuttle Service to and from $destination with Taxi Riviera Maya. Hotels and main destinations in $destination. Book the most reliable service now.",
                     "keywords": ""
                 }
             }
         },
         "alternates": {
-            "es": "/es/traslado-a-hotel-$slug",
-            "en": "/shuttle-to-hotel-$slug"
+            "es": "/es/tulum",
+            "en": "/tulum"
+        }
+    },
+    "silos-destination-hotel": {
+        "languages": {
+            "es": {
+                "path": "/traslado-a-$slug_es",
+                "metas": {
+                    "title": "Traslado a $name | Tulum Airport Cab",
+                    "description": "Traslado a $name seguro y confiable. Paga al llegar tu servicio de transporte a $name al mejor precio.",
+                    "keywords": ""
+                }
+            },
+            "en": {
+                "path": "/shuttle-to-$slug_en",
+                "metas": {
+                    "title": "Shuttle to $name at lowest price | Tulum Airport Cab",
+                    "description": "Enjoy a safe and reliable shuttle to $name. Go from all Riviera Maya on our private transportation service.",
+                    "keywords": ""
+                }
+            }
+        },
+        "alternates": {
+            "es": "/es/traslado-a-$slug",
+            "en": "/shuttle-to-$slug"
         }
     }
 }

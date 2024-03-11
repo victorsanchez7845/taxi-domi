@@ -11,7 +11,7 @@
 div.heading{
     padding-top: 35px;
     padding-bottom: 35px;
-    background-color: #FDC90D;
+    background-color: rgba(0, 123, 255, 0.1);
     > div{
         > .top{
             display: flex;
@@ -21,27 +21,12 @@ div.heading{
                 font-weight: normal;
             }            
         }
-        > div.bottom{
-            padding-top: 15px;
-            iframe{
-                box-shadow: 0 0 40px 0 rgba(145,161,180,.502);
-                background-color: #fff;
-                border-radius: 8px;
-                min-height: 270px;
-                @media (max-width: 811px) {
-                    min-height: 450px;
-                }
-                @media (max-width: 540px) {
-                    min-height: 650px;
-                }
-            }      
-        }
     }
 }
 
 div.destinations-list{
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
     > div.top{
         display: flex;
         flex-direction: column;

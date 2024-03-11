@@ -10,4 +10,11 @@
         "quotations" => "Cotizaciones",
         "my-reservation" => "Mi reserva",        
         "akumal" => "Transporte de Cancún a Akumal",
+        "phone" => "Teléfono",
+        "close" => "Cerrar",
+        "menu" => "Menú",
+        "translate" => "Traducir sitio",
+        "mex_phone" => "Teléfono México",
+        "usa_phone" => "Teléfono USA &amp; Canadá",
+        "my_reservation" => "Mi reserva",
     ];
