@@ -15,6 +15,103 @@
     <link rel="preload" as="image" href="/assets/img/banners/home/home-mobile.webp" media="(max-width: 767px)">
     <link href="{{ mix('/assets/css/hotels/hotel.min.css') }}" rel="preload" as="style" >
     <link href="{{ mix('/assets/css/hotels/hotel.min.css') }}" rel="stylesheet">
+
+    @if(app()->getLocale() == "en")
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Shuttle to {{ $name }}",
+            "image": [
+                "https://tulumairportcab.com/assets/img/schema/1x1.jpg",
+                "https://tulumairportcab.com/assets/img/schema/4x3.jpg",
+                "https://tulumairportcab.com/assets/img/schema/16x9.jpg"
+            ],
+            "description": "Cab service to and from Tulum Airport, the service is provided in a VW Transporter for up to 8 passengers. Available for the entire Riviera Maya.",
+            "sku": "016001",
+            "mpn": "026001",
+            "brand": {
+                "@type": "Brand",
+                "name": "Tulum Airport Cab"
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                "@type": "Rating",
+                    "ratingValue": 5,
+                    "bestRating": 5
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Annete Leyva"
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 5,
+                "reviewCount": 1287
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://tulumairportcab.com/cancun-to-tulum-shuttle",
+                "priceCurrency": "USD",
+                "price": {{ $price }},
+                "priceValidUntil": "2024-12-31",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "availability": "https://schema.org/InStock"
+            }
+        }
+        </script>
+    @endif
+
+    @if(app()->getLocale() == "es")
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Traslado a {{ $name }}",
+            "image": [
+                "https://tulumairportcab.com/assets/img/schema/1x1.jpg",
+                "https://tulumairportcab.com/assets/img/schema/4x3.jpg",
+                "https://tulumairportcab.com/assets/img/schema/16x9.jpg"
+            ],
+            "description": "Servicio de Taxi desde y hacia el Aeropuerto de Tulum, el servicio se proporciona en un VW Transporter para hasta 8 pasajeros. Disponible para toda la Riviera Maya.",
+            "sku": "016001",
+            "mpn": "026001",
+            "brand": {
+                "@type": "Brand",
+                "name": "Tulum Airport Cab"
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                "@type": "Rating",
+                    "ratingValue": 5,
+                    "bestRating": 5
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Annete Leyva"
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 5,
+                "reviewCount": 1287
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://tulumairportcab.com/es/traslado-de-cancun-a-tulum",
+                "priceCurrency": "MXN",
+                "price": {{ $price }},
+                "priceValidUntil": "2024-12-31",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "availability": "https://schema.org/InStock"
+            }
+        }
+        </script>
+    @endif
+
 @endpush
 @push("push-bottom")
     <script defer src="{{ mix('/assets/js/bookingbox/index.min.js') }}"></script>
