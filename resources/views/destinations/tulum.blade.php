@@ -4,9 +4,106 @@
 @extends('layout.master')
 
 @push("push-top")
-    <link rel="preload" as="image" href="/assets/img/banners/home/home-mobile.webp" media="(max-width: 767px)">
+    <link rel="preload" as="image" href="/assets/img/banners/home/home-mobile-{{ app()->getLocale() }}.webp" media="(max-width: 767px)">
     <link href="{{ mix('/assets/css/destinations/tulum.min.css') }}" rel="preload" as="style" >
     <link href="{{ mix('/assets/css/destinations/tulum.min.css') }}" rel="stylesheet">
+
+    @if(app()->getLocale() == "en")
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Cancun to Tulum Shuttle",
+            "image": [
+                "https://tulumairportcab.com/assets/img/schema/1x1.jpg",
+                "https://tulumairportcab.com/assets/img/schema/4x3.jpg",
+                "https://tulumairportcab.com/assets/img/schema/16x9.jpg"
+            ],
+            "description": "Cab service to and from Cancun Airport, the service is provided in a VW Transporter for up to 8 passengers. Available for the entire Riviera Maya.",
+            "sku": "016001",
+            "mpn": "026001",
+            "brand": {
+                "@type": "Brand",
+                "name": "Tulum Airport Cab"
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                "@type": "Rating",
+                    "ratingValue": 5,
+                    "bestRating": 5
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Annete Leyva"
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 5,
+                "reviewCount": 1287
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://tulumairportcab.com/cancun-to-tulum-shuttle",
+                "priceCurrency": "USD",
+                "price": 137,
+                "priceValidUntil": "2024-12-31",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "availability": "https://schema.org/InStock"
+            }
+        }
+        </script>
+    @endif
+
+    @if(app()->getLocale() == "es")
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Traslado de Cancún a Tulum",
+            "image": [
+                "https://tulumairportcab.com/assets/img/schema/1x1.jpg",
+                "https://tulumairportcab.com/assets/img/schema/4x3.jpg",
+                "https://tulumairportcab.com/assets/img/schema/16x9.jpg"
+            ],
+            "description": "Servicio de Taxi desde y hacia el Aeropuerto de Cancún, el servicio se proporciona en un VW Transporter para hasta 8 pasajeros. Disponible para toda la Riviera Maya.",
+            "sku": "016001",
+            "mpn": "026001",
+            "brand": {
+                "@type": "Brand",
+                "name": "Tulum Airport Cab"
+            },
+            "review": {
+                "@type": "Review",
+                "reviewRating": {
+                "@type": "Rating",
+                    "ratingValue": 5,
+                    "bestRating": 5
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Annete Leyva"
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 5,
+                "reviewCount": 1287
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://tulumairportcab.com/es/traslado-de-cancun-a-tulum",
+                "priceCurrency": "MXN",
+                "price": 2466,
+                "priceValidUntil": "2024-12-31",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "availability": "https://schema.org/InStock"
+            }
+        }
+        </script>
+    @endif
+
 @endpush
 @push("push-bottom")
     <script defer src="{{ mix('/assets/js/bookingbox/index.min.js') }}"></script>
@@ -145,7 +242,7 @@
                     <p>Sin importar qu&eacute; opci&oacute;n de transporte elijas, ten la seguridad de que llegar de Canc&uacute;n a Tulum es relativamente sencillo, lo que te permite concentrarte en disfrutar de todo lo que esta hermosa regi&oacute;n de M&eacute;xico tiene para ofrecer.</p>
                 @endif
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57163.93391680891!2d-86.86595496768744!3d21.067088348122944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e81bb49b57809%3A0xe7f7d44da1f07a06!2sAeropuerto%20Internacional%20de%20Canc%C3%BAn!5e0!3m2!1ses-419!2smx!4v1709055310971!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57163.93391680891!2d-86.86595496768744!3d21.067088348122944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e81bb49b57809%3A0xe7f7d44da1f07a06!2sAeropuerto%20Internacional%20de%20Canc%C3%BAn!5e0!3m2!1ses-419!2smx!4v1709055310971!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="location search"></iframe>
             <div class="faqs-accordion">
                 <div>
                     <h3>Private Transportation</h3>

@@ -165,7 +165,12 @@
         </div>
 
         <div class="right">
-            <h2>Trayectoria de tu <span>viaje</span></h2>
+            @if(app()->getLocale() == "es")
+                <h2>Trayectoria de tu <span>viaje</span></h2>
+            @else
+                <h2>Your travel <span>route</span></h2>
+            @endif
+
             @if(!isset($data['error']))
                 <div class="map" id="map">{{ __('quote/search.map_title') }}</div>
             @endif

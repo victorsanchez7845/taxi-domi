@@ -113,6 +113,9 @@
                     justify-content: center;
                     padding: 18px;
                     transition: all .3s;
+                    svg{
+                        fill: white;
+                    }
                     &:hover{
                         transform: scale(1.03);
                     }
