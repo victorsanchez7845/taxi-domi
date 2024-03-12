@@ -1,16 +1,5 @@
 @extends('layout.master')
 
-@php
-    $breadcrumbs = [];
-    $breadcrumbs[1] = [
-        "URL" => "https://taxirivieramaya.com/",
-        "name" => "Transporte Cancún Aeropuerto"
-    ];
-    $breadcrumbs[2] = [        
-        "name" => "Destinos"
-    ];
-@endphp
-
 @push("push-top")    
     <link href="{{ mix('/assets/css/hotels/index.min.css') }}" rel="preload" as="style" >
     <link href="{{ mix('/assets/css/hotels/index.min.css') }}" rel="stylesheet">

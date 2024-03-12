@@ -1,20 +1,5 @@
 @extends('layout.master')
 
-@php
-    $breadcrumbs = [];
-    $breadcrumbs[1] = [
-        "URL" => config('app.url').__('link.home'),
-        "name" => (( app()->getLocale() == "es" )?'Transporte Cancún Aeropuerto':'Cancun Airport Transportation')
-    ];
-    $breadcrumbs[2] = [
-        "URL" => config('app.url').__('link.destinations'),
-        "name" => (( app()->getLocale() == "es" )?'Destinos':'Destinations')
-    ];    
-    $breadcrumbs[3] = [        
-        "name" => "Tulum"
-    ];
-@endphp
-
 @push("push-top")
     <link rel="preload" as="image" href="/assets/img/banners/home/home-mobile.webp" media="(max-width: 767px)">
     <link href="{{ mix('/assets/css/hotels/destination.min.css') }}" rel="preload" as="style" >

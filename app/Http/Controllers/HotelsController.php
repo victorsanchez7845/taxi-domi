@@ -14,8 +14,17 @@ class HotelsController extends Controller{
     public $seo = [];
 
     public function index(){
+        $breadcrumbs = [];
+        $breadcrumbs[1] = [
+            "URL" => config('app.url').__('link.home'),
+            "name" => (( app()->getLocale() == "es" )?'Inicio':'Home')
+        ];
+        $breadcrumbs[2] = [            
+            "name" => (( app()->getLocale() == "es" )?'Nuestros destinos':'Our destinations')
+        ];
+
         $this->seoData("silos-index");
-        return view('hotels.index', ['seo' => $this->seo]);
+        return view('hotels.index', ['seo' => $this->seo, 'breadcrumbs' => $breadcrumbs]);
     }
 
     public function destinationTulum(){
@@ -31,12 +40,6 @@ class HotelsController extends Controller{
         $this->seo['meta']['title'] = GeneralTrait::rep( $this->seo['meta']['title'], $replace );
         $this->seo['meta']['description'] = GeneralTrait::rep( $this->seo['meta']['description'], $replace );
 
-        return view('hotels.destinations.tulum', ['seo' => $this->seo, 'hotels' => $items ]);
-    }
-
-    /*dpublic function destinationHotels(){
-        $this->seoData("silos-index");
-        
         $breadcrumbs = [];
         $breadcrumbs[1] = [
             "URL" => config('app.url').__('link.home'),
@@ -44,15 +47,15 @@ class HotelsController extends Controller{
         ];
         $breadcrumbs[2] = [
             "URL" => config('app.url').__('link.destinations'),
-            "name" => (( app()->getLocale() == "es" )?'Destinos':'Destinations')
+            "name" => (( app()->getLocale() == "es" )?'Nuestros destinos':'Our destinations')
         ];
         $breadcrumbs[3] = [
-            "URL" => config('app.url').__('link.destinations'),
-            "name" => 'Aldea Xaan Tulum'
+            "URL" => config('app.url').__('link.silos_tulum'),
+            "name" => (( app()->getLocale() == "es" )?'Tulum':'Tulum')
         ];
 
-        return view('hotels.hotel.index', ['seo' => $this->seo, 'breadcrumbs' => $breadcrumbs]);
-    }*/
+        return view('hotels.destinations.tulum', ['seo' => $this->seo, 'hotels' => $items, 'breadcrumbs' => $breadcrumbs ]);
+    }
 
     public function hotel($one_slug, $two_slug = null){
         $slug = $one_slug;
