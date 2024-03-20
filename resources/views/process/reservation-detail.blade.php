@@ -10,7 +10,7 @@
 @endpush
 
 @section('content')
-    @include('layout.header.checkout')
+    @include('layout.header.checkout',['link' => \App\Traits\GeneralTrait::getAlternate( $seo )])
 
     <div class="gray-container">
         <div class="container">                        

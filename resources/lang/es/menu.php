@@ -3,7 +3,7 @@
         "home" => "Inicio",
         "how_to_get" => "Cómo llegar a Tulum",
         "find_us" => "Cómo encontrarnos",
-        "pricing" => "Transportation Price",
+        "pricing" => "Precio Traslado",
         "cancun" => "Traslado a Cancún",        
         "tulum" => "Traslado a Tulum",
         "playa-del-carmen" => "Traslado a Playa del Carmen",

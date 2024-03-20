@@ -45,16 +45,16 @@ class ContactController extends Controller
                 "Messages" => array(
                     array(
                         "From" => array(
-                            "Email" => "sales@taxirivieramaya.com",
-                            "Name" => "Sales"
+                            "Email" => "bookings@tulumairportcab.com",
+                            "Name" => "Bookings"
                         ),
                         "To" => array(
                             array(
-                                "Email" => "sales@taxirivieramaya.com",
-                                "Name" => "Sales"
+                                "Email" => "bookings@tulumairportcab.com",
+                                "Name" => "Bookings"
                             )
                         ),
-                        "Subject" => "E-mail de contacto | Taxi Riviera Maya",
+                        "Subject" => "E-mail de contacto | Tulum Airport Cab",
                         "TextPart" => $message
                     )
                 )

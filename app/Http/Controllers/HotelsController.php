@@ -50,7 +50,6 @@ class HotelsController extends Controller{
             "name" => (( app()->getLocale() == "es" )?'Nuestros destinos':'Our destinations')
         ];
         $breadcrumbs[3] = [
-            "URL" => config('app.url').__('link.silos_tulum'),
             "name" => (( app()->getLocale() == "es" )?'Tulum':'Tulum')
         ];
 

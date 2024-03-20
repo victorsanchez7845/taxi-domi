@@ -8,9 +8,11 @@
         </a>
         <ul class="list-menu-right">            
             <li>
-                <a href="tel:+529983870234" class="phone" title="Llámanos">
-                    <svg width="15" height="15"><use xlink:href="/assets/img/svg/icons.svg#phone"></use></svg>
-                </a>
+                @if(app()->getLocale() == "en")
+                    <a href="tel:{{ App\Traits\GeneralTrait::clearPhone( config('services.phone.US') ) }}" class="phone" title="@lang('menu.phone')"><svg width="15" height="15"><use xlink:href="/assets/img/svg/icons.svg#phone"></use></svg></a>
+                @else
+                    <a href="tel:{{ App\Traits\GeneralTrait::clearPhone( config('services.phone.MX') ) }}" class="phone" title="@lang('menu.phone')"><svg width="15" height="15"><use xlink:href="/assets/img/svg/icons.svg#phone"></use></svg></a>
+                @endif
             </li>            
             <li>
                 @if(app()->getLocale() == "es")

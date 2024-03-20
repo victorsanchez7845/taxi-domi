@@ -92,7 +92,6 @@ class WebsiteController extends Controller{
             "name" => (( app()->getLocale() == "es" )?'Inicio':'Home')
         ];
         $breadcrumbs[2] = [
-            "URL" => config('app.url').__('link.tulum'),
             "name" => (( app()->getLocale() == "es" )?'Tulum':'Tulum')
         ];
 
@@ -108,7 +107,6 @@ class WebsiteController extends Controller{
             "name" => (( app()->getLocale() == "es" )?'Inicio':'Home')
         ];
         $breadcrumbs[2] = [
-            "URL" => config('app.url').__('link.pdc'),
             "name" => (( app()->getLocale() == "es" )?'Cancun':'Cancún')
         ];
 
@@ -124,7 +122,6 @@ class WebsiteController extends Controller{
             "name" => (( app()->getLocale() == "es" )?'Inicio':'Home')
         ];
         $breadcrumbs[2] = [
-            "URL" => config('app.url').__('link.pdc'),
             "name" => (( app()->getLocale() == "es" )?'Playa del Carmen':'Playa del Carmen')
         ];
 

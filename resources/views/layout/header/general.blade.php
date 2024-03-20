@@ -13,9 +13,11 @@
         </ul>
         <ul class="list-menu-right">            
             <li>
-                <a href="tel:+529983870234" class="phone" title="@lang('menu.phone')">
-                    <svg width="15" height="15"><use xlink:href="/assets/img/svg/icons.svg#phone"></use></svg>
-                </a>
+                @if(app()->getLocale() == "en")
+                    <a href="tel:{{ App\Traits\GeneralTrait::clearPhone( config('services.phone.US') ) }}" class="phone" title="@lang('menu.phone')"><svg width="15" height="15"><use xlink:href="/assets/img/svg/icons.svg#phone"></use></svg></a>
+                @else
+                    <a href="tel:{{ App\Traits\GeneralTrait::clearPhone( config('services.phone.MX') ) }}" class="phone" title="@lang('menu.phone')"><svg width="15" height="15"><use xlink:href="/assets/img/svg/icons.svg#phone"></use></svg></a>
+                @endif
             </li>
             <li>
                 <button id="openMenuButton">
@@ -73,14 +75,16 @@
                         <p>Para más información sobre tu reservación, comunícate con nosotros. ¡Te ayudaremos!</p>
                     @endif
                 </div>
-                <a href="tel:+529983870234" title="@lang('menu.mex_phone') | Tulum Airport Cab">+52 (998) 387 0234</a>
-                <a href="tel:+13237635379" title="@lang('menu.usa_phone') | Tulum Airport Cab">+1 (323) 763-5379</a>
+                <a href="tel:{{ App\Traits\GeneralTrait::clearPhone( config('services.phone.MX') ) }}" title="@lang('menu.mex_phone') | Tulum Airport Cab">{{ config('services.phone.MX') }}</a>
+                <a href="tel:{{ App\Traits\GeneralTrait::clearPhone( config('services.phone.US') ) }}" title="@lang('menu.usa_phone') | Tulum Airport Cab">{{ config('services.phone.US') }}</a>
             </div>
             <div class="items">
+                @if(false)
                 <a href="https://api.whatsapp.com/send?phone=5219982942389&amp;text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20servicio" class="whatsapp">
                     <svg width="30" height="30"><use xlink:href="/assets/img/svg/icons.svg#social-whatsapp"></use></svg>
                     Whatsapp
                 </a>
+                @endif
                 <a href="@lang('link.reservation')" class="my-booking" title="@lang('menu.my_reservation')">@lang('menu.my_reservation')</a>
             </div>
         </div>        

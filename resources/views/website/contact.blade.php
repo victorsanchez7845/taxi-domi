@@ -45,11 +45,11 @@
             .then( jsonData => {
                 form.querySelector('button').disabled = false;
                 if(jsonData.status == true){
-                    messageDiv.textContent = `El correo ha sido enviado con éxito, en breve un agente te contactará.`;
+                    messageDiv.textContent = `${ (( language == "en" )?'The email has been sent successfully, an agent will contact you shortly.':'El correo ha sido enviado con éxito, en breve un agente te contactará.') }`;
                     messageDiv.classList.add('success');
                     form.reset();
                 }else{
-                    messageDiv.textContent = `Ocurrió un error al enviar el mensaje, por favor contáctanos por teléfono`;
+                    messageDiv.textContent = `${ (( language == "en" )?'An error occurred while sending the message, please contact us by phone':'Ocurrió un error al enviar el mensaje, por favor contáctanos por teléfono') } `;
                     messageDiv.classList.add('error');                    
                 }
             })
@@ -72,9 +72,11 @@
         <div class="left">
             <h3>{{ __('website/contact.write_us') }}</h3>
             @if(app()->getLocale() == "es")   
-                <p>Si deseas una cotización de un servicio especial de transporte, no dudes en consultarnos, llena el siguiente formulario y nos pondremos en contacto lo más pronto posible.</p>
+                <p>&iquest;Listo para explorar la exuberante Riviera Maya con comodidad y estilo? &iexcl;Cont&aacute;ctanos hoy mismo para reservar tu transporte tur&iacute;stico privado! En Tulum Airport Cab, estamos comprometidos a brindarte un servicio excepcional que satisfaga todas tus necesidades de transporte durante tu estancia en esta fascinante regi&oacute;n. Ya sea que necesites un traslado desde el aeropuerto o una emocionante excursi&oacute;n, nuestro equipo profesional est&aacute; aqu&iacute; para hacer que tu experiencia sea inolvidable.</p>
+                <p>Ponte en contacto con nosotros a trav&eacute;s de correo electr&oacute;nico, tel&eacute;fono o mediante nuestro formulario en l&iacute;nea para obtener m&aacute;s informaci&oacute;n y reservar tu viaje con nosotros. &iexcl;Esperamos ayudarte a hacer de tu visita a Tulum y la Riviera Maya una experiencia memorable!</p>
             @else
-                <p>At Taxi Riviera Maya, we understand that each traveler and every journey is unique. That's why we offer special services tailored to your needs and budget. Whether you require transportation for a large group, have specific budget constraints, or need a customized solution, simply share your requirements with us. Our team is here to ensure that your experience with Taxi Riviera Maya is designed to meet your travel needs. Just let us know your needs, and we'll find the best option for you!</p>
+                <p>Ready to explore the lush Riviera Maya in comfort and style? Contact us today to book your private tour transportation! At Tulum Airport Cab, we are committed to providing you with exceptional service to meet all your transportation needs during your stay in this fascinating region. Whether you need an airport transfer or an exciting excursion, our professional team is here to make your experience unforgettable.</p>
+                <p>Contact us via email, phone or our online form for more information and to book your trip with us, we look forward to helping you make your visit to Tulum and the Riviera Maya a memorable experience!</p>
             @endif
             <div id="message"></div>
             <form action="" method="POST" id="formData">
