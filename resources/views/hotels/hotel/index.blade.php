@@ -185,24 +185,10 @@
             <div class="hotels-list">
                 @if(app()->getLocale() == "en")
                     <h2>Other Hotels</h2>
-                    <a href="#" title="Cab from Cancun to La Selva Apartments Tulum">Cab from Cancun to La Selva Apartments Tulum</a>
-                    <a href="#" title="Cab from Cancun to Ambre & Epices Jungle Hotel & Spa">Cab from Cancun to Ambre & Epices Jungle Hotel & Spa</a>
-                    <a href="#" title="Cab from Cancun to Pepem Eco Hotel Tulum">Cab from Cancun to Pepem Eco Hotel Tulum</a>
-                    <a href="#" title="Cab from Cancun to Naala Tulum">Cab from Cancun to Naala Tulum</a>
-                    <a href="#" title="Cab from Cancun to Aldea Xaan Tulum">Cab from Cancun to Aldea Xaan Tulum</a>
-                    <a href="#" title="Cab from Cancun to UJO Condo Boutique">Cab from Cancun to UJO Condo Boutique</a>
-                    <a href="#" title="Cab from Cancún to Nomade Tulum">Cab from Cancún to Nomade Tulum</a>
-                    <a href="#" title="Cab from Cancun to Zamas Hotel">Cab from Cancun to Zamas Hotel</a>
+                    <x-hotels/>
                 @else
                     <h2>Otros Hoteles</h2>
-                    <a href="#" title="Cab from Cancun to La Selva Apartments Tulum">Cab from Cancun to La Selva Apartments Tulum</a>
-                    <a href="#" title="Cab from Cancun to Ambre & Epices Jungle Hotel & Spa">Cab from Cancun to Ambre & Epices Jungle Hotel & Spa</a>
-                    <a href="#" title="Cab from Cancun to Pepem Eco Hotel Tulum">Cab from Cancun to Pepem Eco Hotel Tulum</a>
-                    <a href="#" title="Cab from Cancun to Naala Tulum">Cab from Cancun to Naala Tulum</a>
-                    <a href="#" title="Cab from Cancun to Aldea Xaan Tulum">Cab from Cancun to Aldea Xaan Tulum</a>
-                    <a href="#" title="Cab from Cancun to UJO Condo Boutique">Cab from Cancun to UJO Condo Boutique</a>
-                    <a href="#" title="Cab from Cancún to Nomade Tulum">Cab from Cancún to Nomade Tulum</a>
-                    <a href="#" title="Cab from Cancun to Zamas Hotel">Cab from Cancun to Zamas Hotel</a>
+                    <x-hotels/>
                 @endif
             </div>
         </div>

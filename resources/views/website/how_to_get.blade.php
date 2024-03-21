@@ -137,36 +137,7 @@
                 @else
                     <h2>Otros Hoteles</h2>
                 @endif
-                <a href="#" title="Taxi de Cancún a Little Gem Charme Hotel Tulum">Taxi de Cancún a Little Gem Charme Hotel Tulum</a>
-                <a href="#" title="Taxi de Cancún a Zamas Hotel">Taxi de Cancún a Zamas Hotel</a>
-                <a href="#" title="Taxi de Cancún a Nomade Tulum">Taxi de Cancún a Nomade Tulum</a>
-                <a href="#" title="Taxi de Cancún a UJO Condo Boutique">Taxi de Cancún a UJO Condo Boutique</a>
-                <a href="#" title="Taxi de Cancún a Naala Tulum">Taxi de Cancún a Naala Tulum</a>
-                <a href="#" title="Taxi de Cancún a Pepem Eco Hotel Tulum">Taxi de Cancún a Pepem Eco Hotel Tulum</a>
-                <a href="#" title="Taxi de Cancún a Ambre & Epices Jungle Hotel & Spa">Taxi de Cancún a Ambre & Epices Jungle Hotel & Spa</a>
-                <a href="#" title="Taxi de Cancún a La Selva Apartments Tulum">Taxi de Cancún a La Selva Apartments Tulum</a>
-                <a href="#" title="Taxi de Cancún a Esmeralda Boutique Hotel & Residences">Taxi de Cancún a Esmeralda Boutique Hotel & Residences</a>
-                <a href="#" title="Taxi de Cancún a Niwa Tulum & Luxury Suites">Taxi de Cancún a Niwa Tulum & Luxury Suites</a>
-                <a href="#" title="Taxi Cancún a Kai Tulum">Taxi Cancún a Kai Tulum</a>
-                <a href="#" title="Traslado privado a Villa Las Estrellas Tulum">Traslado privado a Villa Las Estrellas Tulum</a>
-                <a href="#" title="Traslado a Selina Tulum">Traslado a Selina Tulum</a>
-                <a href="#" title="Traslado a La Diosa Tulum Resort & SPA">Traslado a La Diosa Tulum Resort & SPA</a>
-                <a href="#" title="Traslado a Cabanas Tulum">Traslado a Cabanas Tulum</a>
-                <a href="#" title="Traslado a Amansala Resort">Traslado a Amansala Resort</a>
-                <a href="#" title="Transporte a Playa Canek Beachfront Eco Hotel Tulum">Transporte a Playa Canek Beachfront Eco Hotel Tulum</a>
-                <a href="#" title="Transporte privado a Gardens Coba">Transporte privado a Gardens Coba</a>
-                <a href="#" title="Taxi Cancún a Secrets Tulum Resort & Beach Club">Taxi Cancún a Secrets Tulum Resort & Beach Club</a>
-                <a href="#" title="Cancún aeropuerto a Roc Luxe Tulum">Cancún aeropuerto a Roc Luxe Tulum</a>
-                <a href="#" title="Transfer Cancún a Jashita Hotel">Transfer Cancún a Jashita Hotel</a>
-                <a href="#" title="Taxi privado Cancún a Ether Tulum">Taxi privado Cancún a Ether Tulum</a>
-                <a href="#" title="Cancún aeropuerto a Hotel Chacá">Cancún aeropuerto a Hotel Chacá</a>
-                <a href="#" title="Transfer a Ana y Jose Hotel & Spa Tulum">Transfer a Ana y Jose Hotel & Spa Tulum</a>
-                <a href="#" title="Traslado Mezzanine a Colibri Boutique Hotel">Traslado Mezzanine a Colibri Boutique Hotel</a>
-                <a href="#" title="Traslado y taxi privado Cancún a The Beach Tulum">Traslado y taxi privado Cancún a The Beach Tulum</a>
-                <a href="#" title="Traslado aeropuerto cancun a Gramercy Tulum">Traslado aeropuerto cancun a Gramercy Tulum</a>
-                <a href="#" title="Transfer Cancun a Kimpton Aluna Resort Tulum">Transfer Cancun a Kimpton Aluna Resort Tulum</a>
-                <a href="#" title="Taxi Cancún a Maka Hotel Boutique">Taxi Cancún a Maka Hotel Boutique</a>
-                <a href="#" title="Transfer La Zebra Colibri Boutique Hotel">Transfer La Zebra Colibri Boutique Hotel</a>
+                <x-hotels/>
             </div>
         </div>
     </div>
