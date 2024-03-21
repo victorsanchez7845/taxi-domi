@@ -159,6 +159,7 @@ Route::get('/transfer/traslado-kuukum-tulum-hotel/', [RedirectController::class,
 Route::get('/transfer/traslado-mezzanine-to-colibri-boutique-hotel/', [RedirectController::class, 'redirect61']);
 Route::get('/transfer/cab-from-cancun-to-ambre-epices-jungle-hotel-spa/', [RedirectController::class, 'redirect62']);
 Route::get('/transfer/transfer-and-private-cab-cancun-to-the-beach-tulum/', [RedirectController::class, 'redirect63']);
+Route::get('/es/traslado/dreams-tulum-resort-spa/', [RedirectController::class, 'redirect64']);
 
 //Jobs
 Route::get('/jobs/hotels', [JobsController::class, 'hotels']);

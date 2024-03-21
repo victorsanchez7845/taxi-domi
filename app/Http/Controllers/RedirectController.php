@@ -72,4 +72,5 @@ class RedirectController extends Controller
     public function redirect61(){ return Redirect::to('/shuttle-to-mezzanine-hotel-tulum', 301); }
     public function redirect62(){ return Redirect::to('/shuttle-to-ambre-and-epices-jungle-hotel-and-spa', 301); }
     public function redirect63(){ return Redirect::to('/shuttle-to-tulum-beach-hotel', 301); }
+    public function redirect64(){ return Redirect::to('/shuttle-to-dreams-tulum-resort-and-spa', 301); }
 }
