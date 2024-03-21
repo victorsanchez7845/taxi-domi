@@ -1,0 +1,21 @@
+<?php
+    return [
+        "image_one_alt" => "Suburban de lujo para grupos en Tulum - Transporte elegante para tus ocasiones especiales",
+        "image_one_title" => "Luxury Suburban - Elegant transportation for groups in Tulum, ideal for special events",
+        "image_two_alt" => "Van de Pasajeros in Tulum - Explore paradise in comfort and safety",
+        "image_two_title" => "Van de Pasajeros - Discover comfort and safety in our transportation service in Tulum",
+        "image_three_alt" => "Crafter for private tours in Tulum - Experience the beauty of Tulum with our exclusive transportation",
+        "image_three_title" => "Crafter - Exclusive transportation for private tours in Tulum, discover the beauty in total comfort",
+        "price_from" => "Price from",
+        "per_person" => "Per person",
+        "book_now" => "Book now",
+        "passengers" => "Passengers",
+        "luggages" => "Luggages",
+        "link" => "/",
+        "service" => "Service",
+        "one_way" => "One Way",
+        "round_trip" => "Round Trip",
+        "private" => "Private",
+        "luxury" => "Luxury",
+        "small_group" => "Small Group",
+    ];

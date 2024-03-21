@@ -1,0 +1,21 @@
+<?php
+    return [
+        "image_one_alt" => "Suburban de lujo para grupos en Tulum - Transporte elegante para tus ocasiones especiales",
+        "image_one_title" => "Suburban de Lujo - Transporte elegante para grupos en Tulum, ideal para eventos especiales",
+        "image_two_alt" => "Van de Pasajeros en Tulum - Explora el paraíso cómoda y seguramente",
+        "image_two_title" => "Van de Pasajeros - Descubre comodidad y seguridad en nuestro servicio de transporte en Tulum",
+        "image_three_alt" => "Crafter para tours privados en Tulum - Experimenta la belleza con nuestro transporte exclusivo",
+        "image_three_title" => "Crafter - Transporte exclusivo para tours privados en Tulum, descubre la belleza con total comodidad",
+        "price_from" => "Precop desde",
+        "per_person" => "Por persona",
+        "book_now" => "Reservar ahora",
+        "passengers" => "Pasajeros",
+        "luggages" => "Equipaje",
+        "link" => "/es",
+        "service" => "Servicio",
+        "one_way" => "Sólo Ida",
+        "round_trip" => "Ida y Vuelta",
+        "private" => "Privado",
+        "luxury" => "Lujo",
+        "small_group" => "Grupo Pequeño",
+    ];
