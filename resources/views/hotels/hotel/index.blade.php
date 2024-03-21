@@ -131,8 +131,8 @@
             @endif
 
             <picture>
-                <source srcset="/assets/img/hotels/aldea-xaan-tulum.webp" type="image/webp" />
-                <img src="/assets/img/hotels/aldea-xaan-tulum.jpg" alt="{{ __('silos/hotel.one_image_alt') }}" title="{{ __('silos/hotel.one_image_title') }}" loading="lazy" width="750" height="460" />
+                <source srcset="/assets/img/hotels/tulum.webp" type="image/webp" />
+                <img src="/assets/img/hotels/tulum.jpg" alt="{{ __('silos/hotel.one_image_alt') }}" title="{{ __('silos/hotel.one_image_title') }}" loading="lazy" width="750" height="460" />
             </picture>
 
             @if(app()->getLocale() == "en")

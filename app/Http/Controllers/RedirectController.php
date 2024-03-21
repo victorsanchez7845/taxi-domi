@@ -44,5 +44,32 @@ class RedirectController extends Controller
     public function redirect33(){ return Redirect::to('/shuttle-to-una-vida-tulum', 301); }
     public function redirect34(){ return Redirect::to('/shuttle-to-zamas-hotel', 301); }
     public function redirect35(){ return Redirect::to('/es/traslado-a-jade-tulum-hotel', 301); }
-    public function redirect36(){ return Redirect::to('/shuttle-to-ana-y-jose-hotel-and-spa', 301); }
+    public function redirect36(){ return Redirect::to('/shuttle-to-ana-y-jose-hotel-and-spa', 301); }    
+    public function redirect37(){ return Redirect::to('/es/traslado-a-restaurante-estrada', 301); }    
+    public function redirect38(){ return Redirect::to('/shuttle-to-nomade-tulum', 301); }    
+    public function redirect39(){ return Redirect::to('/shuttle-to-ambre-and-epices-jungle-hotel-and-spa', 301); }    
+    public function redirect40(){ return Redirect::to('/shuttle-to-el-cayuco-tulum', 301); }
+    public function redirect41(){ return Redirect::to('/shuttle-to-atman-residences', 301); }
+    public function redirect42(){ return Redirect::to('/how-to-get-to-tulum', 301); }
+    public function redirect43(){ return Redirect::to('/shuttle-to-restaurante-estrada', 301); }
+    public function redirect44(){ return Redirect::to('/es/traslado-a-nomade-tulum', 301); }
+    public function redirect45(){ return Redirect::to('/shuttle-to-ophelia-tulum-hotel-by-gekkot-travel', 301); }
+    public function redirect46(){ return Redirect::to('/es/traslado-a-el-cayuco-tulum', 301); }
+    public function redirect47(){ return Redirect::to('/shuttle-to-curry-thai-restaurant', 301); }
+    public function redirect48(){ return Redirect::to('/es/traslado-a-curry-thai-restaurant', 301); }
+    public function redirect49(){ return Redirect::to('/shuttle-to-roc-luxe-tulum', 301); }
+    public function redirect50(){ return Redirect::to('/es/traslado-a-ophelia-tulum-hotel-by-gekkot-travel', 301); }
+    public function redirect51(){ return Redirect::to('/shuttle-to-tago-tulum', 301); }
+    public function redirect52(){ return Redirect::to('/shuttle-to-papaya-playa-project', 301); }
+    public function redirect53(){ return Redirect::to('/es/traslado-a-atman-residences', 301); }
+    public function redirect54(){ return Redirect::to('/es/traslado-a-kanak-tulum-hotel', 301); }
+    public function redirect55(){ return Redirect::to('/es/traslado-a-tago-tulum', 301); }
+    public function redirect56(){ return Redirect::to('/shuttle-to-studio-11', 301); }
+    public function redirect57(){ return Redirect::to('/es/traslado-a-hotel-kuukum-tulum', 301); }
+    public function redirect58(){ return Redirect::to('/shuttle-to-kanak-tulum-hotel', 301); }
+    public function redirect59(){ return Redirect::to('/shuttle-to-niwa-tulum', 301); }
+    public function redirect60(){ return Redirect::to('/shuttle-to-hotel-kuukum-tulum', 301); }
+    public function redirect61(){ return Redirect::to('/shuttle-to-mezzanine-hotel-tulum', 301); }
+    public function redirect62(){ return Redirect::to('/shuttle-to-ambre-and-epices-jungle-hotel-and-spa', 301); }
+    public function redirect63(){ return Redirect::to('/shuttle-to-tulum-beach-hotel', 301); }
 }
