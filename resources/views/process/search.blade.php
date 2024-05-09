@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                             <div class="two">
-                                @if($item['id'] == 1)
+                                @if(in_array( $item['id'], [1,4] ))
                                     @if(app()->getLocale() == "es")
                                         <p>Viaje cómodamente en un servicio totalmente privado, equipado, para hasta {{ $item['passengers'] }} pasajeros. El servicio es privado, sin tiempo de espera, ni paradas continuas.</p>
                                             <ul>
