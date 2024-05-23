@@ -131,7 +131,7 @@
                         <span>{{ __('quote/checkout.credit_card_text') }}</span>                        
                         <img src="/assets/img/checkout/mastercard.svg" alt="{{ __('quote/checkout.credit_card_text') }}" title="{{ __('quote/checkout.credit_card_text') }}">                        
                     </label>
-                    @if($data['places']['config']['flight_required'])
+                    @if($data['places']['config']['flight_required'] && false)
                     <label>
                         <input type="radio" name="payment_type" id="cash" value="cash">
                         <span>{{ __('quote/checkout.cash_text') }}</span>
