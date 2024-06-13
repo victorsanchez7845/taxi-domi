@@ -45,7 +45,11 @@ Route::middleware('locale')->group(function () {
         Route::get('/register', [ProcessController::class, 'checkout'])->name('step.two.en');
         Route::post('/register', [ProcessController::class, 'handlerCheckout'])->name('step.two.handler.en');            
         Route::post('/processing', [ProcessController::class, 'processingHandler'])->name('step.three.handler.en');    
-        Route::get('/my-reservation-detail', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.en');        
+        Route::get('/my-reservation-detail', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.en');
+
+        Route::get('/payment', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.en');
+        Route::post('/payment-create-order', [ProcessController::class, 'paymentPayPalOrder'])->name('reservation.payment.paypal.order.en');
+        Route::post('/payment-execute-order', [ProcessController::class, 'paymentPayPalCreate'])->name('reservation.payment.paypal.create.en');
     });
 
     Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->group(function () {
@@ -75,6 +79,7 @@ Route::middleware('locale')->group(function () {
             Route::post('/registro', [ProcessController::class, 'handlerCheckout'])->name('step.two.handler.es');        
             Route::post('/procesando', [ProcessController::class, 'processingHandler'])->name('step.three.handler.es');
             Route::get('/mi-reservacion-detalle', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.es');
+            Route::get('/pago', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.es');
         });
     });
 });

@@ -21,6 +21,7 @@ mix.sass(DATA.RESOURCES+'/scss/hotels/hotel.scss', DATA.PUBLIC_FOLDER + "/css/ho
 mix.sass(DATA.RESOURCES+'/scss/process/search.scss', DATA.PUBLIC_FOLDER + "/css/process/search.min.css");
 mix.sass(DATA.RESOURCES+'/scss/process/checkout.scss', DATA.PUBLIC_FOLDER + "/css/process/checkout.min.css");
 mix.sass(DATA.RESOURCES+'/scss/process/processing.scss', DATA.PUBLIC_FOLDER + "/css/process/processing.min.css");
+mix.sass(DATA.RESOURCES+'/scss/process/card-payment.scss', DATA.PUBLIC_FOLDER + "/css/process/card-payment.min.css");
 mix.sass(DATA.RESOURCES+'/scss/process/thank-you.scss', DATA.PUBLIC_FOLDER + "/css/process/thank-you.min.css");
 mix.sass(DATA.RESOURCES+'/scss/process/cancel.scss', DATA.PUBLIC_FOLDER + "/css/process/cancel.min.css");
 
