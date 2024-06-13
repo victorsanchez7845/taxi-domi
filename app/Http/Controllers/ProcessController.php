@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+
 use App\Traits\ApiTrait;
 use App\Traits\SeoTrait;
+use App\Traits\PayPalTrait;
 
 class ProcessController extends Controller{
-    use ApiTrait, SeoTrait;
+    use ApiTrait, SeoTrait, PayPalTrait;
     public $seo = [];
 
     public function handler(Request $request){
@@ -180,7 +182,7 @@ class ProcessController extends Controller{
         Session::put( 'reservation', $data);
         
         $payment_link = trans('link.quote_thank_you');
-        if( in_array( $request->payment_type, ['paypal','credit_card'] ) ):
+        if( in_array( $request->payment_type, ['paypal'] ) ):
             $payment_data = [
                 "type" => (( $request->payment_type == 'paypal' )? 'PAYPAL' : 'STRIPE'),
                 "id" => $data['config']['id'],
@@ -190,6 +192,10 @@ class ProcessController extends Controller{
             ];
             $payment_data = ApiTrait::paymentLink($payment_data);
             $payment_link = $payment_data['url'];
+        endif;
+
+        if( in_array( $request->payment_type, ['credit_card'] ) ):
+            $payment_link = trans('link.payment');
         endif;
 
         return view('process.processing', [ 'payment' => $payment_link, 'seo' => $this->seo, 'data' => $data ]);
@@ -287,5 +293,61 @@ class ProcessController extends Controller{
         endif;
 
         return view('process.reservation-detail', ['rez' => $rez, 'payment_link' => $payment_links, 'seo' => $this->seo]);
+    }
+
+    public function paymentPaypal(Request $request){
+        $this->seoData("payment");
+
+        $rez = session()->get('reservation');
+        if( $rez == NULL ):
+            return redirect()->route('login.' . app()->getLocale(), ['locale' => app()->getLocale()]);
+        endif;
+        
+        return view('process.card-payment', ['rez' => $rez, 'seo' => $this->seo ]);
+    }
+
+    public function paymentPayPalOrder(Request $request){
+        
+        $rez = session()->get('reservation');
+        if( $rez == NULL ):
+            return response()->json([
+                'error' => [
+                    'code' => 'required_params',
+                    'message' =>  "Login in to your account"
+                ]
+            ], 404);
+        endif;
+        
+        $order_data = $this->createPayPalOrder($rez);
+        if($order_data == false):
+            return response()->json([
+                'error' => [
+                    'code' => 'paypal_error',
+                    'message' =>  "Error making the Order"
+                ]
+            ], 404);
+        endif;
+
+        return response()->json($order_data, 200);
+    }
+
+    public function paymentPayPalCreate(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'id' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                    'error' => [
+                        'code' => 'required_params',
+                        'message' =>  $validator->errors()->all() 
+                    ]
+                ], 404);
+        }
+                
+        $response = $this->executePayPalOrder($request->id);        
+
+        return response()->json($response, 200);     
     }
 }
