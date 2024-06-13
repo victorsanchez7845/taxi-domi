@@ -76,10 +76,10 @@
     <div id="aff-error-list"></div>
     <p>            
         <?php if(app()->getLocale() == "en"): ?>
-            Book now and pay later | <strong>FREE cancellation</strong> on all our services | Pay in installments
+            Cheaper than at the airport!
         <?php endif; ?>
         <?php if(app()->getLocale() == "es"): ?>
-            Reserva ahora y paga después | Cancelación <strong>GRATIS</strong> en todos nuestros servicios
+            ¡Más barato que en el Aeropuerto!
         <?php endif; ?>
     </p>
 </div>
