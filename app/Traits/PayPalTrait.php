@@ -128,8 +128,7 @@ trait PayPalTrait
                         }
                     }
                 ],
-                "application_context": {
-                    "shipping_preference": "NO_SHIPPING",
+                "application_context": {                    
                     "user_action": "PAY_NOW",
                     "locale": "' . $lang . '",
                     "return_url": "'.$return_url.'",
