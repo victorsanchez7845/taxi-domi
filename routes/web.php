@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\ProcessController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\AdsController;
 use App\Http\Controllers\HotelsController;
@@ -47,7 +48,8 @@ Route::middleware('locale')->group(function () {
         Route::post('/processing', [ProcessController::class, 'processingHandler'])->name('step.three.handler.en');    
         Route::get('/my-reservation-detail', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.en');
 
-        Route::get('/payment', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.en');
+        //Route::get('/payment', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.en');
+        Route::get('/payment', [PaymentController::class, 'payment'])->name('reservation.payment.en');
         Route::post('/payment-create-order', [ProcessController::class, 'paymentPayPalOrder'])->name('reservation.payment.paypal.order.en');
         Route::post('/payment-execute-order', [ProcessController::class, 'paymentPayPalCreate'])->name('reservation.payment.paypal.create.en');
     });
@@ -79,7 +81,8 @@ Route::middleware('locale')->group(function () {
             Route::post('/registro', [ProcessController::class, 'handlerCheckout'])->name('step.two.handler.es');        
             Route::post('/procesando', [ProcessController::class, 'processingHandler'])->name('step.three.handler.es');
             Route::get('/mi-reservacion-detalle', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.es');
-            Route::get('/pago', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.es');
+            Route::get('/pago', [PaymentController::class, 'payment'])->name('reservation.payment.es');
+            //Route::get('/pago', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.es');
         });
     });
 });
