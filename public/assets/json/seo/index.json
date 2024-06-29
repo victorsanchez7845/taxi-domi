@@ -550,5 +550,29 @@
             "es": "/es/pago",
             "en": "/payment"
         }
+    },
+    "card-payment-mifel": {
+        "languages": {
+            "es": {
+                "path": "/es/pago",
+                "metas": {
+                    "title": "Pago rápido y seguro",
+                    "description": "",
+                    "keywords": ""
+                }
+            },
+            "en": {
+                "path": "/payment",
+                "metas": {
+                    "title": "Fast and safe payment",
+                    "description": "",
+                    "keywords": ""
+                }
+            }
+        },
+        "alternates": {
+            "es": "/es/pago",
+            "en": "/payment"
+        }
     }
 }

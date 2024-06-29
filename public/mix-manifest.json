@@ -1,5 +1,5 @@
 {
-    "/assets/js/base/index.min.js": "/assets/js/base/index.min.js?id=91da0beeb0e907ad5c10efdba81aae94",
+    "/assets/js/base/index.min.js": "/assets/js/base/index.min.js?id=15f53a113c082435695fe584fdf2fd4e",
     "/assets/js/bookingbox/index.min.js": "/assets/js/bookingbox/index.min.js?id=431c3353e7199502b478b26666504038",
     "/assets/js/process/listing.min.js": "/assets/js/process/listing.min.js?id=c269199b14e490ad95f1bfb2b81d4e26",
     "/assets/js/quotations/index.min.js": "/assets/js/quotations/index.min.js?id=9394a490f24edc8fa40faa82aa332d12",
@@ -16,6 +16,7 @@
     "/assets/css/destinations/tulum.min.css": "/assets/css/destinations/tulum.min.css?id=d4b5c503ce9e0967a74981e68da2726a",
     "/assets/css/process/reservation-detail.min.css": "/assets/css/process/reservation-detail.min.css?id=c3156f583ba28144e135728b3df46d83",
     "/assets/css/process/login.min.css": "/assets/css/process/login.min.css?id=cef4402c31b337c55fe94728382b0f12",
+    "/assets/css/process/card-payment-mifel.min.css": "/assets/css/process/card-payment-mifel.min.css?id=b46d90b57deb7b63754e621020782171",
     "/assets/css/process/cancel.min.css": "/assets/css/process/cancel.min.css?id=027b019120f5cd405bf0cb205778231a",
     "/assets/css/process/thank-you.min.css": "/assets/css/process/thank-you.min.css?id=d07bf9d4529d20b7764604254f0bc065",
     "/assets/css/process/card-payment.min.css": "/assets/css/process/card-payment.min.css?id=53d8cdefe3f4d0c36a3d21ca4d3c0253",
