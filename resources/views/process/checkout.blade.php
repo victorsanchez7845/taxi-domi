@@ -126,11 +126,13 @@
                         PayPal
                         <img src="/assets/img/checkout/paypal.svg" alt="PayPal" title="PayPal">
                     </label>
+                    @if(false)
                     <label>
                         <input type="radio" name="payment_type" id="card" value="credit_card">
                         <span>{{ __('quote/checkout.credit_card_text') }}</span>                        
                         <img src="/assets/img/checkout/mastercard.svg" alt="{{ __('quote/checkout.credit_card_text') }}" title="{{ __('quote/checkout.credit_card_text') }}">                        
                     </label>
+                    @endif
                     @if($data['places']['config']['flight_required'] && false)
                     <label>
                         <input type="radio" name="payment_type" id="cash" value="cash">
