@@ -46,6 +46,14 @@
 
         @stack('push-top')
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16596385055"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16596385055');
+        </script>
+        
         <script>
             setTimeout(function () {
                 window.__lc = window.__lc || {};
