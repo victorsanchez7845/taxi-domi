@@ -10,7 +10,7 @@
     @if(app()->getLocale() == "es")
         <script>
             gtag('event', 'conversion', {
-                'send_to': 'AW-880287216/b8MxCPiyv_oYEPC74KMD',
+                'send_to': 'AW-16596385055/j-1ZCNuYscgZEJ_64uk9',
                 'value': `{!! $data['sales']['total'] !!}`,
                 'currency': `{!! $data['config']['currency'] !!}`,
                 'transaction_id': `{!! $data['config']['id'] !!}`,
@@ -20,7 +20,7 @@
     @if(app()->getLocale() == "en")
         <script>
             gtag('event', 'conversion', {
-                'send_to': 'AW-880287216/cfz6CLmSwY4ZEPC74KMD',
+                'send_to': 'AW-16596385055/jwwWCNG6o7cZEJ_64uk9',
                 'value': `{!! $data['sales']['total'] !!}`,
                 'currency': `{!! $data['config']['currency'] !!}`,
                 'transaction_id': `{!! $data['config']['id'] !!}`,
