@@ -184,7 +184,7 @@ class ProcessController extends Controller{
         $payment_link = trans('link.quote_thank_you');
         if( in_array( $request->payment_type, ['paypal','credit_card'] ) ):
             $payment_data = [
-                "type" => (( $request->payment_type == 'paypal' )? 'PAYPAL' : 'STRIPE'),
+                "type" => (( $request->payment_type == 'paypal' )? 'PAYPAL' : 'STRIPE-2'),
                 "id" => $data['config']['id'],
                 "language" => "es",
                 "success_url" => trans('link.quote_thank_you'),
@@ -280,7 +280,7 @@ class ProcessController extends Controller{
             endif;
             
             $payment_data = [
-                "type" => 'STRIPE',
+                "type" => 'STRIPE-2',
                 "id" => $rez['config']['id'],
                 "language" => "es",
                 "success_url" => trans('link.quote_thank_you'),
