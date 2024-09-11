@@ -67,7 +67,8 @@
 
                     @foreach ($data['items'] as $item)      
                         @php
-                            $before = (( $item['price']  * 100 ) / 70);                            
+                            $before = (( $item['price']  * 100 ) / 70);
+                            if( in_array( $item['id'], [5] )  ) continue;
                         @endphp
                         <div class="item">
                             <div class="one">
