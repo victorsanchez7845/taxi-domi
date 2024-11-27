@@ -182,7 +182,7 @@ class ProcessController extends Controller{
         Session::put( 'reservation', $data);
         
         $payment_link = trans('link.quote_thank_you');
-        if( in_array( $request->payment_type, ['paypal','credit_card'] ) ):
+        if( in_array( $request->payment_type, ['paypal'] ) ):
             $payment_data = [
                 "type" => (( $request->payment_type == 'paypal' )? 'PAYPAL' : 'STRIPE-2'),
                 "id" => $data['config']['id'],
@@ -195,7 +195,7 @@ class ProcessController extends Controller{
         endif;
 
         if( in_array( $request->payment_type, ['credit_card'] ) ):
-            //$payment_link = trans('link.payment');
+            $payment_link = trans('link.payment');
         endif;
 
         return view('process.processing', [ 'payment' => $payment_link, 'seo' => $this->seo, 'data' => $data ]);
@@ -253,6 +253,21 @@ class ProcessController extends Controller{
         if(isset( $request->logout )):
             session()->forget('reservation');
             return redirect()->route('login.' . app()->getLocale(), ['locale' => app()->getLocale()]);
+        endif;
+
+        if(isset( $request->code ) && isset( $request->email )):
+            $item = [
+                "code" => $request->code,
+                "email" => $request->email,
+                "language" => app()->getLocale()
+            ];
+    
+            $data = ApiTrait::checkReservation($item);
+            if( isset( $data['error'] ) ):
+                return view('process.login', ['data' => $item]);
+            endif;
+
+            Session::put( 'reservation', $data);
         endif;
 
         $rez = session()->get('reservation');
