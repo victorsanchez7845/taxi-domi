@@ -49,7 +49,7 @@ Route::middleware('locale')->group(function () {
         Route::get('/my-reservation-detail', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.en');
 
         //Route::get('/payment', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.en');
-        Route::get('/payment', [PaymentController::class, 'payment'])->name('reservation.payment.en');
+        Route::get('/payment', [PaymentController::class, 'santander'])->name('reservation.payment.en');
         Route::post('/payment-create-order', [ProcessController::class, 'paymentPayPalOrder'])->name('reservation.payment.paypal.order.en');
         Route::post('/payment-execute-order', [ProcessController::class, 'paymentPayPalCreate'])->name('reservation.payment.paypal.create.en');
     });
@@ -81,7 +81,7 @@ Route::middleware('locale')->group(function () {
             Route::post('/registro', [ProcessController::class, 'handlerCheckout'])->name('step.two.handler.es');        
             Route::post('/procesando', [ProcessController::class, 'processingHandler'])->name('step.three.handler.es');
             Route::get('/mi-reservacion-detalle', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.es');
-            Route::get('/pago', [PaymentController::class, 'payment'])->name('reservation.payment.es');
+            Route::get('/pago', [PaymentController::class, 'santander'])->name('reservation.payment.es');
             //Route::get('/pago', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.es');
         });
     });
