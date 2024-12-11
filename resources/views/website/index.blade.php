@@ -9,7 +9,7 @@
     <link href="{{ mix('/assets/css/website/index.min.css') }}" rel="stylesheet">
 @endpush
 @push("push-bottom")
-    <script defer src="{{ mix('/assets/js/bookingbox/index.min.js') }}"></script>
+    <script defer src="{{ mix('/assets/js/bookingbox/index.min.js') }}"></script> 
     <x-analytics/>
 @endpush
 
