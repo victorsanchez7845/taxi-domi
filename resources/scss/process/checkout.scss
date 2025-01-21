@@ -211,7 +211,30 @@ form.checkout-container{
             display: flex;
             flex-direction: column;
             gap: 15px;
-            > div{
+            > h3{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                &::before{
+                    content: "";
+                    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%2316161d" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z"/></svg>');
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
+                    margin-right: 8px;
+                }
+                > span{
+                    display: flex;
+                    &::after{
+                        content: "";
+                        background: url('data:image/svg+xml,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 468 222.5" style="enable-background:new 0 0 468 222.5;" xml:space="preserve"><style type="text/css"> .st0{fill-rule:evenodd;clip-rule:evenodd;fill:%23635BFF;} </style><g><path class="st0" d="M414,113.4c0-25.6-12.4-45.8-36.1-45.8c-23.8,0-38.2,20.2-38.2,45.6c0,30.1,17,45.3,41.4,45.3c11.9,0,20.9-2.7,27.7-6.5v-20c-6.8,3.4-14.6,5.5-24.5,5.5c-9.7,0-18.3-3.4-19.4-15.2h48.9C413.8,121,414,115.8,414,113.4z M364.6,103.9c0-11.3,6.9-16,13.2-16c6.1,0,12.6,4.7,12.6,16H364.6z"></path><path class="st0" d="M301.1,67.6c-9.8,0-16.1,4.6-19.6,7.8l-1.3-6.2h-22v116.6l25-5.3l0.1-28.3c3.6,2.6,8.9,6.3,17.7,6.3c17.9,0,34.2-14.4,34.2-46.1C335.1,83.4,318.6,67.6,301.1,67.6z M295.1,136.5c-5.9,0-9.4-2.1-11.8-4.7l-0.1-37.1c2.6-2.9,6.2-4.9,11.9-4.9c9.1,0,15.4,10.2,15.4,23.3C310.5,126.5,304.3,136.5,295.1,136.5z"></path><polygon class="st0" points="223.8,61.7 248.9,56.3 248.9,36 223.8,41.3 "></polygon><rect x="223.8" y="69.3" class="st0" width="25.1" height="87.5"></rect><path class="st0" d="M196.9,76.7l-1.6-7.4h-21.6v87.5h25V97.5c5.9-7.7,15.9-6.3,19-5.2v-23C214.5,68.1,202.8,65.9,196.9,76.7z"></path><path class="st0" d="M146.9,47.6l-24.4,5.2l-0.1,80.1c0,14.8,11.1,25.7,25.9,25.7c8.2,0,14.2-1.5,17.5-3.3V135c-3.2,1.3-19,5.9-19-8.9V90.6h19V69.3h-19L146.9,47.6z"></path><path class="st0" d="M79.3,94.7c0-3.9,3.2-5.4,8.5-5.4c7.6,0,17.2,2.3,24.8,6.4V72.2c-8.3-3.3-16.5-4.6-24.8-4.6C67.5,67.6,54,78.2,54,95.9c0,27.6,38,23.2,38,35.1c0,4.6-4,6.1-9.6,6.1c-8.3,0-18.9-3.4-27.3-8v23.8c9.3,4,18.7,5.7,27.3,5.7c20.8,0,35.1-10.3,35.1-28.2C117.4,100.6,79.3,105.9,79.3,94.7z"></path></g></svg>');
+                        width: 90px;
+                        height: 45px;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            /*> div{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-column-gap: 15px;
@@ -242,6 +265,34 @@ form.checkout-container{
                     grid-template-columns: 1fr;
                     gap: 15px;
                 }
+            }*/
+            > div#paymentV2{
+                > div#payment-form{
+                    > div#error-message{
+                        background-color: #fa503f;
+                        color: #fff;
+                        padding: 5px 8px;
+                        border-radius: 5px;
+                        font-size: 8pt;
+                        text-transform: lowercase;
+                        letter-spacing: 1pt;
+                        font-weight: bold;
+                        display: inline-block;
+                        margin-top: 15px;
+                        &:empty{
+                            padding: 0px;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }           
+            }
+            > div#paymentInfo{
+                border-radius: 10px;
+                box-shadow: 0 0 6px rgba(0,0,0,.16);
+                padding: 15px;
+                &.hidden{
+                    display: none;
+                }
             }
         }
 
@@ -264,6 +315,7 @@ form.checkout-container{
                 border: 1px solid #4DBC34;
                 color: white;
                 cursor: pointer;
+                position: relative;
                 &::before{
                     content: '';
                     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none"><path d="M6.04636 19.5557V20.5557C6.04636 20.839 5.95036 21.0767 5.75836 21.2687C5.56636 21.4607 5.32902 21.5563 5.04636 21.5557H4.04636C3.76302 21.5557 3.52569 21.4597 3.33436 21.2677C3.14302 21.0757 3.04702 20.8383 3.04636 20.5557L3.04636 12.5557L5.14636 6.55566C5.24636 6.25566 5.42569 6.014 5.68436 5.83066C5.94302 5.64733 6.23036 5.55566 6.54636 5.55566L17.5464 5.55566C17.863 5.55566 18.1507 5.64733 18.4094 5.83066C18.668 6.014 18.847 6.25566 18.9464 6.55566L21.0464 12.5557L21.0464 20.5557C21.0464 20.839 20.9507 21.0767 20.7594 21.2687C20.568 21.4607 20.3304 21.5563 20.0464 21.5557H19.0464C18.763 21.5557 18.5257 21.4597 18.3344 21.2677C18.143 21.0757 18.047 20.8383 18.0464 20.5557V19.5557H6.04636ZM5.84636 10.5557L18.2464 10.5557L17.1964 7.55566L6.89636 7.55566L5.84636 10.5557ZM7.54636 16.5557C7.96302 16.5557 8.31736 16.41 8.60936 16.1187C8.90136 15.8273 9.04702 15.473 9.04636 15.0557C9.04636 14.639 8.90069 14.285 8.60936 13.9937C8.31802 13.7023 7.96369 13.5563 7.54636 13.5557C7.12969 13.5557 6.77569 13.7017 6.48436 13.9937C6.19302 14.2857 6.04702 14.6397 6.04636 15.0557C6.04636 15.4723 6.19236 15.8267 6.48436 16.1187C6.77636 16.4107 7.13036 16.5563 7.54636 16.5557ZM16.5464 16.5557C16.963 16.5557 17.3174 16.41 17.6094 16.1187C17.9014 15.8273 18.047 15.473 18.0464 15.0557C18.0464 14.639 17.9007 14.285 17.6094 13.9937C17.318 13.7023 16.9637 13.5563 16.5464 13.5557C16.1297 13.5557 15.7757 13.7017 15.4844 13.9937C15.193 14.2857 15.047 14.6397 15.0464 15.0557C15.0464 15.4723 15.1924 15.8267 15.4844 16.1187C15.7764 16.4107 16.1304 16.5563 16.5464 16.5557Z" fill="white"/></svg>');
@@ -404,6 +456,25 @@ form.checkout-container{
         border-color: #f5c6cb;
     }
     
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.6s linear infinite;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-right-color: transparent;
 }
 
 span.error{

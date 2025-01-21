@@ -103,8 +103,15 @@ class ProcessController extends Controller{
         $data['items'] = $item[0];
         
         $form = session()->get('client_data');
+
+        $payment_elements = ApiTrait::paymentElements($data['items']);
+        if(isset( $payment_elements['id'] )):
+            $payments['status'] = true;
+            $payments['data'] = $payment_elements['id'];
+        endif;
+        // Fin de identificador de Payment Elements de Stripe
         
-        return view('process.checkout', ['quote' => $quote, 'data' => $data, 'form' => $form, 'seo' => $this->seo]);
+        return view('process.checkout', ['quote' => $quote, 'data' => $data, 'form' => $form, 'seo' => $this->seo, 'payments' => $payments]);
     }
 
     public function checkout(){
@@ -139,10 +146,18 @@ class ProcessController extends Controller{
         
         $form = session()->get('client_data');
 
-        return view('process.checkout', ['quote' => $quote, 'data' => $data, 'form' => $form, 'seo' => $this->seo]);
+        $payment_elements = ApiTrait::paymentElements($data['items']);
+        if(isset( $payment_elements['id'] )):
+            $payments['status'] = true;
+            $payments['data'] = $payment_elements['id'];
+        endif;
+        // Fin de identificador de Payment Elements de Stripe
+
+        return view('process.checkout', ['quote' => $quote, 'data' => $data, 'form' => $form, 'seo' => $this->seo, 'payments' => $payments]);
     }
 
     public function processingHandler(Request $request){
+        
         $this->seoData("processing");
 
         $validator = Validator::make($request->all(), [
@@ -152,11 +167,15 @@ class ProcessController extends Controller{
             'email' => 'required|email|max:80',
             'phone' => 'max:25',
             'special_request' => 'max:150',
-            'payment_type' => 'required|in:paypal,credit_card,cash',
+            //'payment_type' => 'required|in:paypal,credit_card,cash',
             'token' => 'required', 
             
             'arrival_airline' => 'max:25',
-            'arrival_flight_number' => 'max:25'
+            'arrival_flight_number' => 'max:25',
+
+            'payment.id' => 'required',
+            'payment.amount' => 'required',
+            'payment.currency' => 'required',
         ]);
 
         Session::put( 'client_data', [
