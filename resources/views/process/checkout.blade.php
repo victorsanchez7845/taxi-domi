@@ -9,11 +9,36 @@
             service_type: `{!! $quote['type'] !!}`
         };
     </script>
-    <script src="{{ mix('/assets/js/process/checkout.min.js') }}" defer></script>
+    <script src="https://js.stripe.com/v3/"></script>    
 @endpush
 @push("push-bottom")
     <x-analytics/>
     <x-hotjar/>
+
+    <script>
+        const stripe = Stripe('pk_live_51PTwwLHTWfttKamJWgj0rpn2cxAntGeadaCDbZWqlzbDyG2puIFxNnprnxwDfNdVNKlYIthcXeXshSlFM5dKc9PB00WMAWPd1i');
+        const elements = stripe.elements({
+            clientSecret: `{!! $payments['data'] !!}`,
+        });
+        elements.update({locale: `{!! app()->getLocale() !!}`});
+
+        const paymentElementOptions = {
+            layout: {
+                type: 'accordion',
+                defaultCollapsed: false,
+                radios: true,
+                spacedAccordionItems: true
+            },
+            business: {
+                name: "Caribbean Transfers"
+            },
+            paymentMethodOrder: ['card', 'apple_pay', 'google_pay']
+        };
+
+        const paymentElement = elements.create('payment', paymentElementOptions);
+        paymentElement.mount("#payment-element");
+    </script>
+    <script src="{{ mix('/assets/js/process/checkout.min.js') }}" defer></script>
 @endpush
 
 @section('content')
@@ -120,23 +145,47 @@
     
             <div class="payment-information">
                 <h2>{{ __('quote/checkout.payment_method') }}</h2>
-                <div>
-                    <label class="active">
-                        <input type="radio" name="payment_type" id="paypal" value="paypal" checked>
-                        PayPal
-                        <img src="/assets/img/checkout/paypal.svg" alt="PayPal" title="PayPal">
-                    </label>                    
-                    <label>
-                        <input type="radio" name="payment_type" id="card" value="credit_card">
-                        <span>{{ __('quote/checkout.credit_card_text') }}</span>                        
-                        <img src="/assets/img/checkout/mastercard.svg" alt="{{ __('quote/checkout.credit_card_text') }}" title="{{ __('quote/checkout.credit_card_text') }}">                        
-                    </label>                    
-                    @if($data['places']['config']['flight_required'] && false)
-                    <label>
-                        <input type="radio" name="payment_type" id="cash" value="cash">
-                        <span>{{ __('quote/checkout.cash_text') }}</span>
-                        <img src="/assets/img/checkout/cash.svg" alt="PayPal" title="PayPal">
-                    </label>
+                <h3>
+                    @if(app()->getLocale() == "es")
+                        Utilizamos encriptación SSL para pagos seguros respaldado por <span></span>
+                    @else
+                        We use SSL encryption for secure payments powered by <span></span>
+                    @endif
+                </h3>
+                @if(false)
+                    <div>
+                        <label class="active">
+                            <input type="radio" name="payment_type" id="paypal" value="paypal" checked>
+                            PayPal
+                            <img src="/assets/img/checkout/paypal.svg" alt="PayPal" title="PayPal">
+                        </label>                    
+                        <label>
+                            <input type="radio" name="payment_type" id="card" value="credit_card">
+                            <span>{{ __('quote/checkout.credit_card_text') }}</span>                        
+                            <img src="/assets/img/checkout/mastercard.svg" alt="{{ __('quote/checkout.credit_card_text') }}" title="{{ __('quote/checkout.credit_card_text') }}">                        
+                        </label>                    
+                        @if($data['places']['config']['flight_required'] && false)
+                        <label>
+                            <input type="radio" name="payment_type" id="cash" value="cash">
+                            <span>{{ __('quote/checkout.cash_text') }}</span>
+                            <img src="/assets/img/checkout/cash.svg" alt="PayPal" title="PayPal">
+                        </label>
+                        @endif
+                    </div>
+                @endif
+                <div id="paymentV2">
+                    <div id="payment-form">
+                        <div id="payment-element"></div>
+                        <div id="error-message"></div>
+                    </div>
+                </div>
+                <div id="paymentInfo">
+                    @if(app()->getLocale() == "en")
+                        <p><strong>Important!</strong> You have to present the debit or credit card with which you made the payment when starting your transfer.</p>
+                        <p>If you choose to pay by credit/debit card, your payment will be converted into local currency (MXN) at a preferential exchange rate for you ❤️.</p>
+                    @else
+                        <p><strong>¡Importante!</strong> Debe presentar la tarjeta de débito o crédito con la que realizó el pago al iniciar la transferencia.</p>
+                        <p>Si elige pagar con tarjeta de crédito/débito, su pago se convertirá en moneda local (MXN) a un tipo de cambio preferente para usted ❤️.</p>
                     @endif
                 </div>
             </div>
@@ -146,7 +195,7 @@
                 <input type="hidden" name="token" value="{{ $data['items']['token'] }}">
                 <input type="hidden" name="type" value="{{ $quote['type'] }}">
                 @csrf
-                <button id="btn_send" type="button" class="btn" onclick="handler()">{{ __('quote/checkout.book_now_btn') }}</button>
+                <button id="btn_send" type="submit" class="btn">{{ __('quote/checkout.book_now_btn') }}</button>
             </div>
 
 

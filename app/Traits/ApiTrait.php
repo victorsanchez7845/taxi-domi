@@ -136,6 +136,13 @@ trait ApiTrait
             $data['pay_at_arrival'] = 1;
         }
 
+        $data['data']['payment'] = [
+            "id" => $request['payment']['id'],
+            "brand" => "STRIPE",
+            "amount" => $request['payment']['amount'] / 100,
+            "currency" => strtoupper($request['payment']['currency'])
+        ];
+        
         $auth = session()->get('auth');
         $headers[] = 'Authorization: Bearer ' . $auth['token'];
 
@@ -147,6 +154,20 @@ trait ApiTrait
         $headers[] = 'Authorization: Bearer ' . $auth['token'];
 
         return self::sendRequest('/api/v1/reservation/payment/handler', 'GET', $data, $headers);
+    }
+
+    public static function paymentElements($items = []){
+
+        $auth = session()->get('auth');
+        $headers[] = 'Authorization: Bearer ' . $auth['token'];
+
+        $data = [
+            "language" => app()->getLocale(),
+            "total" => $items['price'],
+            "currency" => $items['currency']
+        ];
+
+        return self::sendRequest('/api/v1/reservation/payment/expressCheckoutElements', 'GET', $data, $headers);
     }
 
     public static function checkReservation($data){        
@@ -161,6 +182,7 @@ trait ApiTrait
         $headers = array_merge($headers, $headers_merge);
 
         $url = 'https://api.caribbean-transfers.com'.$end_point;
+                
         $ch = curl_init($url);
 
         if ($method == 'POST') {

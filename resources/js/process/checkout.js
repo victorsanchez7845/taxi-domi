@@ -10,8 +10,55 @@ let formData = {
     special_request: document.getElementsByName('special_request')[0],
 };
 
-function handler(){    
-    deleteMessages();    
+function deleteMessages() {
+    Object.keys(formData).forEach(function(key) {
+        if(formData[key]){
+            let after_span = formData[key].nextSibling;
+            if (after_span && after_span.nodeName === 'SPAN') {
+                after_span.remove();
+            }
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {    
+    var labels = document.querySelectorAll('.payment-information label');    
+    
+    labels.forEach(function (label) {
+      label.addEventListener('click', function () {        
+        labels.forEach(function (l) {
+          l.classList.remove('active');
+        });
+        
+        label.classList.add('active');
+        
+        var radioButtons = document.querySelectorAll('input[name="payment_type"]');
+        radioButtons.forEach(function (radio) {
+          radio.checked = false;
+        });
+        
+        var radioButton = label.querySelector('input[name="payment_type"]');
+        radioButton.checked = true;
+      });
+    });
+});
+
+
+
+const messageContainer = document.querySelector('#error-message');
+const handleError = (error) => {
+    messageContainer.textContent = error.message;
+}
+const handleClearError = () => {
+    messageContainer.textContent = "";
+}
+
+const form = document.getElementById('checkoutForm');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    deleteMessages();
+    handleClearError();
 
     let data = {};
     Object.keys(formData).forEach(function(key) {
@@ -55,9 +102,47 @@ function handler(){
 
     let validation = new Validator(data, rules, messages);
 
-    if (validation.passes()) {     
-        var form = document.getElementById("checkoutForm");
-        form.submit();
+    if (validation.passes()) {
+        btn.classList.add("loading");
+        btn.disabled = true;
+
+        const {error, paymentIntent} = await stripe.confirmPayment({
+            elements,
+            redirect: "if_required"
+        });
+        
+        if(error){
+            btn.classList.remove("loading");
+            btn.disabled = false;
+            handleError(error);
+        } else if (paymentIntent) {                        
+
+            // Crear y configurar el input para payment ID
+            const inputId = document.createElement("input");
+            inputId.type = "hidden";
+            inputId.name = "payment[id]";
+            inputId.value = paymentIntent.id;
+
+            // Crear y configurar el input para payment amount
+            const inputAmount = document.createElement("input");
+            inputAmount.type = "hidden";
+            inputAmount.name = "payment[amount]";
+            inputAmount.value = paymentIntent.amount;
+
+            // Crear y configurar el input para payment currency
+            const inputCurrency = document.createElement("input");
+            inputCurrency.type = "hidden";
+            inputCurrency.name = "payment[currency]";
+            inputCurrency.value = paymentIntent.currency;
+
+            // Añadir los inputs al formulario
+            form.appendChild(inputId);
+            form.appendChild(inputAmount);
+            form.appendChild(inputCurrency);
+
+            form.submit();
+        }
+        
     } else {
         
         Object.keys(validation.errors.errors).forEach(function(key) {  
@@ -69,38 +154,5 @@ function handler(){
                 }
         });        
         return false;
-    }    
-}
-
-function deleteMessages() {
-    Object.keys(formData).forEach(function(key) {
-        if(formData[key]){
-            let after_span = formData[key].nextSibling;
-            if (after_span && after_span.nodeName === 'SPAN') {
-                after_span.remove();
-            }
-        }
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function () {    
-    var labels = document.querySelectorAll('.payment-information label');    
-    
-    labels.forEach(function (label) {
-      label.addEventListener('click', function () {        
-        labels.forEach(function (l) {
-          l.classList.remove('active');
-        });
-        
-        label.classList.add('active');
-        
-        var radioButtons = document.querySelectorAll('input[name="payment_type"]');
-        radioButtons.forEach(function (radio) {
-          radio.checked = false;
-        });
-        
-        var radioButton = label.querySelector('input[name="payment_type"]');
-        radioButton.checked = true;
-      });
-    });
+    }  
 });
