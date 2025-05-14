@@ -49,10 +49,11 @@ Route::middleware('locale')->group(function () {
         Route::get('/my-reservation-detail/{uuid}', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.en');
 
         Route::get('/payment/{uuid}', [PaymentController::class, 'paymentUUID'])->name('payments.uuid.en');
+        Route::get('/payment-capture-order', [PaymentController::class, 'paypalCapture'])->name('reservation.payment.paypal.capture.en'); //PayPal Capture
         //Route::get('/payment', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.en');
         //Route::get('/payment', [PaymentController::class, 'santander'])->name('reservation.payment.en');
-        Route::post('/payment-create-order', [ProcessController::class, 'paymentPayPalOrder'])->name('reservation.payment.paypal.order.en');
-        Route::post('/payment-execute-order', [ProcessController::class, 'paymentPayPalCreate'])->name('reservation.payment.paypal.create.en');
+        //Route::post('/payment-create-order', [ProcessController::class, 'paymentPayPalOrder'])->name('reservation.payment.paypal.order.en');
+        //Route::post('/payment-execute-order', [ProcessController::class, 'paymentPayPalCreate'])->name('reservation.payment.paypal.create.en');
     });
 
     Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->group(function () {
@@ -83,6 +84,7 @@ Route::middleware('locale')->group(function () {
             Route::post('/procesando', [ProcessController::class, 'processingHandler'])->name('step.three.handler.es');
             Route::get('/mi-reservacion-detalle/{uuid}', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.es');
             Route::get('/pago/{uuid}', [PaymentController::class, 'paymentUUID'])->name('payments.uuid.es');
+            Route::get('/payment-capture-order', [PaymentController::class, 'paypalCapture'])->name('reservation.payment.paypal.capture.es'); //PayPal Capture
             //Route::get('/pago', [PaymentController::class, 'santander'])->name('reservation.payment.es');
             //Route::get('/pago', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.es');
         });
