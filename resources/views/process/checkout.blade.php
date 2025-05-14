@@ -174,29 +174,6 @@
                             @endif
                         </div>
                     </div>
-                    @if( ($data['places']['config']['flight_required'] && $data['items']['id'] != 5) && (isset($_SERVER['HTTP_CF_IPCOUNTRY']) && $_SERVER['HTTP_CF_IPCOUNTRY'] != "US" ) )
-                        <div class="element" data-type="cash">
-                            <div class="top">
-                                <h3>
-                                    @if(app()->getLocale() == "en")
-                                        Cash
-                                    @else
-                                        Efectivo
-                                    @endif
-                                </h3>
-                                <div>
-                                    <img src="/assets/img/checkout/cash.png" width="45" height="45" alt="" title="" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="bottom">                                    
-                                @if(app()->getLocale() == "en")
-                                    <p>Tax service <strong>${{ $data['items']['cash_fee'] }} {{ $data['items']['currency'] }}</strong>, you can save this fee prepaying online.</p>
-                                @else
-                                    <p>Tarifa de servicio por <strong>${{ $data['items']['cash_fee'] }} {{ $data['items']['currency'] }}</strong>, usted puede ahorrar esta cuota pagando en línea.</p>
-                                @endif
-                            </div>
-                        </div>
-                    @endif
                 </div>
             </div>
     
