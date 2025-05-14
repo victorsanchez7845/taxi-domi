@@ -46,10 +46,11 @@ Route::middleware('locale')->group(function () {
         Route::get('/register', [ProcessController::class, 'checkout'])->name('step.two.en');
         Route::post('/register', [ProcessController::class, 'handlerCheckout'])->name('step.two.handler.en');            
         Route::post('/processing', [ProcessController::class, 'processingHandler'])->name('step.three.handler.en');    
-        Route::get('/my-reservation-detail', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.en');
+        Route::get('/my-reservation-detail/{uuid}', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.en');
 
+        Route::get('/payment/{uuid}', [PaymentController::class, 'paymentUUID'])->name('payments.uuid.en');
         //Route::get('/payment', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.en');
-        Route::get('/payment', [PaymentController::class, 'santander'])->name('reservation.payment.en');
+        //Route::get('/payment', [PaymentController::class, 'santander'])->name('reservation.payment.en');
         Route::post('/payment-create-order', [ProcessController::class, 'paymentPayPalOrder'])->name('reservation.payment.paypal.order.en');
         Route::post('/payment-execute-order', [ProcessController::class, 'paymentPayPalCreate'])->name('reservation.payment.paypal.create.en');
     });
@@ -80,8 +81,9 @@ Route::middleware('locale')->group(function () {
             Route::get('/registro', [ProcessController::class, 'checkout'])->name('step.two.es');
             Route::post('/registro', [ProcessController::class, 'handlerCheckout'])->name('step.two.handler.es');        
             Route::post('/procesando', [ProcessController::class, 'processingHandler'])->name('step.three.handler.es');
-            Route::get('/mi-reservacion-detalle', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.es');
-            Route::get('/pago', [PaymentController::class, 'santander'])->name('reservation.payment.es');
+            Route::get('/mi-reservacion-detalle/{uuid}', [ProcessController::class, 'reservationDetail'])->name('reservation.detail.es');
+            Route::get('/pago/{uuid}', [PaymentController::class, 'paymentUUID'])->name('payments.uuid.es');
+            //Route::get('/pago', [PaymentController::class, 'santander'])->name('reservation.payment.es');
             //Route::get('/pago', [ProcessController::class, 'paymentPaypal'])->name('reservation.payment.paypal.es');
         });
     });

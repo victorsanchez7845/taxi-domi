@@ -76,10 +76,10 @@
     <div id="aff-error-list"></div>
     <p>            
         <?php if(app()->getLocale() == "en"): ?>
-            Cheaper than at the airport!
+            Premium service, comfort, and reliability every step of the way. Yes, we go to <span></span>
         <?php endif; ?>
         <?php if(app()->getLocale() == "es"): ?>
-            ¡Más barato que en el Aeropuerto!
+            Servicio de primera, comodidad y confianza en cada viaje. Sí, vamos a <span></span>
         <?php endif; ?>
     </p>
 </div>

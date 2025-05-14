@@ -44,4 +44,12 @@ return [
         'key' => env('CAPTCHA_PUBLIC',''),
         'secret' => env('CAPTCHA_SECRET',''),
     ],
+    'payment' => [
+        'stripe' => [
+            'public' => env('PAYMENT_STRIPE_PUBLIC')
+        ],
+        'paypal' => [            
+            'public' => env('PAYMENT_PAYPAL_PUBLIC', '')
+        ]
+    ]
 ];

@@ -551,6 +551,30 @@
             "en": "/payment"
         }
     },
+    "payment-all": {
+        "languages": {            
+            "es": {
+                "path": "/es/pago/{uuid}",
+                "metas": {
+                    "title": "Realiza tu pago de manera segura | Caribbean Transfers",
+                    "description": "Realiza tu pago de manera segura, tu transacción será encriptada de principio a fin.",
+                    "keywords": ""
+                }
+            },
+            "en": {
+                "path": "/payment/{uuid}",
+                "metas": {
+                    "title": "Make your payment securely | Caribbean Transfers",
+                    "description": "Make your payment securely, your transaction will be encrypted from beginning to end.",
+                    "keywords": ""
+                }
+            }
+        },
+        "alternates": {
+            "es": "/es/pago/{uuid}",
+            "en": "/payment/{uuid}"
+        }
+    },
     "card-payment-mifel": {
         "languages": {
             "es": {

@@ -17,10 +17,10 @@
         "quote_processing" => "/processing",
         "quote_thank_you" => "/thank-you",
         "quote_cancel" => "/cancel",
-        "quote_reservation_detail" => "/my-reservation-detail",
+        "quote_reservation_detail" => "/my-reservation-detail/:uuid",
         "silos_cancun" => "/cancun",
         "silos_tulum" => "/tulum",
         "silos_playa_del_carmen" => "/playa-del-carmen",
         "hotels" => "/shuttle-to-:slug",
-        "payment" => "/payment",
+        "payment" => "/payment/:uuid",
     ];

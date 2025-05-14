@@ -172,10 +172,6 @@ class ProcessController extends Controller{
             
             'arrival_airline' => 'max:25',
             'arrival_flight_number' => 'max:25',
-
-            'payment.id' => 'required',
-            'payment.amount' => 'required',
-            'payment.currency' => 'required',
         ]);
 
         Session::put( 'client_data', [
@@ -188,8 +184,8 @@ class ProcessController extends Controller{
             'arrival_flight_number' => (( isset($request->arrival_flight_number) )? $request->arrival_flight_number : ''),
         ] );
 
-        if ($validator->fails()) {
-            return redirect()->route('step.two.' . app()->getLocale(), ['locale' => app()->getLocale()]);
+        if ($validator->fails()) {            
+            return redirect()->route('step.two.' . app()->getLocale(), ['locale' => app()->getLocale(), "error" => implode(",", $validator->errors()->all()) ]);
         }
 
         $data = ApiTrait::create($request);
@@ -201,21 +197,10 @@ class ProcessController extends Controller{
         Session::put( 'reservation', $data);
         
         $payment_link = trans('link.quote_thank_you');
-        if( in_array( $request->payment_type, ['paypal','credit_card'] ) ):
-            $payment_data = [
-                "type" => (( $request->payment_type == 'paypal' )? 'PAYPAL' : 'STRIPE-2'),
-                "id" => $data['config']['id'],
-                "language" => "es",
-                "success_url" => trans('link.quote_thank_you'),
-                "cancel_url" => trans('link.quote_cancel')
-            ];
-            $payment_data = ApiTrait::paymentLink($payment_data);
-            $payment_link = $payment_data['url'];
-        endif;
 
-        /*if( in_array( $request->payment_type, ['credit_card'] ) ):
-            $payment_link = trans('link.payment');
-        endif;*/
+        if( in_array( $request->payment_type, ['paypal', 'credit_card'] ) ):
+            $payment_link = trans('link.payment', ['uuid' => $data['config']['uuid'] ]);
+        endif;
 
         return view('process.processing', [ 'payment' => $payment_link, 'seo' => $this->seo, 'data' => $data ]);
     }
@@ -231,11 +216,6 @@ class ProcessController extends Controller{
     }
 
     public function login(){
-        $rez = session()->get('reservation');
-        if( $rez ):            
-            return redirect()->route('reservation.detail.' . app()->getLocale(), ['locale' => app()->getLocale()]);
-        endif;
-
         $this->seoData("login");
         return view('process.login', ['seo' => $this->seo]);
     }
@@ -256,77 +236,45 @@ class ProcessController extends Controller{
             "language" => 'es'
         ];
 
-        $data = ApiTrait::checkReservation($item);
-        
-        if( isset( $data['error'] ) ):
-            return view('process.login', ['data' => $item]);
+        $rez = ApiTrait::checkReservation($item);        
+        if( isset( $rez['error'] ) ):
+            return redirect()->to(
+                trans('link.reservation') . '?' . http_build_query([
+                    'code' => $rez['error']['code'],
+                    'message' => $rez['error']['message']
+                ])
+            );
         endif;
 
-        Session::put( 'reservation', $data);
-
-        return redirect()->route('reservation.detail.' . app()->getLocale(), ['locale' => app()->getLocale()]);
+        return redirect( trans('link.quote_reservation_detail', ['uuid' => $rez['config']['uuid'] ]) );        
     }
 
-    public function reservationDetail(Request $request){
+    public function reservationDetail(Request $request, ...$args){
+        $uuid = $args[0];
+        if (count($args) > 1) $uuid = $args[1];
+
         $this->seoData("reservation-detail");
-        if(isset( $request->logout )):
-            session()->forget('reservation');
-            return redirect()->route('login.' . app()->getLocale(), ['locale' => app()->getLocale()]);
-        endif;
 
-        if(isset( $request->code ) && isset( $request->email )):
-            $item = [
-                "code" => $request->code,
-                "email" => $request->email,
-                "language" => app()->getLocale()
-            ];
-    
-            $data = ApiTrait::checkReservation($item);
-            if( isset( $data['error'] ) ):
-                return view('process.login', ['data' => $item]);
-            endif;
-
-            Session::put( 'reservation', $data);
-        endif;
-
-        $rez = session()->get('reservation');
-        if( $rez == NULL ):
-            return redirect()->route('login.' . app()->getLocale(), ['locale' => app()->getLocale()]);
-        endif;
-
-        $payment_links = [
-            "PAYPAL" => NULL,
-            "STRIPE" => NULL,
+        $this->seo['alternate']['en'] = str_replace("{uuid}", $uuid, $this->seo['alternate']['en']);
+        $this->seo['alternate']['es'] = str_replace("{uuid}", $uuid, $this->seo['alternate']['es']);
+        
+        $item = [
+            "uuid" => $uuid,
+            "language" => app()->getLocale()
         ];
+        
+        $rez = ApiTrait::checkReservation($item);
 
-       if($rez['payments']['total'] <= 0):
-            $payment_data = [
-                "type" => 'PAYPAL',
-                "id" => $rez['config']['id'],
-                "language" => "es",
-                "success_url" => trans('link.quote_thank_you'),
-                "cancel_url" => trans('link.quote_cancel')
-            ];
-            
-            $paypal = ApiTrait::paymentLink($payment_data);
-            if(!isset( $paypal['error'] )):
-                $payment_links['PAYPAL'] = $paypal['url'];
-            endif;
-            
-            $payment_data = [
-                "type" => 'STRIPE-2',
-                "id" => $rez['config']['id'],
-                "language" => "es",
-                "success_url" => trans('link.quote_thank_you'),
-                "cancel_url" => trans('link.quote_cancel')
-            ];            
-            $stripe = ApiTrait::paymentLink($payment_data);
-            if(!isset( $stripe['error'] )):
-                $payment_links['STRIPE'] = $stripe['url'];
-            endif;
+        if( isset( $rez['error'] ) ):
+            return redirect()->to(
+                trans('link.reservation') . '?' . http_build_query([
+                    'code' => $rez['error']['code'],
+                    'message' => $rez['error']['message']
+                ])
+            );
         endif;
 
-        return view('process.reservation-detail', ['rez' => $rez, 'payment_link' => $payment_links, 'seo' => $this->seo]);
+        return view('process.reservation-detail', ['rez' => $rez, 'seo' => $this->seo]);
     }
 
     public function paymentPaypal(Request $request){
