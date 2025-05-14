@@ -45,6 +45,11 @@ mix.js(DATA.RESOURCES+'/js/quotations/index.js', DATA.PUBLIC_FOLDER + "/js/quota
 mix.js(DATA.RESOURCES+'/js/bookingbox/lastminute.js', DATA.PUBLIC_FOLDER + "/js/bookingbox/lastminute.min.js");
 
 mix.combine([DATA.RESOURCES+'/js/libs/validator.js', DATA.RESOURCES+'/js/process/checkout.js'], DATA.PUBLIC_FOLDER + '/js/process/checkout.min.js');
+mix.combine([DATA.RESOURCES+'/js/libs/validator.js', DATA.RESOURCES+'/js/libs/intlTelInput.min.js', DATA.RESOURCES+'/js/process/checkout-v1.js'], DATA.PUBLIC_FOLDER + '/js/process/checkout-v1.min.js');
+
+//Payment
+mix.sass(DATA.RESOURCES+'/scss/process/payment/index.scss', DATA.PUBLIC_FOLDER + "/css/process/payment/index.min.css");
+mix.js(DATA.RESOURCES+'/js/process/payment.js', DATA.PUBLIC_FOLDER + "/js/process/payment.min.js");
 
 if (mix.inProduction()) {
     mix.version();

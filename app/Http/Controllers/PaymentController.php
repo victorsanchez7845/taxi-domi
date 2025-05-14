@@ -52,4 +52,55 @@ class PaymentController extends Controller{
 
         return view('process.card-payment-santander', ['seo' => $this->seo, 'rez' => $rez, 'bank' => $bank]);
     }
+
+    public function paymentUUID(Request $request, ...$args){
+        $uuid = $args[0];
+        if (count($args) > 1) $uuid = $args[1];
+
+        $item = [
+            "uuid" => $uuid,
+            "language" => app()->getLocale()
+        ];
+
+        $rez = ApiTrait::checkReservation($item);
+        
+        if( isset( $rez['error'] ) ):
+            return redirect()->to(
+                trans('link.reservation') . '?' . http_build_query([
+                    'code' => $rez['error']['code'],
+                    'message' => $rez['error']['message']
+                ])
+            );
+        endif;
+        
+        //PayPal
+        $payment_data = [
+            "type" => 'PAYPAL-V2',
+            "id" => $rez['config']['id'],
+            "language" => app()->getLocale(),
+            "success_url" => trans('link.quote_thank_you'),
+            "cancel_url" => trans('link.quote_cancel')
+        ];
+
+        $paypal = ApiTrait::paymentLink($payment_data);
+        if(!isset( $paypal['url'] )) $paypal['url'] = NULL;   
+
+        //STRIPE ORDER
+        $payment_data = [
+            "language" => app()->getLocale(),
+            "price" => $rez['payments']['pending'],
+            "currency" => $rez['config']['currency'],
+            "id" => $rez['config']['id']
+        ];
+        
+        $stripe = ApiTrait::paymentElements($payment_data);
+        if(!isset( $stripe['id'] )) $stripe['id'] = NULL;
+
+        $this->seoData("payment-all");
+
+        $this->seo['alternate']['en'] = str_replace("{uuid}", $uuid, $this->seo['alternate']['en']);
+        $this->seo['alternate']['es'] = str_replace("{uuid}", $uuid, $this->seo['alternate']['es']);
+        
+        return view('process.payment.index', ['seo' => $this->seo, 'data' => $rez, "paypal_id" => $paypal['url'], "stripe_id" => $stripe['id'], "uuid" => $uuid ]);
+    }
 }

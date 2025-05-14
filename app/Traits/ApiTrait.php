@@ -135,13 +135,6 @@ trait ApiTrait
         if($request->payment_type == "cash"){
             $data['pay_at_arrival'] = 1;
         }
-
-        $data['data']['payment'] = [
-            "id" => $request['payment']['id'],
-            "brand" => "STRIPE",
-            "amount" => $request['payment']['amount'] / 100,
-            "currency" => strtoupper($request['payment']['currency'])
-        ];
         
         $auth = session()->get('auth');
         $headers[] = 'Authorization: Bearer ' . $auth['token'];

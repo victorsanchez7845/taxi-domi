@@ -14,31 +14,7 @@
 @push("push-bottom")
     <x-analytics/>
     <x-hotjar/>
-
-    <script>
-        const stripe = Stripe('pk_live_51PTwwLHTWfttKamJWgj0rpn2cxAntGeadaCDbZWqlzbDyG2puIFxNnprnxwDfNdVNKlYIthcXeXshSlFM5dKc9PB00WMAWPd1i');
-        const elements = stripe.elements({
-            clientSecret: `{!! $payments['data'] !!}`,
-        });
-        elements.update({locale: `{!! app()->getLocale() !!}`});
-
-        const paymentElementOptions = {
-            layout: {
-                type: 'accordion',
-                defaultCollapsed: false,
-                radios: true,
-                spacedAccordionItems: true
-            },
-            business: {
-                name: "Caribbean Transfers"
-            },
-            paymentMethodOrder: ['card', 'apple_pay', 'google_pay']
-        };
-
-        const paymentElement = elements.create('payment', paymentElementOptions);
-        paymentElement.mount("#payment-element");
-    </script>
-    <script src="{{ mix('/assets/js/process/checkout.min.js') }}" defer></script>
+    <script src="{{ mix('/assets/js/process/checkout-v1.min.js') }}" defer></script>
 @endpush
 
 @section('content')
@@ -53,6 +29,8 @@
     @endphp    
 
     <form class="container checkout-container" method="POST" action="@lang('link.quote_processing')" id="checkoutForm">
+        <input type="hidden" name="phone" id="fill-phone" value="{{ $form['phone'] }}">
+
         @if(isset($_GET['code']))
         <div class="badge-error">
             <p><strong>{{ $_GET['code'] }}</strong>: {{ $_GET['message'] }}</p>
@@ -131,7 +109,7 @@
                         </div>
                         <div>
                             <label>{{ __('quote/checkout.phone') }}</label>
-                            <input type="text" class="form-control" name="phone" placeholder="{{ __('quote/checkout.phone_placeholder') }}" value="{{ $form['phone'] }}">
+                            <input type="text" class="form-control" name="phone_input" placeholder="{{ __('quote/checkout.phone_placeholder') }}" value="{{ $form['phone'] }}" id="phone">
                         </div>
                     </div>
                     <div class="three">
@@ -147,45 +125,77 @@
                 <h2>{{ __('quote/checkout.payment_method') }}</h2>
                 <h3>
                     @if(app()->getLocale() == "es")
-                        Utilizamos encriptación SSL para pagos seguros respaldado por <span></span>
+                        Utilizamos encriptación SSL para pagos seguros respaldados por las mejores plataformas de pago.                    
                     @else
-                        We use SSL encryption for secure payments powered by <span></span>
+                        We use SSL encryption for secure payments backed by the best payment platforms.
                     @endif
                 </h3>
-                @if(false)
-                    <div>
-                        <label class="active">
-                            <input type="radio" name="payment_type" id="paypal" value="paypal" checked>
-                            PayPal
-                            <img src="/assets/img/checkout/paypal.svg" alt="PayPal" title="PayPal">
-                        </label>                    
-                        <label>
-                            <input type="radio" name="payment_type" id="card" value="credit_card">
-                            <span>{{ __('quote/checkout.credit_card_text') }}</span>                        
-                            <img src="/assets/img/checkout/mastercard.svg" alt="{{ __('quote/checkout.credit_card_text') }}" title="{{ __('quote/checkout.credit_card_text') }}">                        
-                        </label>                    
-                        @if($data['places']['config']['flight_required'] && false)
-                        <label>
-                            <input type="radio" name="payment_type" id="cash" value="cash">
-                            <span>{{ __('quote/checkout.cash_text') }}</span>
-                            <img src="/assets/img/checkout/cash.svg" alt="PayPal" title="PayPal">
-                        </label>
-                        @endif
+                <div class="paymentV4">
+                    <div class="element active" data-type="credit_card">
+                        <div class="top">
+                            <h3>
+                                @if(app()->getLocale() == "en")
+                                    Credit/Debit Card or PayPal Account
+                                @else
+                                    Tarjeta de Crédito/Débito o Cuenta de PayPal
+                                @endif
+                            </h3>
+                            <div>
+                                <img src="/assets/img/payments/AMEX.png" width="24" height="16" alt="" title="" loading="lazy">
+                                <img src="/assets/img/payments/MC.png" width="24" height="16" alt="" title="" loading="lazy">
+                                <img src="/assets/img/payments/VISA.png" width="24" height="16" alt="" title="" loading="lazy">
+                                <img src="/assets/img/payments/JCB.png" width="24" height="16" alt="" title="" loading="lazy">
+                                <img src="/assets/img/payments/UNIONPAY.png" width="24" height="16" alt="" title="" loading="lazy">
+                                <img src="/assets/img/payments/DINERS.png" width="24" height="16" alt="" title="" loading="lazy">
+                                <img src="/assets/img/payments/DISCOVER.png" width="24" height="16" alt="" title="" loading="lazy">                                        
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            @if(app()->getLocale() == "en")
+                                <p>We accept payments with <strong>PayPal</strong> and <strong>Stripe</strong>, two of the most trusted platforms worldwide.</p>
+                                <ul>
+                                    <li>✅ Guaranteed security</li>
+                                    <li>✅ Pay with card or PayPal account</li>
+                                    <li>✅ Hassle-free</li>
+                                </ul>                            
+                            @else
+                                <p>Aceptamos pagos con <strong>PayPal</strong> y <strong>Stripe</strong>, dos de las plataformas más confiables a nivel mundial.</p>
+                                <ul>
+                                    <li>✅ Seguridad garantizada</li>
+                                    <li>✅ Paga con tarjeta o cuenta PayPal</li>
+                                    <li>✅ Sin complicaciones</li>
+                                </ul>
+                            @endif
+                            <hr>
+                            @if(app()->getLocale() == "en")
+                                <p><strong>Important!</strong> You have to present the debit or credit card with which you made the payment when starting your transfer.</p>
+                            @else
+                                <p><strong>¡Importante!</strong> Debe presentar la tarjeta de débito o crédito con la que realizó el pago al iniciar la transferencia.</p>
+                            @endif
+                        </div>
                     </div>
-                @endif
-                <div id="paymentV2">
-                    <div id="payment-form">
-                        <div id="payment-element"></div>
-                        <div id="error-message"></div>
-                    </div>
-                </div>
-                <div id="paymentInfo">
-                    @if(app()->getLocale() == "en")
-                        <p><strong>Important!</strong> You have to present the debit or credit card with which you made the payment when starting your transfer.</p>
-                        <p>If you choose to pay by credit/debit card, your payment will be converted into local currency (MXN) at a preferential exchange rate for you ❤️.</p>
-                    @else
-                        <p><strong>¡Importante!</strong> Debe presentar la tarjeta de débito o crédito con la que realizó el pago al iniciar la transferencia.</p>
-                        <p>Si elige pagar con tarjeta de crédito/débito, su pago se convertirá en moneda local (MXN) a un tipo de cambio preferente para usted ❤️.</p>
+                    @if( ($data['places']['config']['flight_required'] && $data['items']['id'] != 5) && (isset($_SERVER['HTTP_CF_IPCOUNTRY']) && $_SERVER['HTTP_CF_IPCOUNTRY'] != "US" ) )
+                        <div class="element" data-type="cash">
+                            <div class="top">
+                                <h3>
+                                    @if(app()->getLocale() == "en")
+                                        Cash
+                                    @else
+                                        Efectivo
+                                    @endif
+                                </h3>
+                                <div>
+                                    <img src="/assets/img/checkout/cash.png" width="45" height="45" alt="" title="" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="bottom">                                    
+                                @if(app()->getLocale() == "en")
+                                    <p>Tax service <strong>${{ $data['items']['cash_fee'] }} {{ $data['items']['currency'] }}</strong>, you can save this fee prepaying online.</p>
+                                @else
+                                    <p>Tarifa de servicio por <strong>${{ $data['items']['cash_fee'] }} {{ $data['items']['currency'] }}</strong>, usted puede ahorrar esta cuota pagando en línea.</p>
+                                @endif
+                            </div>
+                        </div>
                     @endif
                 </div>
             </div>
@@ -194,6 +204,7 @@
                 <p>{{ __('quote/checkout.accept_terms_text') }} <a href="@lang('link.terms')" target="_blank" title="{{ __('quote/checkout.terms_and_conditions') }}">{{ __('quote/checkout.terms_and_conditions') }}</a>.</p>
                 <input type="hidden" name="token" value="{{ $data['items']['token'] }}">
                 <input type="hidden" name="type" value="{{ $quote['type'] }}">
+                <input type="hidden" name="payment_type" id="payment_type" value="credit_card">
                 @csrf
                 <button id="btn_send" type="submit" class="btn">{{ __('quote/checkout.book_now_btn') }}</button>
             </div>
