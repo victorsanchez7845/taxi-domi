@@ -135,7 +135,7 @@ trait ApiTrait
         if($request->payment_type == "cash"){
             $data['pay_at_arrival'] = 1;
         }
-        
+
         $auth = session()->get('auth');
         $headers[] = 'Authorization: Bearer ' . $auth['token'];
 
@@ -157,7 +157,8 @@ trait ApiTrait
         $data = [
             "language" => app()->getLocale(),
             "total" => $items['price'],
-            "currency" => $items['currency']
+            "currency" => $items['currency'],
+            "id" => $items['id'],
         ];
 
         return self::sendRequest('/api/v1/reservation/payment/expressCheckoutElements', 'GET', $data, $headers);
