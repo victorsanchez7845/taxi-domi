@@ -135,7 +135,7 @@ trait ApiTrait
         if($request->payment_type == "cash"){
             $data['pay_at_arrival'] = 1;
         }
-
+        
         $auth = session()->get('auth');
         $headers[] = 'Authorization: Bearer ' . $auth['token'];
 
@@ -157,8 +157,7 @@ trait ApiTrait
         $data = [
             "language" => app()->getLocale(),
             "total" => $items['price'],
-            "currency" => $items['currency'],
-            "id" => $items['id'],
+            "currency" => $items['currency']
         ];
 
         return self::sendRequest('/api/v1/reservation/payment/expressCheckoutElements', 'GET', $data, $headers);
@@ -166,6 +165,14 @@ trait ApiTrait
 
     public static function checkReservation($data){        
         return self::sendRequest('/api/v1/reservation/get', 'POST', $data, []);
+    }
+
+    public static function payPalCaptureOrder($id){
+        $data = [
+            "id" => $id
+        ];
+
+        return self::sendRequest('/api/v1/reservation/payment/paypal/capture-order', 'GET', $data, []);
     }
 
     public static function sendRequest($end_point, $method = 'GET', $data = null, $headers_merge = []) {

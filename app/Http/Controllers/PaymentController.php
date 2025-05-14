@@ -53,6 +53,24 @@ class PaymentController extends Controller{
         return view('process.card-payment-santander', ['seo' => $this->seo, 'rez' => $rez, 'bank' => $bank]);
     }
 
+    public function paypalCapture(Request $request){
+        $validator = Validator::make($request->all(), [
+            'id' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                    'error' => [
+                        'code' => 'required_params',
+                        'message' =>  $validator->errors()->all() 
+                    ]
+                ], 404);
+        }
+        
+        $data = ApiTrait::payPalCaptureOrder($request->id);
+        return response()->json($data['data'], 200);
+    }
+
     public function paymentUUID(Request $request, ...$args){
         $uuid = $args[0];
         if (count($args) > 1) $uuid = $args[1];
