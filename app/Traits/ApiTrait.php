@@ -157,7 +157,8 @@ trait ApiTrait
         $data = [
             "language" => app()->getLocale(),
             "total" => $items['price'],
-            "currency" => $items['currency']
+            "currency" => $items['currency'],
+            "id" => $items['id'],
         ];
 
         return self::sendRequest('/api/v1/reservation/payment/expressCheckoutElements', 'GET', $data, $headers);
