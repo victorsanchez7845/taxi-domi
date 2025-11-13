@@ -1,12 +1,20 @@
-@extends('layout.master')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tulum Airport Cab</title>
 
-@push("push-top")
-    <link href="{{ mix('/assets/css/process/processing.min.css') }}" rel="preload" as="style" >
-    <link href="{{ mix('/assets/css/process/processing.min.css') }}" rel="stylesheet">    
-@endpush
-@push("push-bottom")
-    <x-hotjar/>
-    <x-analytics/>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16596385055"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16596385055');
+    </script>
+
     @if(app()->getLocale() == "es")
         <script>
             gtag('event', 'conversion', {
@@ -27,39 +35,33 @@
             });
         </script>
     @endif
-@endpush
-
-@section('content')
-    @include('layout.header.checkout',['link' => \App\Traits\GeneralTrait::getAlternate( $seo )])
-    
-    <div class="parallax-container">
-        <div class="container">
-            <h1>{{ __('quote/processing.title') }}</h1>
-        </div>
-    </div>
-
-    <div class="container redirect-container">
-        <h2>{{ __('quote/processing.timer') }} <span id="timer">3</span> ...</h2>
-    </div>
 
     <script>
         (function () {
-            var timerElement = document.getElementById("timer");
-            var contador = 3;
-
-            function updateCounter() {
-                timerElement.textContent = contador;
-                contador--;
-
-                if (contador < 0) {
-                    clearInterval(intervalo);
-                   window.location.href = `{!! $payment !!}`;                    
-                }
-            }
-
-            updateCounter();
-            var intervalo = setInterval(updateCounter, 1000);
+            let seconds = 1;
+            setTimeout(() => window.location.href = `{!! $payment !!}`, seconds * 1000);
         })();
     </script>
-    
-@endsection
+
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        h2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+        }
+        div {
+            display: grid;
+            place-content: center;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>{{ __('quote/processing.timer') }}</h2>
+    </div>
+</body>
+</html>

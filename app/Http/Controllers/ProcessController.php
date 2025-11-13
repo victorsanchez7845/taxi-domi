@@ -198,7 +198,19 @@ class ProcessController extends Controller{
         
         $payment_link = trans('link.quote_thank_you');
 
-        if( in_array( $request->payment_type, ['paypal', 'credit_card'] ) ):
+        if( in_array( $request->payment_type, ['credit_card'] ) ):
+            $payment_data = [
+                "type" => (( $request->payment_type == 'paypal' )? 'PAYPAL' : 'STRIPE'),
+                "id" => $data['config']['id'],
+                "language" => "es",
+                "success_url" => trans('link.quote_thank_you'),
+                "cancel_url" => trans('link.quote_cancel')
+            ];
+            $payment_data = ApiTrait::paymentLink($payment_data);
+            $payment_link = $payment_data['url'];
+        endif;
+
+        if( in_array( $request->payment_type, ['paypal'] ) ):
             $payment_link = trans('link.payment', ['uuid' => $data['config']['uuid'] ]);
         endif;
 
