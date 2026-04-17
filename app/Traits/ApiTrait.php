@@ -183,7 +183,7 @@ trait ApiTrait
 
         $headers = array_merge($headers, $headers_merge);
 
-        $url = 'https://api.caribbean-transfers.com'.$end_point;
+        $url = 'https://api.taxidominicana.com'.$end_point;
                 
         $ch = curl_init($url);
 

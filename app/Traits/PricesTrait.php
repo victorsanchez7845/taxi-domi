@@ -75,7 +75,7 @@ trait PricesTrait{
     
     public static function curlGetPrices(){
         $ch = curl_init();
-        curl_setopt( $ch, CURLOPT_URL, "https://api.caribbean-transfers.com/api/v1/rates");
+        curl_setopt( $ch, CURLOPT_URL, "https://api.taxidominicana.com/api/v1/rates");
         curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
         $response = curl_exec( $ch );
         if ($response === false) exit();
