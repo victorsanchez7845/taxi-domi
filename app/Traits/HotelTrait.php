@@ -108,7 +108,7 @@ trait HotelTrait{
 
     public static function curlGetHotel($id){
         $ch = curl_init();
-        curl_setopt( $ch, CURLOPT_URL, "https://api.caribbean-transfers.com/api/v1/hotels?code=".$id);
+        curl_setopt( $ch, CURLOPT_URL, "https://api.taxidominicana.com/api/v1/hotels?code=".$id);
         curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
         $response = curl_exec( $ch );
         if ($response === false) exit();

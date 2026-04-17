@@ -37,9 +37,9 @@ trait GeneralTrait
     }
 
     public static function getTerms($type = 'terms'){
-        $url = 'https://api.caribbean-transfers.com/api/v1/terms-and-conditions';
+        $url = 'https://api.taxidominicana.com/api/v1/terms-and-conditions';
         if( $type == 'privacy' ):
-            $url = 'https://api.caribbean-transfers.com/api/v1/privacy-policy';
+            $url = 'https://api.taxidominicana.com/api/v1/privacy-policy';
         endif;
                 
         $data = array (
