@@ -23,4 +23,5 @@
         "silos_playa_del_carmen" => "/es/playa-del-carmen",
         "hotels" => "/es/traslado-a-:slug",
         "payment" => "/es/pago/:uuid",
+        "blog" => "/es/blog",
     ];

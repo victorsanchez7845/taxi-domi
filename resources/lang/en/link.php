@@ -23,4 +23,5 @@
         "silos_playa_del_carmen" => "/playa-del-carmen",
         "hotels" => "/shuttle-to-:slug",
         "payment" => "/payment/:uuid",
+        "blog" => "/blog",
     ];

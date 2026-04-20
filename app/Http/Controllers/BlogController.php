@@ -6,14 +6,19 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Traits\SeoTrait;
 use App\Traits\GeneralTrait;
+use Illuminate\Support\Facades\App;
 
 class BlogController extends Controller
 {
     use SeoTrait, GeneralTrait;
     public $seo = [];
 
-    public function index()
+    public function index($locale = null)
     {
+        if ($locale && in_array($locale, ['es'])) {
+            App::setLocale($locale);
+        }
+
         $this->seoData("blog-index");
 
         $posts = Post::where('status', true)
@@ -42,9 +47,10 @@ class BlogController extends Controller
         $locale = app()->getLocale();
         $slug = $param1;
 
-        if (in_array($param1, ['es', 'en'])) {
+        if (in_array($param1, ['es'])) {
             $locale = $param1;
             $slug = $param2;
+            App::setLocale($locale);
         }
 
         $post = Post::where('slug', $slug)

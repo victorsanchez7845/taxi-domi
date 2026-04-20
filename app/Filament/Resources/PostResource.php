@@ -48,7 +48,10 @@ class PostResource extends Resource
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),
-                Forms\Components\TextInput::make('image'),
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->disk('public')
+                    ->directory('blog'),
                 Forms\Components\DateTimePicker::make('published_at')
                     ->default(now()),
                 Forms\Components\Toggle::make('status')
