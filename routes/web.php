@@ -8,6 +8,7 @@ use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\AdsController;
 use App\Http\Controllers\HotelsController;
 use App\Http\Controllers\JobsController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,9 @@ Route::middleware('locale')->group(function () {
     Route::get('/destinations', [HotelsController::class, 'index'])->name('destinations.en');
     Route::get('/tulum', [HotelsController::class, 'destinationTulum'])->name('destinations.tulum.en');
     Route::get('/shuttle-to-{slug}', [HotelsController::class, 'hotel'])->name('destinations.hotel.en');
+
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog.index.en');
+    Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show.en');
 
     Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact.en');
     Route::get('/terms-and-conditions', [WebsiteController::class, 'terms'])->name('terms.en');
@@ -66,6 +70,9 @@ Route::middleware('locale')->group(function () {
         Route::get('/destinos', [HotelsController::class, 'index'])->name('destinations');
         Route::get('/tulum', [HotelsController::class, 'destinationTulum'])->name('destinations.tulum.es');
         Route::get('/traslado-a-{slug}', [HotelsController::class, 'hotel'])->name('destinations.hotel.es');
+
+        Route::get('/blog', [BlogController::class, 'index'])->name('blog.index.es');
+        Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show.es');
 
         Route::get('/contacto', [WebsiteController::class, 'contact'])->name('contact');
         Route::get('/terminos-y-condiciones', [WebsiteController::class, 'terms'])->name('terms.es');

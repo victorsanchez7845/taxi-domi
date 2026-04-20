@@ -10,6 +10,7 @@
             <li><a href="@lang('link.home')" title="@lang('menu.home')" class="{{ ((isset($active) && $active == 1)?'active':'') }}">@lang('menu.home')</a></li>
             <li><a href="@lang('link.how_to_get')" title="@lang('menu.how_to_get')" class="{{ ((isset($active) && $active == 2)?'active':'') }}">@lang('menu.how_to_get')</a></li>            
             <li><a href="@lang('link.pricing')" title="@lang('menu.pricing')" class="{{ ((isset($active) && $active == 3)?'active':'') }}">@lang('menu.pricing')</a></li>
+            <li><a href="@lang('link.blog')" title="@lang('menu.blog')" class="{{ ((isset($active) && $active == 4)?'active':'') }}">@lang('menu.blog')</a></li>
         </ul>
         <ul class="list-menu-right">            
             <li>
@@ -49,10 +50,12 @@
                     <a href="@lang('link.tulum')" title="Cancun to Tulum Shuttle">Cancun to Tulum Shuttle</a>
                     <a href="@lang('link.cancun')" title="Cancun Airport Transportation">Cancun Airport Transportation</a>
                     <a href="@lang('link.pdc')" title="Transportation from Cancun to Playa del Carmen">Transportation from Cancun to Playa del Carmen</a>
+                    <a href="@lang('link.blog')" title="Blog">Blog</a>
                 @else
                     <a href="@lang('link.tulum')" title="Traslado de Cancún a Tulum">Traslado de Cancún a Tulum</a>
                     <a href="@lang('link.cancun')" title="Traslado Aeropuerto Cancún">Traslado Aeropuerto Cancún</a>
                     <a href="@lang('link.pdc')" title="Transporte de Cancún a Playa del Carmen">Transporte de Cancún a Playa del Carmen</a>
+                    <a href="@lang('link.blog')" title="Blog">Blog</a>
                 @endif
             </div>
             <div class="items">

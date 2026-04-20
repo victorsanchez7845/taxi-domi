@@ -17,4 +17,5 @@
         "mex_phone" => "Mexico phone",
         "usa_phone" => "Phone USA &amp; Canada",
         "my_reservation" => "My reservation",
+        "blog" => "Blog",
     ];

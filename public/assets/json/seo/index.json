@@ -598,5 +598,53 @@
             "es": "/es/pago",
             "en": "/payment"
         }
+    },
+    "blog-index": {
+        "languages": {
+            "es": {
+                "path": "/es/blog",
+                "metas": {
+                    "title": "Blog | Tulum Airport Cab",
+                    "description": "Lee las últimas noticias y consejos sobre traslados en Tulum y la Riviera Maya.",
+                    "keywords": "blog tulum, consejos tulum, traslados tulum"
+                }
+            },
+            "en": {
+                "path": "/blog",
+                "metas": {
+                    "title": "Blog | Tulum Airport Cab",
+                    "description": "Read the latest news and tips about transfers in Tulum and the Riviera Maya.",
+                    "keywords": "blog tulum, tulum tips, tulum transfers"
+                }
+            }
+        },
+        "alternates": {
+            "es": "/es/blog",
+            "en": "/blog"
+        }
+    },
+    "blog-post": {
+        "languages": {
+            "es": {
+                "path": "/es/blog/$slug",
+                "metas": {
+                    "title": "$title | Blog | Tulum Airport Cab",
+                    "description": "$title - Lee más en nuestro blog.",
+                    "keywords": ""
+                }
+            },
+            "en": {
+                "path": "/blog/$slug",
+                "metas": {
+                    "title": "$title | Blog | Tulum Airport Cab",
+                    "description": "$title - Read more in our blog.",
+                    "keywords": ""
+                }
+            }
+        },
+        "alternates": {
+            "es": "/es/blog/$slug",
+            "en": "/blog/$slug"
+        }
     }
 }
