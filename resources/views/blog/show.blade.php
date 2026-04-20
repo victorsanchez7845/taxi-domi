@@ -35,7 +35,11 @@
             </article>
 
             <div style="margin-top: 50px;">
-                <a href="{{ route('blog.index.' . app()->getLocale(), ['locale' => app()->getLocale()]) }}" class="btn-back">
+                @php
+                    $params = [];
+                    if(app()->getLocale() == 'es') $params['locale'] = 'es';
+                @endphp
+                <a href="{{ route('blog.index.' . app()->getLocale(), $params) }}" class="btn-back">
                     &larr; {{ app()->getLocale() == 'es' ? 'Volver al Blog' : 'Back to Blog' }}
                 </a>
             </div>

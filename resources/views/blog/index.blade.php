@@ -38,7 +38,11 @@
                             <div class="excerpt">
                                 {{ Str::limit(strip_tags(app()->getLocale() == 'es' ? $post->content_es : $post->content_en), 200) }}
                             </div>
-                            <a href="{{ route('blog.show.' . app()->getLocale(), ['locale' => app()->getLocale(), 'slug' => $post->slug]) }}" class="read-more">
+                            @php
+                                $params = ['slug' => $post->slug];
+                                if(app()->getLocale() == 'es') $params['locale'] = 'es';
+                            @endphp
+                            <a href="{{ route('blog.show.' . app()->getLocale(), $params) }}" class="read-more">
                                 {{ app()->getLocale() == 'es' ? 'Leer más' : 'Read more' }}
                             </a>
                         </div>
