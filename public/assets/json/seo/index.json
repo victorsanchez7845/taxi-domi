@@ -1,602 +1,602 @@
 {
-    "home": {
-        "languages": {
-            "es": {
-                "path": "/es",
-                "metas": {
-                    "title": "Traslado en el Aeropuerto de Tulum | Tulum Airport Cab",
-                    "description": "Traslado desde el Aeropuerto de Tulum disponible las 24 horas, los 7 días de la semana. Taxi privado en Tulum. Reserve ahora y pague a su llegada hasta con un 30% de descuento.",
-                    "keywords": "taxi aeropuerto tulum, taxi en el aeropuerto de tulum, traslado en el aeropuerto de tulum, transportacion en el aeropuerto de tulum, transporte aeropuerto tulum, transporte tulum aeropuerto, traslado aeropuerto tulum"
-                }
-            },
-            "en": {
-                "path": "/",
-                "metas": {
-                    "title": "Transportation from Tulum Airport to all Riviera Maya | Tulum Airport Cab",
-                    "description": "Transportation from Tulum Airport available 24 hours a day, 7 days a week. Private taxi in Tulum Airport. Book now and pay upon arrival with up to 30% off.",
-                    "keywords": "tulum airport taxi, taxi at tulum airport, transfer at tulum airport, transportation at tulum airport, tulum airport transport, tulum airport transportation, tulum airport transfer"
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es",      
-            "en": "/"
+  "home": {
+    "languages": {
+      "es": {
+        "path": "/es",
+        "metas": {
+          "title": "Taxi Dominicana | Transporte privado en República Dominicana",
+          "description": "Taxi Dominicana ofrece traslados privados, transporte desde aeropuertos, viajes a hoteles y servicio para grupos en República Dominicana.",
+          "keywords": ""
         }
+      },
+      "en": {
+        "path": "/",
+        "metas": {
+          "title": "Taxi Dominicana | Private Transportation in Dominican Republic",
+          "description": "Taxi Dominicana offers private transfers, airport transportation, hotel rides and group transportation services in Dominican Republic.",
+          "keywords": ""
+        }
+      }
     },
-    "how-to-get": {
-        "languages": {
-            "es": {
-                "path": "/es/como-llegar-a-tulum",
-                "metas": {
-                    "title": "Como llegar a Tulum - Tulum Airport Cab",
-                    "description": "Conoce como llegar a Tulum, las 5 opciones disponibles y elije la que consideres mejor para ti ya mismo.",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/how-to-get-to-tulum",
-                "metas": {
-                    "title": "How to get to Tulum - Tulum Airport Cab",
-                    "description": "Learn how to get to Tulum, the 5 options available and choose the one you consider best for you right now.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/como-llegar-a-tulum",      
-            "en": "/how-to-get-to-tulum"
-        }
-    },
-    "pricing": {
-        "languages": {
-            "es": {
-                "path": "/es/precio-traslado",
-                "metas": {
-                    "title": "Precios y tarifas de taxis en el aeropuerto de Tulum | Precios de transporte privado, de lujo, de grupos y servicio taxi",
-                    "description": "Tarifas de taxis del aeropuerto de Tulum. Precios para los servicios de transporte: privado, de lujo, de grupo y servicio de taxi en Tulum y Riviera Maya",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/transportation-price-tulum",
-                "metas": {
-                    "title": "Tulum Airport Cab Prices and Rates | Prices for private transportation group transportation and taxi service",
-                    "description": "Tulum Airport Cab Rates. Tulum Airport Shuttle prices for transportation services: private, luxury, group, and taxi service in Tulum and Riviera Maya",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/precio-traslado",      
-            "en": "/transportation-price-tulum"
-        }
-    },
-    "destination-tulum": {
-        "languages": {
-            "es": {
-                "path": "/es/traslado-de-cancun-a-tulum",
-                "metas": {
-                    "title": "Traslado de Cancún a Tulum al Precio Más Bajo | Tulum Airport Cab",
-                    "description": "El MEJOR traslado de Cancún a Tulum disponible las 24 horas, los 7 días de la semana. Traslado privado desde Cancún a Tulum. Reserve ahora y pague a su llegada hasta con un 30% de descuento.",
-                    "keywords": "traslado desde cancún a tulum, traslado de cancún a tulum, cancún a tulum, traslado del aeropuerto de cancún a tulum, traslado del aeropuerto de cancún a tulum, desde cancún a tulum traslado, transporte del aeropuerto de cancún a tulum, taxi de cancún a tulum, transporte de cancún a tulum, transporte desde cancún a tulum, traslado del aeropuerto de tulum, traslados del aeropuerto de tulum, transporte de tulum en cancún"
-                }
-            },
-            "en": {
-                "path": "/cancun-to-tulum-shuttle",
-                "metas": {
-                    "title": "Cancun to Tulum Shuttle at Lowest Prices | Tulum Airport Taxi",
-                    "description": "The BEST Cancun to Tulum Shuttle available 24/7. Private Shuttle from Cancun to Tulum from $139. Book now and Pay on Arrival the most reliable Shuttle from Cancun to Tulum with 30% off.",
-                    "keywords": "shuttle from cancun to tulum, cancun to tulum shuttle, cancun to tulum, airport cancun to tulum shuttle, airport shuttle from cancun to tulum, from cancun to tulum shuttle, airport transportation from cancun to tulum, taxi from cancun to tulum, cancun to tulum transportation, transportation from cancun to tulum, tulum airport shuttle, tulum airport transfers, tulum transportation in cancun"
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/traslado-de-cancun-a-tulum",
-            "en": "/cancun-to-tulum-shuttle"
-        }
-    },
-    "destination-cancun": {
-        "languages": {
-            "es": {
-                "path": "/es/traslado-cancun-aeropuerto",
-                "metas": {
-                    "title": "Traslado del Aeropuerto de Cancún al Precio Más Bajo | Tulum Airport Cab",
-                    "description": "Traslado Aeropuerto Cancún disponible las 24 horas, los 7 días de la semana. Transporte privado a Cancún. Reserve ahora y pague a su llegada hasta con un 30% de descuento.",
-                    "keywords": "transporte aeropuerto cancun, traslados en el aeropuerto de cancun, transportacion privada cancun, transporte privado en el aeropuerto de cancun, traslados en cancun aeropuerto, transportacion en cancun, traslados cancun, transportes en cancun, transportacion desde el aeropuerto de cancun,, como ir del aeropuerto de cancun a mi hotel, medios de transprorte en cancun"
-                }
-            },
-            "en": {
-                "path": "/cancun-airport-transportation",
-                "metas": {
-                    "title": "Cancun Airport Transportation at Low Prices | Tulum Airport Cab",
-                    "description": "Safest Cancun Airport Transportation. Book now and Pay on Arrival. The most reliable Shuttle to Cancun with 30% off. Private Cancun Airport Transfers always available & on time.",
-                    "keywords": "cancun airport transportation, cancun airport shuttle, cancun airport transfers, airport cancun shuttle, airport cancun transportation, transportation in cancun airport, cancun airport taxi, cancun transfers, transfers from cancun airport"
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/traslado-cancun-aeropuerto",
-            "en": "/cancun-airport-transportation"
-        }
-    },
-    "destination-pdc": {
-        "languages": {
-            "es": {
-                "path": "/es/transporte-de-cancun-a-playa-del-carmen",
-                "metas": {
-                    "title": "Transporte de Cancún a Playa del Carmen al precio más bajo | Tulum Airport Cab",
-                    "description": "Transporte de Cancún a Playa del Carmen seguro y confiable. Reserve ahora y pague a su llegada. El Traslado más confiable de Cancún a Playa del Carmen con 30% de descuento.",
-                    "keywords": "transporte del aeropuerto de cancun a playa del carmen, playa del carmen, traslados playa de carmen, traslados cancun playa del carmen, transportacion de cancun a playa del carmen, taxi de cancun a playa del carmen"
-                }
-            },
-            "en": {
-                "path": "/transportation-from-cancun-airport-to-playa-del-carmen",
-                "metas": {
-                    "title": "Transportation from Cancun Airport to Playa del Carmen at Low Prices",
-                    "description": "Safest Transportation from Cancun Airport to Playa del Carmen. Book now and Pay on Arrival. The most reliable Shuttle from Cancun to Playa del Carmen with 30% off.",
-                    "keywords": "transportation from cancun airport to playa del carmen, shuttle from cancun airport to playa del carmen, cancun airport transportation to playa del carmen, private transportation from cancun airport to playa del carmen, cancun airport shuttle to playa del carmen, cancun to playa del carmen, how to get from cancun to playa del carmen, playa del carmen transportation, transportation from playa del carmen to cancun, taxi from cancun to playa del carmen"
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/transporte-de-cancun-a-playa-del-carmen",
-            "en": "/transportation-from-cancun-airport-to-playa-del-carmen"
-        }
-    },
-    "contact": {
-        "languages": {
-            "es": {
-                "path": "/es/contacto",
-                "metas": {
-                    "title": "Contacto | Atención 24/7 sólo en Tulum Airport Cab",
-                    "description": "Si necesitas cotizar algún servicio o tienes dudas y sugerencias, no dudes en ponerte en contacto con nosotros. Estamos siempre listos para atender a tus solicitudes oportunamente",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/contact",
-                "metas": {
-                    "title": "Contact | Service 24/7 only at Tulum Airport Cab",
-                    "description": "If you need to quote any service or have questions and suggestions, do not hesitate to contact us. We are always ready to attend your requests in a timely manner",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/contacto",
-            "en": "/contact"
-        }
-    },
-    "quotes": {
-        "languages": {
-            "es": {
-                "path": "/es/cotizaciones",
-                "metas": {
-                    "title": "Transporte seguro del Aeropuerto de Cancún a toda la Riviera Maya",
-                    "description": "Reserva los mejores traslados del Aeropuerto Internacional de Cancún a la Riviera Maya al mejor precio. ¡Reservar ahora!",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/quotations",
-                "metas": {
-                    "title": "Get Personalized Quotes for Reliable Airport Transportation - Taxi Riviera Maya",
-                    "description": "Request a quote from Taxi Riviera Maya for personalized and budget-friendly airport transportation services. Our team is ready to provide you with a tailored solution that ensures secure, comfortable, and punctual transfers to your destination.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/cotizaciones",
-            "en": "/quotations"
-        }
-    },
-    "privacy": {
-        "languages": {
-            "es": {
-                "path": "/es/privacidad",
-                "metas": {
-                    "title": "Transporte seguro del Aeropuerto de Cancún a toda la Riviera Maya",
-                    "description": "Si deseas una cotización de un servicio especial de transporte, no dudes en consultarnos, somos tu mejor opción de transporte confiable desde el Aeropuerto Internacional de Cancún hacía todas las zonas de la Riviera Maya",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/privacy",
-                "metas": {
-                    "title": "Safe transportation from Cancun Airport to the entire Riviera Maya",
-                    "description": "If you want a quote for a special transportation service, do not hesitate to contact us, we are your best option for reliable transportation from Cancun International Airport to all areas of the Riviera Maya.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/privacidad",
-            "en": "/privacy"
-        }
-    },
-    "terms": {
-        "languages": {
-            "es": {
-                "path": "/es/terminos-y-condiciones",
-                "metas": {
-                    "title": "Transporte seguro del Aeropuerto de Cancún a toda la Riviera Maya",
-                    "description": "Si deseas una cotización de un servicio especial de transporte, no dudes en consultarnos, somos tu mejor opción de transporte confiable desde el Aeropuerto Internacional de Cancún hacía todas las zonas de la Riviera Maya",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/terms-and-conditions",
-                "metas": {
-                    "title": "Safe transportation from Cancun Airport to the entire Riviera Maya",
-                    "description": "If you want a quote for a special transportation service, do not hesitate to contact us, we are your best option for reliable transportation from Cancun International Airport to all areas of the Riviera Maya.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/terminos-y-condiciones",
-            "en": "/terms-and-conditions"
-        }
-    },
-    "services": {
-        "languages": {
-            "es": {
-                "path": "/es/servicios",
-                "metas": {
-                    "title": "Transporte seguro del Aeropuerto de Cancún a toda la Riviera Maya",
-                    "description": "Nuestros servicios de traslados son ideales para parejas, familias, grupos, y ejecutivos empresariales, incluso para cualquier persona que desee llegar a su destino sin problemas, sin espera, sin paradas, sin compartir con otros, es por eso que nosotros somos su mejor opción.",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/services",
-                "metas": {
-                    "title": "Taxi Riviera Maya | Reliable Airport Transfers and Certified Transportation Services in the Riviera Maya",
-                    "description": "Discover seamless airport transfers and certified services with Taxi Riviera Maya. From Cancun Airport to the beautiful Riviera Maya, enjoy punctual, regulated rates, and insured journeys.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/servicios",
-            "en": "/services"
-        }
-    },
-    "search-result": {
-        "languages": {
-            "es": {
-                "path": "/es/resultados",
-                "metas": {
-                    "title": "Resultado de búsqueda | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/results",
-                "metas": {
-                    "title": "Search result : Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/resultados",
-            "en": "/results"
-        }
-    },
-    "checkout": {
-        "languages": {
-            "es": {
-                "path": "/es/registro",
-                "metas": {
-                    "title": "Checkout | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/register",
-                "metas": {
-                    "title": "Checkout | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/registro",
-            "en": "/register"
-        }
-    },
-    "processing": {
-        "languages": {
-            "es": {
-                "path": "/es/procesando",
-                "metas": {
-                    "title": "Procesando | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/processing",
-                "metas": {
-                    "title": "Processing | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/procesando",
-            "en": "/processing"
-        }
-    },
-    "thank-you": {
-        "languages": {
-            "es": {
-                "path": "/es/gracias",
-                "metas": {
-                    "title": "Gracias | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/thank-you",
-                "metas": {
-                    "title": "Thank You | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/gracias",
-            "en": "/thank-you"
-        }
-    },
-    "cancel": {
-        "languages": {
-            "es": {
-                "path": "/es/cancelar",
-                "metas": {
-                    "title": "Lo sentimos | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/cancel",
-                "metas": {
-                    "title": "We are sorry | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/cancelar",
-            "en": "/cancel"
-        }
-    },
-    "login": {
-        "languages": {
-            "es": {
-                "path": "/es/reserva",
-                "metas": {
-                    "title": "Mi reservación | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/booking",
-                "metas": {
-                    "title": "My reservation | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/reserva",
-            "en": "/booking"
-        }
-    },
-    "reservation-detail": {
-        "languages": {
-            "es": {
-                "path": "/es/mi-reservacion-detalle",
-                "metas": {
-                    "title": "Mi reservación | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/my-reservation-detail",
-                "metas": {
-                    "title": "My reservation detail | Taxi Riviera Maya",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/mi-reservacion-detalle",
-            "en": "/my-reservation-detail"
-        }
-    },
-    "lastminute": {
-        "languages": {
-            "es": {
-                "path": "/es/lastminute",
-                "metas": {
-                    "title": "Reserva de último minuto?",
-                    "description": "Taxi Riviera Maya está siempre disponible para tí en el Aeropuerto de Cancún.",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/lastminute",
-                "metas": {
-                    "title": "Riviera Maya Taxi is always available for you at the Cancun Airport.",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/lastminute",
-            "en": "/lastminute"            
-        }
-    },
-    "silos-index": {
-        "languages": {
-            "es": {
-                "path": "/es/destinos",
-                "metas": {
-                    "title": "Descubre todo los destinos que Tulum Airport Cab tiene disponibles al mejor precio",
-                    "description": "Tulum Airport Cab ofrece servicios de traslado a toda la Riviera Maya, ya sea desde el aeropuerto de Tulum o desde el Aeropuerto de Tulum, estamos listos para operar con las mejor calidad.",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/destinations",
-                "metas": {
-                    "title": "Discover all the destinations that Tulum Airport Cab has available at the best price",
-                    "description": "Tulum Airport Cab offers transfer services to all the Riviera Maya, either from Tulum Airport or Tulum Airport, we are ready to operate with the best quality.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/destinos",
-            "en": "/destinations"
-        }
-    },
-    "silos-destination-tulum": {
-        "languages": {
-            "es": {
-                "path": "/es/tulum",
-                "metas": {
-                    "title": "Toda la información que necesitas saber sobre Tulum | Qué hacer y opciones de transporte | Tulum Airport Cab",
-                    "description": "Encuentra toda la información sobre Tulum: atracciones populares, cómo llegar a Tulum desde Cancún. Hoteles, destinos y qué hacer en Tulum.",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/tulum",
-                "metas": {
-                    "title": "All the information that you need to know about Tulum | Tulum Airport Cab",
-                    "description": "discover all the information about tulum: popular attractions, how to get to tulum from cancun. hotels, destinations, and what to do in tulum.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/tulum",
-            "en": "/tulum"
-        }
-    },
-    "silos-destination-hotel": {
-        "languages": {
-            "es": {
-                "path": "/traslado-a-$slug_es",
-                "metas": {
-                    "title": "Traslado a $name | Tulum Airport Cab",
-                    "description": "Traslado a $name seguro y confiable. Paga al llegar tu servicio de transporte a $name al mejor precio.",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/shuttle-to-$slug_en",
-                "metas": {
-                    "title": "Shuttle to $name at lowest price | Tulum Airport Cab",
-                    "description": "Enjoy a safe and reliable shuttle to $name. Go from all Riviera Maya on our private transportation service.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/traslado-a-$slug",
-            "en": "/shuttle-to-$slug"
-        }
-    },
-    "payment": {
-        "languages": {
-            "es": {
-                "path": "/es/pago",
-                "metas": {
-                    "title": "Pago rápido y seguro",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/payment",
-                "metas": {
-                    "title": "Fast and safe payment",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/pago",
-            "en": "/payment"
-        }
-    },
-    "payment-all": {
-        "languages": {            
-            "es": {
-                "path": "/es/pago/{uuid}",
-                "metas": {
-                    "title": "Realiza tu pago de manera segura | Caribbean Transfers",
-                    "description": "Realiza tu pago de manera segura, tu transacción será encriptada de principio a fin.",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/payment/{uuid}",
-                "metas": {
-                    "title": "Make your payment securely | Caribbean Transfers",
-                    "description": "Make your payment securely, your transaction will be encrypted from beginning to end.",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/pago/{uuid}",
-            "en": "/payment/{uuid}"
-        }
-    },
-    "card-payment-mifel": {
-        "languages": {
-            "es": {
-                "path": "/es/pago",
-                "metas": {
-                    "title": "Pago rápido y seguro",
-                    "description": "",
-                    "keywords": ""
-                }
-            },
-            "en": {
-                "path": "/payment",
-                "metas": {
-                    "title": "Fast and safe payment",
-                    "description": "",
-                    "keywords": ""
-                }
-            }
-        },
-        "alternates": {
-            "es": "/es/pago",
-            "en": "/payment"
-        }
+    "alternates": {
+      "es": "/es",
+      "en": "/"
     }
+  },
+  "how-to-get": {
+    "languages": {
+      "es": {
+        "path": "/es/como-llegar-a-punta-cana",
+        "metas": {
+          "title": "Cómo llegar a Punta Cana | Taxi Dominicana",
+          "description": "Conoce las opciones de transporte para llegar a Punta Cana y reserva tu traslado privado con Taxi Dominicana.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/how-to-get-to-punta-cana",
+        "metas": {
+          "title": "How to Get to Punta Cana | Taxi Dominicana",
+          "description": "Learn the best transportation options to get to Punta Cana and book your private transfer with Taxi Dominicana.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/como-llegar-a-punta-cana",
+      "en": "/how-to-get-to-punta-cana"
+    }
+  },
+  "pricing": {
+    "languages": {
+      "es": {
+        "path": "/es/precio-traslado-punta-cana",
+        "metas": {
+          "title": "Tarifas de traslados privados | Taxi Dominicana",
+          "description": "Consulta las tarifas de Taxi Dominicana para traslados privados desde Punta Cana hacia Bávaro, Uvero Alto, Bayahíbe, La Romana, Santo Domingo y más.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/transportation-price-punta-cana",
+        "metas": {
+          "title": "Private Transfer Rates | Taxi Dominicana",
+          "description": "Check Taxi Dominicana rates for private transfers from Punta Cana to Bavaro, Uvero Alto, Bayahibe, La Romana, Santo Domingo and more.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/precio-traslado-punta-cana",
+      "en": "/transportation-price-punta-cana"
+    }
+  },
+  "destination-tulum": {
+    "languages": {
+      "es": {
+        "path": "/es/traslados-aeropuerto-punta-cana",
+        "metas": {
+          "title": "Traslados Aeropuerto Punta Cana | Taxi Dominicana",
+          "description": "Reserva traslados privados desde el Aeropuerto de Punta Cana hacia hoteles, resorts y destinos en República Dominicana.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/punta-cana-airport-transfers",
+        "metas": {
+          "title": "Punta Cana Airport Transfers | Taxi Dominicana",
+          "description": "Book private transfers from Punta Cana Airport to hotels, resorts and destinations across the Dominican Republic.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/traslados-aeropuerto-punta-cana",
+      "en": "/punta-cana-airport-transfers"
+    }
+  },
+  "destination-cancun": {
+    "languages": {
+      "es": {
+        "path": "/es/traslados-aeropuerto-santo-domingo",
+        "metas": {
+          "title": "Traslados Aeropuerto Santo Domingo | Taxi Dominicana",
+          "description": "Transporte privado desde el Aeropuerto de Santo Domingo hacia Punta Cana, Boca Chica, Juan Dolio y otros destinos.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/santo-domingo-airport-transfers",
+        "metas": {
+          "title": "Santo Domingo Airport Transfers | Taxi Dominicana",
+          "description": "Private transportation from Santo Domingo Airport to Punta Cana, Boca Chica, Juan Dolio and other destinations.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/traslados-aeropuerto-santo-domingo",
+      "en": "/santo-domingo-airport-transfers"
+    }
+  },
+  "destination-pdc": {
+    "languages": {
+      "es": {
+        "path": "/es/aeropuerto-punta-cana-a-bavaro",
+        "metas": {
+          "title": "Traslado del Aeropuerto de Punta Cana a Bávaro | Taxi Dominicana",
+          "description": "Reserva transporte privado desde el Aeropuerto de Punta Cana hacia Bávaro con Taxi Dominicana.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/punta-cana-airport-to-bavaro",
+        "metas": {
+          "title": "Punta Cana Airport to Bavaro | Taxi Dominicana",
+          "description": "Book private transportation from Punta Cana Airport to Bavaro with Taxi Dominicana.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/aeropuerto-punta-cana-a-bavaro",
+      "en": "/punta-cana-airport-to-bavaro"
+    }
+  },
+  "contact": {
+    "languages": {
+      "es": {
+        "path": "/es/contacto",
+        "metas": {
+          "title": "Contacto | Taxi Dominicana",
+          "description": "Contacta a Taxi Dominicana para reservar transporte privado, traslados desde aeropuertos y servicios para grupos en República Dominicana.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/contact",
+        "metas": {
+          "title": "Contact | Taxi Dominicana",
+          "description": "Contact Taxi Dominicana to book private transportation, airport transfers and group transportation services in Dominican Republic.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/contacto",
+      "en": "/contact"
+    }
+  },
+  "quotes": {
+    "languages": {
+      "es": {
+        "path": "/es/cotizaciones",
+        "metas": {
+          "title": "Cotizaciones de transporte privado | Taxi Dominicana",
+          "description": "Solicita una cotización personalizada para transporte privado, traslados desde aeropuertos o servicios para grupos en República Dominicana.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/quotations",
+        "metas": {
+          "title": "Private Transportation Quotes | Taxi Dominicana",
+          "description": "Request a personalized quote for private transportation, airport transfers or group services in Dominican Republic.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/cotizaciones",
+      "en": "/quotations"
+    }
+  },
+  "privacy": {
+    "languages": {
+      "es": {
+        "path": "/es/privacidad",
+        "metas": {
+          "title": "Política de privacidad | Taxi Dominicana",
+          "description": "Consulta la política de privacidad de Taxi Dominicana para nuestros servicios de transporte privado en República Dominicana.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/privacy",
+        "metas": {
+          "title": "Privacy Policy | Taxi Dominicana",
+          "description": "Read Taxi Dominicana privacy policy for our private transportation services in Dominican Republic.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/privacidad",
+      "en": "/privacy"
+    }
+  },
+  "terms": {
+    "languages": {
+      "es": {
+        "path": "/es/terminos-y-condiciones",
+        "metas": {
+          "title": "Términos y condiciones | Taxi Dominicana",
+          "description": "Consulta los términos y condiciones de Taxi Dominicana para reservas, pagos y servicios de transporte privado.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/terms-and-conditions",
+        "metas": {
+          "title": "Terms and Conditions | Taxi Dominicana",
+          "description": "Read Taxi Dominicana terms and conditions for bookings, payments and private transportation services.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/terminos-y-condiciones",
+      "en": "/terms-and-conditions"
+    }
+  },
+  "services": {
+    "languages": {
+      "es": {
+        "path": "/es/servicios",
+        "metas": {
+          "title": "Servicios de transporte privado | Taxi Dominicana",
+          "description": "Taxi Dominicana ofrece transporte privado, traslados desde aeropuertos, transporte a hoteles, servicios para grupos y viajes personalizados.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/services",
+        "metas": {
+          "title": "Private Transportation Services | Taxi Dominicana",
+          "description": "Taxi Dominicana offers private transportation, airport transfers, hotel rides, group transportation and custom private trips.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/servicios",
+      "en": "/services"
+    }
+  },
+  "search-result": {
+    "languages": {
+      "es": {
+        "path": "/es/resultados",
+        "metas": {
+          "title": "Resultados de búsqueda | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/results",
+        "metas": {
+          "title": "Search Results | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/resultados",
+      "en": "/results"
+    }
+  },
+  "checkout": {
+    "languages": {
+      "es": {
+        "path": "/es/registro",
+        "metas": {
+          "title": "Registro de reserva | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/register",
+        "metas": {
+          "title": "Booking Registration | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/registro",
+      "en": "/register"
+    }
+  },
+  "processing": {
+    "languages": {
+      "es": {
+        "path": "/es/procesando",
+        "metas": {
+          "title": "Procesando reserva | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/processing",
+        "metas": {
+          "title": "Processing Booking | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/procesando",
+      "en": "/processing"
+    }
+  },
+  "thank-you": {
+    "languages": {
+      "es": {
+        "path": "/es/gracias",
+        "metas": {
+          "title": "Gracias | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/thank-you",
+        "metas": {
+          "title": "Thank You | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/gracias",
+      "en": "/thank-you"
+    }
+  },
+  "cancel": {
+    "languages": {
+      "es": {
+        "path": "/es/cancelar",
+        "metas": {
+          "title": "Reserva cancelada | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/cancel",
+        "metas": {
+          "title": "Booking Cancelled | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/cancelar",
+      "en": "/cancel"
+    }
+  },
+  "login": {
+    "languages": {
+      "es": {
+        "path": "/es/reserva",
+        "metas": {
+          "title": "Mi reservación | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/booking",
+        "metas": {
+          "title": "My Reservation | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/reserva",
+      "en": "/booking"
+    }
+  },
+  "reservation-detail": {
+    "languages": {
+      "es": {
+        "path": "/es/mi-reservacion-detalle",
+        "metas": {
+          "title": "Detalle de mi reservación | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/my-reservation-detail",
+        "metas": {
+          "title": "My Reservation Detail | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/mi-reservacion-detalle",
+      "en": "/my-reservation-detail"
+    }
+  },
+  "lastminute": {
+    "languages": {
+      "es": {
+        "path": "/es/lastminute",
+        "metas": {
+          "title": "¿Reserva de último minuto? | Taxi Dominicana",
+          "description": "Taxi Dominicana ofrece transporte privado y traslados de último minuto en República Dominicana.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/lastminute",
+        "metas": {
+          "title": "Last-Minute Booking? | Taxi Dominicana",
+          "description": "Taxi Dominicana offers private transportation and last-minute transfers in Dominican Republic.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/lastminute",
+      "en": "/lastminute"
+    }
+  },
+  "silos-index": {
+    "languages": {
+      "es": {
+        "path": "/es/destinos",
+        "metas": {
+          "title": "Destinos de transporte privado | Taxi Dominicana",
+          "description": "Descubre los destinos disponibles con Taxi Dominicana: Punta Cana, Bávaro, Uvero Alto, Bayahíbe, La Romana, Santo Domingo, Boca Chica y más.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/destinations",
+        "metas": {
+          "title": "Private Transportation Destinations | Taxi Dominicana",
+          "description": "Discover Taxi Dominicana destinations including Punta Cana, Bavaro, Uvero Alto, Bayahibe, La Romana, Santo Domingo, Boca Chica and more.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/destinos",
+      "en": "/destinations"
+    }
+  },
+  "silos-destination-tulum": {
+    "languages": {
+      "es": {
+        "path": "/es/punta-cana",
+        "metas": {
+          "title": "Punta Cana | Transporte privado | Taxi Dominicana",
+          "description": "Conoce Punta Cana y reserva transporte privado con Taxi Dominicana hacia hoteles, resorts y destinos cercanos.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/punta-cana",
+        "metas": {
+          "title": "Punta Cana | Private Transportation | Taxi Dominicana",
+          "description": "Discover Punta Cana and book private transportation with Taxi Dominicana to hotels, resorts and nearby destinations.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/punta-cana",
+      "en": "/punta-cana"
+    }
+  },
+  "silos-destination-hotel": {
+    "languages": {
+      "es": {
+        "path": "/traslado-a-$slug_es",
+        "metas": {
+          "title": "Traslado a $name | Taxi Dominicana",
+          "description": "Reserva traslado privado a $name con Taxi Dominicana. Transporte seguro, cómodo y confiable en República Dominicana.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/shuttle-to-$slug_en",
+        "metas": {
+          "title": "Shuttle to $name | Taxi Dominicana",
+          "description": "Book private transportation to $name with Taxi Dominicana. Safe, comfortable and reliable transportation in Dominican Republic.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/traslado-a-$slug",
+      "en": "/shuttle-to-$slug"
+    }
+  },
+  "payment": {
+    "languages": {
+      "es": {
+        "path": "/es/pago",
+        "metas": {
+          "title": "Pago rápido y seguro | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/payment",
+        "metas": {
+          "title": "Fast and Secure Payment | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/pago",
+      "en": "/payment"
+    }
+  },
+  "payment-all": {
+    "languages": {
+      "es": {
+        "path": "/es/pago/{uuid}",
+        "metas": {
+          "title": "Realiza tu pago de manera segura | Taxi Dominicana",
+          "description": "Realiza tu pago de manera segura. Tu transacción será protegida de principio a fin.",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/payment/{uuid}",
+        "metas": {
+          "title": "Make Your Payment Securely | Taxi Dominicana",
+          "description": "Make your payment securely. Your transaction will be protected from beginning to end.",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/pago/{uuid}",
+      "en": "/payment/{uuid}"
+    }
+  },
+  "card-payment-mifel": {
+    "languages": {
+      "es": {
+        "path": "/es/pago",
+        "metas": {
+          "title": "Pago rápido y seguro | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      },
+      "en": {
+        "path": "/payment",
+        "metas": {
+          "title": "Fast and Secure Payment | Taxi Dominicana",
+          "description": "",
+          "keywords": ""
+        }
+      }
+    },
+    "alternates": {
+      "es": "/es/pago",
+      "en": "/payment"
+    }
+  }
 }

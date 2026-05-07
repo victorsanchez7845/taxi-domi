@@ -3,51 +3,70 @@
         <div class="top">
             <div>
                 <picture>
-                    <source srcset="/assets/img/logo.png" type="image/webp">
-                    <img src="/assets/img/logo.png" alt="Tulum Airport Cab" title="Tulum Airport Cab" loading="lazy" width="150" height="50">
+                    <source srcset="/assets/img/logo.webp" type="image/webp">
+                    <img src="/assets/img/logo.png" alt="Taxi Dominicana" title="Taxi Dominicana" loading="lazy" width="150" height="50">
                 </picture>
+
                 @if(app()->getLocale() == "es")
-                    <p>Más de una década de experiencia, ofrecemos el traslado más seguro, veloz y confiable en Cancún.</p>
+                    <p>Taxi Dominicana ofrece transporte privado seguro, cómodo y confiable en República Dominicana, con servicio principal en Punta Cana y traslados a los destinos más populares del país.</p>
                 @else
-                    <p>More than a decade of experience, we offer the safest, fastest and most reliable transfer in Cancun.</p>
+                    <p>Taxi Dominicana offers safe, comfortable and reliable private transportation in the Dominican Republic, with main service in Punta Cana and transfers to the country’s most popular destinations.</p>
                 @endif
             </div>
+
             <div>
                 @if(app()->getLocale() == "es")
-                    <h4>Información</h4>                    
-                    <a href="@lang('link.contact')" title="Contacto">Contacto</a>
-                    <a href="@lang('link.reservation')" title="Consulta tu reservación">Consulta tu reservación</a>
-                    <a href="@lang('link.terms')" title="Términos y condiciones">Términos y condiciones</a>
-                    <a href="@lang('link.privacy')" title="Políticas de privacidad">Políticas de privacidad</a>
+                    <h4>Información</h4>
+                    <a href="/es/contacto" title="Contacto">Contacto</a>
+                    <a href="/es/reserva" title="Consulta tu reservación">Consulta tu reservación</a>
+                    <a href="/es/terminos-y-condiciones" title="Términos y condiciones">Términos y condiciones</a>
+                    <a href="/es/privacidad" title="Política de privacidad">Política de privacidad</a>
                 @else
-                    <h4>Information</h4>                    
-                    <a href="@lang('link.contact')" title="Contacto">Contacto</a>                    
-                    <a href="@lang('link.reservation')" title="Check your reservation">Check your reservation</a>
-                    <a href="@lang('link.terms')" title="Terms and conditions">Terms and conditions</a>
-                    <a href="@lang('link.privacy')" title="Privacy policy">Privacy policy</a>
+                    <h4>Information</h4>
+                    <a href="/contact" title="Contact">Contact</a>
+                    <a href="/booking" title="Check your reservation">Check your reservation</a>
+                    <a href="/terms-and-conditions" title="Terms and conditions">Terms and conditions</a>
+                    <a href="/privacy" title="Privacy policy">Privacy policy</a>
                 @endif
             </div>
+
             <div>
-                @if(app()->getLocale() == "en")
-                    <h4>Popular destinations</h4>
-                    <a href="@lang('link.destinations')" title="Destinations">Destinations</a>
-                    <a href="@lang('link.tulum')" title="Cancun to Tulum Shuttle">Cancun to Tulum Shuttle</a>
-                    <a href="@lang('link.cancun')" title="Cancun Airport Transportation">Cancun Airport Transportation</a>
-                    <a href="@lang('link.pdc')" title="Transportation from Cancun to Playa del Carmen">Transportation from Cancun to Playa del Carmen</a>                                        
+                @if(app()->getLocale() == "es")
+                    <h4>Servicios y rutas</h4>
+                    <a href="/es/traslados-aeropuerto-punta-cana">Traslados Aeropuerto Punta Cana</a>
+                    <a href="/es/traslados-aeropuerto-santo-domingo">Traslados Aeropuerto Santo Domingo</a>
+                    <a href="/es/precio-traslado-punta-cana">Tarifas de traslado</a>
+                    <a href="/es/destinos">Destinos</a>
+                    <a href="/es/aeropuerto-punta-cana-a-bavaro">Punta Cana a Bávaro</a>
+                    <a href="/es/aeropuerto-punta-cana-a-cap-cana">Punta Cana a Cap Cana</a>
+                    <a href="/es/aeropuerto-punta-cana-a-uvero-alto">Punta Cana a Uvero Alto</a>
+                    <a href="/es/aeropuerto-punta-cana-a-bayahibe">Punta Cana a Bayahíbe</a>
                 @else
-                    <h4>Destinos populares</h4>
-                    <a href="@lang('link.destinations')" title="Destinos">Destinos</a>
-                    <a href="@lang('link.tulum')" title="Traslado de Cancún a Tulum">Traslado de Cancún a Tulum</a>
-                    <a href="@lang('link.cancun')" title="Traslado Aeropuerto Cancún">Traslado Aeropuerto Cancún</a>
-                    <a href="@lang('link.pdc')" title="Transporte de Cancún a Playa del Carmen">Transporte de Cancún a Playa del Carmen</a>
+                    <h4>Services and routes</h4>
+                    <a href="/punta-cana-airport-transfers">Punta Cana Airport Transfers</a>
+                    <a href="/santo-domingo-airport-transfers">Santo Domingo Airport Transfers</a>
+                    <a href="/transportation-price-punta-cana">Transfer Rates</a>
+                    <a href="/destinations">Destinations</a>
+                    <a href="/punta-cana-airport-to-bavaro">Punta Cana to Bavaro</a>
+                    <a href="/punta-cana-airport-to-cap-cana">Punta Cana to Cap Cana</a>
+                    <a href="/punta-cana-airport-to-uvero-alto">Punta Cana to Uvero Alto</a>
+                    <a href="/punta-cana-airport-to-bayahibe">Punta Cana to Bayahibe</a>
                 @endif
             </div>
         </div>
+
         <hr>
+
         <div class="bottom">
-            <p>&copy; {{ date("Y") }} Tulum Airport Cab. All rights reserved.</p>
-            <p><a href="tel:{{ App\Traits\GeneralTrait::clearPhone( config('services.phone.MX') ) }}" title="{{ config('services.phone.MX') }}">{{ config('services.phone.MX') }}</a> & <a href="tel:{{ App\Traits\GeneralTrait::clearPhone( config('services.phone.US') ) }}" title="{{ config('services.phone.US') }}">{{ config('services.phone.US') }}</a></p>
+            <p>&copy; {{ date("Y") }} Taxi Dominicana. All rights reserved.</p>
+
+            <p>
+                <a href="tel:{{ App\Traits\GeneralTrait::clearPhone(config('services.phone.DO')) }}" title="{{ config('services.phone.DO') }}">
+                    {{ config('services.phone.DO') }}
+                </a>
+            </p>
+
             <a href="mailto:{{ config('services.email') }}">{{ config('services.email') }}</a>
         </div>
-    </div>    
+    </div>
 </footer>

@@ -127,4 +127,42 @@ class WebsiteController extends Controller{
 
         return view('destinations.playa-del-carmen', ['seo' => $this->seo, 'breadcrumbs' => $breadcrumbs]);
     }
+
+    public function puntaCanaAirportTransfers()
+{
+    $this->seoData("destination-tulum");
+
+    $breadcrumbs = [];
+    $breadcrumbs[1] = [
+        "URL" => config('app.url').__('link.home'),
+        "name" => ((app()->getLocale() == "es") ? 'Inicio' : 'Home')
+    ];
+    $breadcrumbs[2] = [
+        "name" => ((app()->getLocale() == "es") ? 'Traslados Aeropuerto Punta Cana' : 'Punta Cana Airport Transfers')
+    ];
+
+    return view('destinations.tulum', [
+        'seo' => $this->seo,
+        'breadcrumbs' => $breadcrumbs
+    ]);
+}
+
+public function santoDomingoAirportTransfers()
+{
+    $this->seoData("destination-cancun");
+
+    $breadcrumbs = [];
+    $breadcrumbs[1] = [
+        "URL" => config('app.url').__('link.home'),
+        "name" => ((app()->getLocale() == "es") ? 'Inicio' : 'Home')
+    ];
+    $breadcrumbs[2] = [
+        "name" => ((app()->getLocale() == "es") ? 'Traslados Aeropuerto Santo Domingo' : 'Santo Domingo Airport Transfers')
+    ];
+
+    return view('destinations.cancun', [
+        'seo' => $this->seo,
+        'breadcrumbs' => $breadcrumbs
+    ]);
+}
 }

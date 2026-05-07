@@ -16,20 +16,18 @@ class Locale
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-
     {
-        $available_languages = ["es"];
-        $locale = config('app.locale');
-        
-        if( isset($request->route()->parameters()['locale'])){
-            if(in_array($request->route()->parameters()['locale'], $available_languages) ){
-                $locale = $request->route()->parameters()['locale'];
-            }else{
-                abort(404);            
-            }
+        // Default language
+        $locale = 'en';
+
+        // Detect /es prefix
+        if ($request->segment(1) === 'es') {
+            $locale = 'es';
         }
-        
-        App::setLocale($locale);        
+
+        // Set application locale
+        App::setLocale($locale);
+
         return $next($request);
     }
 }

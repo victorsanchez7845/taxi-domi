@@ -1,82 +1,35 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-<loc>https://tulumairportcab.com/</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/cancun-to-tulum-shuttle</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/cancun-airport-transportation</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/transportation-from-cancun-airport-to-playa-del-carmen</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/how-to-get-to-tulum</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/transportation-price-tulum</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/destinations</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/tulum</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/es</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/es/traslado-de-cancun-a-tulum</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/es/traslado-cancun-aeropuerto</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/es/transporte-de-cancun-a-playa-del-carmen</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/es/como-llegar-a-tulum</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/es/precio-traslado</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/es/destinos</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://tulumairportcab.com/es/tulum</loc>
-<lastmod>2024-03-21T12:00:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <url>
+        <loc>http://127.0.0.1:8000</loc>
+    
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/blog</loc>
+    
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/es/blog</loc>
+    
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/blog/travel-dominicana</loc>
+        <lastmod>2026-04-21T22:12:07+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/es/blog/viaje-dominicana</loc>
+        <lastmod>2026-04-21T05:16:46+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/es/blog/samana-ultimo-refugio-salvaje-caribe-dominicano</loc>
+        <lastmod>2026-04-21T22:45:11+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://127.0.0.1:8000/blog/samana-last-wild-refuge-dominican-caribbean</loc>
+        <lastmod>2026-04-21T22:59:10+00:00</lastmod>
+
+            </url>
 </urlset>
