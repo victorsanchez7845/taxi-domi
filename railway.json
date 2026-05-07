@@ -1,6 +1,6 @@
 {
   "$schema": "https://railway.com/railway.schema.json",
   "deploy": {
-    "startCommand": "php artisan migrate --force && php artisan storage:link && php artisan optimize:clear && php artisan serve --host=0.0.0.0 --port=${PORT}"
+    "startCommand": "php artisan migrate --force && php artisan storage:link && php artisan filament:assets && php artisan optimize:clear && php artisan serve --host=0.0.0.0 --port=${PORT}"
   }
 }
