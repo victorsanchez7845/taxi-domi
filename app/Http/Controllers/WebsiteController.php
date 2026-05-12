@@ -165,4 +165,52 @@ public function santoDomingoAirportTransfers()
         'breadcrumbs' => $breadcrumbs
     ]);
 }
+
+public function puntaCanaToBavaro()
+{
+    return $this->routePage('punta-cana-to-bavaro', 'Punta Cana to Bavaro', 'Punta Cana a Bávaro');
+}
+
+public function puntaCanaToCapCana()
+{
+    return $this->routePage('punta-cana-to-cap-cana', 'Punta Cana to Cap Cana', 'Punta Cana a Cap Cana');
+}
+
+public function puntaCanaToUveroAlto()
+{
+    return $this->routePage('punta-cana-to-uvero-alto', 'Punta Cana to Uvero Alto', 'Punta Cana a Uvero Alto');
+}
+
+public function puntaCanaToBayahibe()
+{
+    return $this->routePage('punta-cana-to-bayahibe', 'Punta Cana to Bayahibe', 'Punta Cana a Bayahíbe');
+}
+
+public function puntaCanaToLaRomana()
+{
+    return $this->routePage('punta-cana-to-la-romana', 'Punta Cana to La Romana', 'Punta Cana a La Romana');
+}
+
+private function routePage($seoCode, $nameEn, $nameEs)
+{
+    $this->seoData($seoCode);
+
+    $breadcrumbs = [];
+    $breadcrumbs[1] = [
+        "URL" => config('app.url').__('link.home'),
+        "name" => ((app()->getLocale() == "es") ? 'Inicio' : 'Home')
+    ];
+
+    $breadcrumbs[2] = [
+        "name" => ((app()->getLocale() == "es") ? $nameEs : $nameEn)
+    ];
+
+    return view('website.route', [
+        'seo' => $this->seo,
+        'breadcrumbs' => $breadcrumbs,
+        'routeNameEn' => $nameEn,
+        'routeNameEs' => $nameEs,
+    ]);
+}
+
 }
