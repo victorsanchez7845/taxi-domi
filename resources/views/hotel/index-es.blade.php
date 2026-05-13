@@ -132,7 +132,7 @@
     <section class="hotels-page">
         <div class="container">
             <div class="intro">
-                <h2>Encuentra los mejores hoteles en Tulum y destinos cercanos</h2>
+                <h2>Encuentra los mejores hoteles en República Dominicana y destinos cercanos</h2>
                 <p>
                     Explora hospedajes recomendados, compara opciones y encuentra el hotel ideal para tu viaje.
                     Revisa ubicación, rango de precio, etiqueta y calificación.
