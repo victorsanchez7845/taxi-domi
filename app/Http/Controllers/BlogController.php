@@ -22,9 +22,9 @@ public function index()
 
     $seo = [
         'meta' => [
-            'title' => 'Blog | Tulum Airport Cab',
+            'title' => 'Blog | Taxi Dominicana',
             'description' => 'Travel tips and transportation information.',
-            'keywords' => 'blog, tulum, airport cab',
+            'keywords' => 'blog, taxi dominicana, airport cab',
         ],
         'nofollow' => false,
         'alternate' => [
@@ -67,9 +67,9 @@ public function indexEs()
 
     $seo = [
         'meta' => [
-            'title' => 'Blog | Tulum Airport Cab',
+            'title' => 'Blog | Taxi Dominicana',
             'description' => 'Consejos de viaje e información de transportación.',
-            'keywords' => 'blog, tulum, taxi, aeropuerto',
+            'keywords' => 'blog, taxi dominicana, airport cab',
         ],
         'nofollow' => false,
         'alternate' => [
@@ -121,7 +121,7 @@ public function indexEs()
             'meta' => [
                 'title' => $post->meta_title ?: $post->title,
                 'description' => $post->meta_description ?: ($post->excerpt ?? ''),
-                'keywords' => 'blog, tulum, airport cab',
+                'keywords' => 'blog, taxi dominicana, airport cab',
             ],
             'nofollow' => false,
             'alternate' => $translation ? [
@@ -201,7 +201,7 @@ $breadcrumbs[3] = [
         'meta' => [
             'title' => $post->meta_title ?: $post->title,
             'description' => $post->meta_description ?: ($post->excerpt ?? ''),
-            'keywords' => 'blog, tulum, taxi, aeropuerto',
+            'keywords' => 'blog, taxi dominicana, airport cab',
         ],
         'nofollow' => false,
         'alternate' => $translation ? [
