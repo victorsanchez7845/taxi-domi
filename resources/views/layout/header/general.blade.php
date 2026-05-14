@@ -25,8 +25,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/about-us" title="About us" class="{{ ((isset($active) && $active == 5)?'active':'') }}">
-                        About us
+                    <a href="/hotels" title="Hotels" class="{{ ((isset($active) && $active == 5)?'active':'') }}">
+                        Hotels
                     </a>
                 </li>
             @else
@@ -46,8 +46,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/es/sobre-nosotros" title="Sobre nosotros" class="{{ ((isset($active) && $active == 5)?'active':'') }}">
-                        Sobre nosotros
+                    <a href="/es/hoteles" title="Hoteles" class="{{ ((isset($active) && $active == 5)?'active':'') }}">
+                        Hoteles
                     </a>
                 </li>
             @endif
@@ -95,14 +95,14 @@
                     <a href="/punta-cana-airport-transfers" title="Punta Cana Airport Transfers">Punta Cana Airport Transfers</a>
                     <a href="/santo-domingo-airport-transfers" title="Santo Domingo Airport Transfers">Santo Domingo Airport Transfers</a>
                     <a href="/destinations" title="Destinations">Destinations</a>
-                    <a href="/about-us" title="About us">About us</a>
+                    <a href="/hotels" title="Hotels">Hotels</a>
                     <a href="/contact" title="Contact">Contact</a>
                 @else
                     <a href="/es" title="Taxi Dominicana">Inicio</a>
                     <a href="/es/traslados-aeropuerto-punta-cana" title="Traslados Aeropuerto Punta Cana">Traslados Punta Cana</a>
                     <a href="/es/traslados-aeropuerto-santo-domingo" title="Traslados Aeropuerto Santo Domingo">Traslados Santo Domingo</a>
                     <a href="/es/destinos" title="Destinos">Destinos</a>
-                    <a href="/es/sobre-nosotros" title="Sobre nosotros">Sobre nosotros</a>
+                    <a href="/es/hoteles" title="Hoteles">Hoteles</a>
                     <a href="/es/contacto" title="Contacto">Contacto</a>
                 @endif
             </div>
