@@ -20,6 +20,13 @@ Route::middleware('locale')->group(function () {
     Route::get('/transportation-price-punta-cana', [WebsiteController::class, 'pricing'])->name('pricing.en');
     Route::get('/how-to-get-to-punta-cana', [WebsiteController::class, 'howToGet'])->name('how-to-get.en');
 
+        // BLOG & HOTELS
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+    Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+
+    Route::get('/hotels', [HotelController::class, 'index'])->name('hotel.index');
+    Route::get('/hotels/{slug}', [HotelController::class, 'show'])->name('hotel.show');
+
     // MAIN ROUTES
     Route::get('/punta-cana-airport-to-bavaro', [WebsiteController::class, 'puntaCanaToBavaro'])->name('punta-cana-to-bavaro.en');
     Route::get('/punta-cana-airport-to-cap-cana', [WebsiteController::class, 'puntaCanaToCapCana'])->name('punta-cana-to-cap-cana.en');
@@ -81,7 +88,15 @@ Route::middleware('locale')->group(function () {
         Route::get('/aeropuerto-punta-cana-a-uvero-alto', [WebsiteController::class, 'puntaCanaToUveroAlto'])->name('punta-cana-to-uvero-alto.es');
         Route::get('/aeropuerto-punta-cana-a-bayahibe', [WebsiteController::class, 'puntaCanaToBayahibe'])->name('punta-cana-to-bayahibe.es');
         Route::get('/aeropuerto-punta-cana-a-la-romana', [WebsiteController::class, 'puntaCanaToLaRomana'])->name('punta-cana-to-la-romana.es');
+       
+        // HOTEL & Blog  DIRECTORY
 
+        Route::get('/es/blog', [BlogController::class, 'indexEs'])->name('blog.index.es');
+        Route::get('/es/blog/{slug}', [BlogController::class, 'showEs'])->name('blog.show.es');
+
+        Route::get('/hoteles', [HotelController::class, 'indexEs'])->name('hotel.index.es');
+        Route::get('/hoteles/{slug}', [HotelController::class, 'showEs'])->name('hotel.show.es');
+        
         Route::get('/destinos', [HotelsController::class, 'index'])->name('destinations.es');
         Route::get('/traslados-a-bavaro', [HotelsController::class, 'bavaro'])->name('destinations.bavaro.es');
         Route::get('/traslados-a-cap-cana', [HotelsController::class, 'capCana'])->name('destinations.cap-cana.es');
@@ -119,21 +134,10 @@ Route::middleware('locale')->group(function () {
     });
 });
 
-// BLOG
-Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
-Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
-Route::get('/es/blog', [BlogController::class, 'indexEs'])->name('blog.index.es');
-Route::get('/es/blog/{slug}', [BlogController::class, 'showEs'])->name('blog.show.es');
 
-// HOTEL DIRECTORY
-Route::get('/hotels', [HotelController::class, 'index'])->name('hotel.index');
-Route::get('/hotels/{slug}', [HotelController::class, 'show'])->name('hotel.show');
 
-Route::prefix('es')->group(function () {
-    Route::get('/hoteles', [HotelController::class, 'indexEs'])->name('hotel.index.es');
-    Route::get('/hoteles/{slug}', [HotelController::class, 'showEs'])->name('hotel.show.es');
-});
+
 
 // JOBS
 Route::get('/jobs/hotels', [JobsController::class, 'hotels']);
