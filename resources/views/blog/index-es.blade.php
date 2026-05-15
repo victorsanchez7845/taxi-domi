@@ -207,7 +207,7 @@
                     <div class="blog-intro-image">
                         <a href="{{ route('blog.show.es', ltrim($heroPost->slug, '/')) }}">
                             @if($heroPost->featured_image)
-                                <img src="{{ asset('storage/' . $heroPost->featured_image) }}" alt="{{ $heroPost->title }}">
+                                <img src="{{ $heroPost->featured_image }}" alt="{{ $heroPost->title }}">
                             @else
                                 <img src="/assets/img/hotels/client.jpg" alt="{{ $heroPost->title }}">
                             @endif
@@ -227,7 +227,7 @@
                         <div class="blog-featured-left">
                             <a href="{{ route('blog.show.es', ltrim($mainFeatured->slug, '/')) }}">
                                 @if($mainFeatured->featured_image)
-                                    <img src="{{ asset('storage/' . $mainFeatured->featured_image) }}" alt="{{ $mainFeatured->title }}">
+                                    <img src="{{ $mainFeatured->featured_image }}" alt="{{ $mainFeatured->title }}">
                                 @else
                                     <img src="/assets/img/hotels/client.jpg" alt="{{ $mainFeatured->title }}">
                                 @endif
@@ -253,7 +253,7 @@
                         @foreach($secondaryFeatured as $post)
                             <a class="blog-card-small" href="{{ route('blog.show.es', ltrim($post->slug, '/')) }}">
                                 @if($post->featured_image)
-                                    <img src="{{ asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}">
+                                    <img src="{{ $post->featured_image }}" alt="{{ $post->title }}">
                                 @else
                                     <img src="/assets/img/hotels/client.jpg" alt="{{ $post->title }}">
                                 @endif
@@ -276,7 +276,7 @@
                     @foreach($gridPosts as $post)
                         <a class="blog-grid-post" href="{{ route('blog.show.es', ltrim($post->slug, '/')) }}">
                             @if($post->featured_image)
-                                <img src="{{ asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}">
+                                <img src="{{ $post->featured_image }}" alt="{{ $post->title }}">
                             @else
                                 <img src="/assets/img/hotels/client.jpg" alt="{{ $post->title }}">
                             @endif

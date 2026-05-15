@@ -91,8 +91,8 @@ Route::middleware('locale')->group(function () {
        
         // HOTEL & Blog  DIRECTORY
 
-        Route::get('/es/blog', [BlogController::class, 'indexEs'])->name('blog.index.es');
-        Route::get('/es/blog/{slug}', [BlogController::class, 'showEs'])->name('blog.show.es');
+        Route::get('/blog', [BlogController::class, 'indexEs'])->name('blog.index.es');
+        Route::get('/blog/{slug}', [BlogController::class, 'showEs'])->name('blog.show.es');
 
         Route::get('/hoteles', [HotelController::class, 'indexEs'])->name('hotel.index.es');
         Route::get('/hoteles/{slug}', [HotelController::class, 'showEs'])->name('hotel.show.es');

@@ -274,9 +274,11 @@
 
                     @if($post->featured_image)
                         <div class="blog-featured">
-                            <img src="{{ asset('storage/' . $post->featured_image) }}"
-                                 alt="{{ $post->title }}"
-                                 title="{{ $post->title }}">
+                            <img 
+                                src="{{ $post->featured_image }}"
+                                alt="{{ $post->title }}"
+                                title="{{ $post->title }}"
+                            >
                         </div>
                     @endif
 
@@ -313,7 +315,7 @@
                             <a class="related-card" href="{{ route('blog.show', ltrim($related->slug, '/')) }}">
                                 <div class="related-card-image">
                                     @if($related->featured_image)
-                                        <img src="{{ asset('storage/' . $related->featured_image) }}" alt="{{ $related->title }}">
+                                        <img src="{{ $related->featured_image }}" alt="{{ $related->title }}">
                                     @else
                                         <img src="/assets/img/hotels/client.jpg" alt="{{ $related->title }}">
                                     @endif
