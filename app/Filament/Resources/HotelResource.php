@@ -19,9 +19,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\ImageColumn;
-
+use Illuminate\Support\HtmlString;
 
 class HotelResource extends Resource
 {
@@ -46,18 +45,27 @@ class HotelResource extends Resource
                                 ->label('Title')
                                 ->required()
                                 ->maxLength(255),
-                            
-                            FileUpload::make('image')
-                            ->label('Main Image')
-                            ->image()
-                            ->directory('hotels')
-                            ->imageEditor()
-                            ->disk('public'), 
-                            
+
+                            TextInput::make('image')
+                                ->label('Image URL')
+                                ->url()
+                                ->required()
+                                ->maxLength(2048)
+                                ->helperText('Paste the ImageKit.io image URL here'),
+
+                            Forms\Components\Placeholder::make('image_preview')
+                                ->label('Preview')
+                                ->content(fn ($get) => $get('image')
+                                    ? new HtmlString(
+                                        '<img src="' . e($get('image')) . '" 
+                                        style="max-width:250px;border-radius:12px;margin-top:10px;">'
+                                    )
+                                    : 'No image selected'),
+
                             TextInput::make('image_alt')
-                            ->label('Image Alt')
-                            ->maxLength(255)
-                            ->helperText('Describe the main image for SEO and accessibility'),
+                                ->label('Image Alt')
+                                ->maxLength(255)
+                                ->helperText('Describe the main image for SEO and accessibility'),
 
                             TextInput::make('slug')
                                 ->label('Slug')
@@ -130,10 +138,8 @@ class HotelResource extends Resource
                             ->rows(3),
 
                         RichEditor::make('content')
-                    ->label('Content')
-                    ->columnSpanFull()
-                    ->fileAttachmentsDisk('public')
-                    ->fileAttachmentsDirectory('hotels/content'),
+                            ->label('Content')
+                            ->columnSpanFull(),
                     ]),
 
                 Section::make('SEO')
@@ -200,8 +206,7 @@ class HotelResource extends Resource
             ->columns([
 
                 ImageColumn::make('image')
-                ->label('Image')
-                ->disk('public'),
+                    ->label('Image'),
 
                 TextColumn::make('title')
                     ->searchable()
