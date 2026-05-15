@@ -43,6 +43,8 @@ class PostResource extends Resource
 
                 Forms\Components\Textarea::make('content')
                     ->required()
+                    ->rows(18)
+                    ->autosize()
                     ->columnSpanFull(),
 
                 Forms\Components\TextInput::make('featured_image')
