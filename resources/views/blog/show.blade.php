@@ -284,7 +284,7 @@
 
                     <div class="blog-author-box">
                         <div class="left">
-                            <p>Written by Tulum Airport Cab</p>
+                            <p>Written by Taxi Dominicana</p>
                             <p>Discover the way, connect with nature.</p>
                         </div>
 
