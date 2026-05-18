@@ -5,22 +5,146 @@
     <link href="{{ mix('/assets/css/destinations/tulum.min.css') }}" rel="stylesheet">
 
     <style>
+        .hotel-single {
+            padding: 40px 0 60px;
+            background: #f7f8fb;
+        }
 
+        .hotel-single .content-wrap {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) 340px;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .hotel-single .main {
+            background: #fff;
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+        }
+
+        .hotel-single .sidebar {
+            position: sticky;
+            top: 110px;
+            display: grid;
+            gap: 24px;
+        }
+
+        .hotel-booking-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+            border: 1px solid #edf1f7;
+        }
+
+        .hotel-back-link {
+            display: inline-block;
+            margin-bottom: 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hotel-single .main h1 {
+            font-size: 46px;
+            line-height: 1.08;
+            margin-bottom: 16px;
+            color: #243b5a;
+        }
+
+        .hotel-category-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 13px;
+            margin-bottom: 18px;
+            color: #5f6b7a;
+        }
+
+        .hotel-single .main img.hero {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            display: block;
+            margin: 20px 0 26px;
+        }
+
+        .hotel-info-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            padding: 16px 18px;
+            border-radius: 14px;
+            background: #f8fafc;
+            margin-bottom: 24px;
+            border: 1px solid #e8edf5;
+            color: #5f6b7a;
+            font-size: 14px;
+        }
+
+        .hotel-excerpt-box {
+            background: #f2f5fb;
+            border-left: 4px solid #2a8cff;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 24px 0 28px;
+            color: #31445f;
+        }
+
+        .hotel-excerpt-box strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #243b5a;
+        }
+
+        .hotel-map {
+            margin: 24px 0;
+        }
+
+        .hotel-map iframe {
+            width: 100%;
+            height: 320px;
+            border: 0;
+            border-radius: 16px;
+        }
+
+        .hotel-editor-content {
+            color: #31445f;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+        .hotel-editor-content h2,
+        .hotel-editor-content h3,
+        .hotel-editor-content h4 {
+            color: #243b5a;
+            margin-top: 34px;
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+
+        .hotel-editor-content h2 {
+            font-size: 34px;
+        }
+
+        .hotel-editor-content h3 {
+            font-size: 28px;
+        }
+
+        .hotel-editor-content p {
+            margin-bottom: 18px;
+        }
 
         .hotel-editor-content img {
             max-width: 100%;
             height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
+            border-radius: 16px;
+            margin: 18px 0;
         }
 
         .hotel-editor-content figure {
             margin: 24px 0;
-        }
-
-        .hotel-editor-content a {
-            word-break: break-word;
         }
 
         .hotel-editor-content figcaption {
@@ -30,106 +154,40 @@
             text-align: center;
         }
 
-        .hotel-single {
-            padding: 40px 0 60px;
-            background: #f5f5f3;
+        .hotel-editor-content a {
+            word-break: break-word;
         }
 
-        .hotel-single .content-wrap {
-            display: grid;
-            grid-template-columns: minmax(0, 2fr) minmax(300px, 380px);
-            gap: 36px;
-            align-items: start;
+        .hotel-editor-content ul,
+        .hotel-editor-content ol {
+            margin: 0 0 18px 22px;
         }
 
-        .hotel-single .main {
-            background: #fff;
-            padding: 28px;
+        .hotel-editor-content li {
+            margin-bottom: 8px;
+        }
+
+        .hotel-editor-content blockquote {
+            margin: 24px 0;
+            padding: 18px 20px;
+            background: #f8fafc;
+            border-left: 4px solid #2a8cff;
             border-radius: 12px;
-        }
-
-        .hotel-single .main img.hero {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            display: block;
-            margin-bottom: 22px;
-            border-radius: 10px;
-        }
-
-        .hotel-single .main h1 {
-            font-size: 42px;
-            line-height: 1.05;
-            color: #2f3550;
-            margin-bottom: 12px;
-        }
-
-        .hotel-single .meta {
-            font-size: 14px;
-            color: #5f6776;
-            margin-bottom: 18px;
-        }
-
-        .hotel-single .rating {
-            color: #f5c518;
-            font-size: 20px;
-            margin-bottom: 6px;
-        }
-
-        .hotel-single .reviews {
-            font-size: 14px;
-            color: #6b7280;
-            margin-bottom: 18px;
-        }
-
-        .hotel-single .excerpt {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #4d5567;
-            margin-bottom: 22px;
-        }
-
-        .hotel-single .content {
-            color: #3f4656;
-            line-height: 1.85;
-        }
-
-        .hotel-single .sidebar {
-            display: grid;
-            gap: 24px;
+            color: #243b5a;
         }
 
         .hotel-widget {
             background: #fff;
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 22px;
+            box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+            border: 1px solid #edf1f7;
         }
 
         .hotel-widget h3 {
             font-size: 20px;
-            color: #2f3550;
-            margin-bottom: 16px;
-        }
-
-        .hotel-search-form {
-            display: grid;
-            gap: 10px;
-        }
-
-        .hotel-search-form input {
-            width: 100%;
-            border: 1px solid #d7dce5;
-            border-radius: 8px;
-            padding: 12px 14px;
-        }
-
-        .hotel-search-form button {
-            border: 0;
-            border-radius: 8px;
-            padding: 12px 16px;
-            background: #2f3550;
-            color: #fff;
-            cursor: pointer;
+            margin-bottom: 18px;
+            color: #243b5a;
         }
 
         .related-hotels {
@@ -138,30 +196,42 @@
         }
 
         .related-hotel {
-            display: grid;
-            grid-template-columns: 88px 1fr;
-            gap: 12px;
+            display: block;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
             text-decoration: none;
-            color: inherit;
+            box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+            border: 1px solid #edf1f7;
+            transition: .25s ease;
+        }
+
+        .related-hotel:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(16, 24, 40, .12);
         }
 
         .related-hotel img {
-            width: 88px;
-            height: 88px;
+            width: 100%;
+            height: 220px;
             object-fit: cover;
-            border-radius: 8px;
+            display: block;
+        }
+
+        .related-hotel div {
+            padding: 16px;
         }
 
         .related-hotel h4 {
-            font-size: 16px;
-            line-height: 1.35;
-            color: #2f3550;
-            margin-bottom: 6px;
+            font-size: 22px;
+            line-height: 1.2;
+            color: #243b5a;
+            margin-bottom: 12px;
         }
 
         .related-hotel p {
             font-size: 13px;
-            color: #6b7280;
+            color: #5f6b7a;
             line-height: 1.5;
         }
 
@@ -169,63 +239,97 @@
             .hotel-single .content-wrap {
                 grid-template-columns: 1fr;
             }
+
+            .hotel-single .sidebar {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hotel-single {
+                padding: 24px 0 40px;
+            }
+
+            .hotel-single .main {
+                padding: 18px;
+                border-radius: 14px;
+            }
+
+            .hotel-single .main h1 {
+                font-size: 34px;
+            }
+
+            .related-hotel img {
+                height: 180px;
+            }
         }
     </style>
 @endpush
 
 @push("push-bottom")
+    <script defer src="{{ mix('/assets/js/bookingbox/index.min.js') }}"></script>
 @endpush
 
 @section('content')
     @include('layout.header.general', ['link' => $link, 'active' => 0])
 
-    <div class="heading">
-        <div class="container">
-            <div class="top">
-                <x-breadcrumb :breadcrumbs="$breadcrumbs"/>
-            </div>
-        </div>
-    </div>
-
     <section class="hotel-single">
         <div class="container">
             <div class="content-wrap">
-                <div class="main">
+                <article class="main">
+                    @if(isset($breadcrumbs))
+                        <div style="margin-bottom: 16px;">
+                            <x-breadcrumb :breadcrumbs="$breadcrumbs"/>
+                        </div>
+                    @endif
+
+                    <a class="hotel-back-link" href="{{ route('hotel.index') }}">← Back to hotels</a>
+
+                    <h1>{{ $hotel->title }}</h1>
+
+                    <div class="hotel-category-row">
+                        <span>Hotel Guide</span>
+
+                        @if($hotel->tag)
+                            <span>{{ ucfirst($hotel->tag) }}</span>
+                        @endif
+
+                        @if($hotel->price_range)
+                            <span>{{ $hotel->price_range }}</span>
+                        @endif
+                    </div>
+
                     <img
                         class="hero"
                         src="{{ $hotel->image ? asset('storage/' . $hotel->image) : '/assets/img/hotels/client.jpg' }}"
                         alt="{{ $hotel->image_alt ?: $hotel->title }}"
+                        title="{{ $hotel->title }}"
                     >
 
-                    <h1>{{ $hotel->title }}</h1>
-
-                    <div class="rating">★★★★☆</div>
-                    <div class="reviews">4.5 / 5 - 1114 reviews</div>
-
-                    <div class="meta">
+                    <div class="hotel-info-box">
                         @if($hotel->price_range)
-                            <strong>Price:</strong> {{ $hotel->price_range }}
+                            <span><strong>Price:</strong> {{ $hotel->price_range }}</span>
                         @endif
 
                         @if($hotel->tag)
-                            &nbsp;&nbsp;|&nbsp;&nbsp;<strong>Tag:</strong> {{ ucfirst($hotel->tag) }}
+                            <span><strong>Tag:</strong> {{ ucfirst($hotel->tag) }}</span>
                         @endif
 
                         @if($hotel->address)
-                            &nbsp;&nbsp;|&nbsp;&nbsp;<strong>Location:</strong> {{ $hotel->address }}
+                            <span><strong>Location:</strong> {{ $hotel->address }}</span>
                         @endif
                     </div>
 
                     @if($hotel->excerpt)
-                        <div class="excerpt">{{ $hotel->excerpt }}</div>
+                        <div class="hotel-excerpt-box">
+                            <strong>Hotel Summary</strong>
+                            <p style="margin:0;">{{ $hotel->excerpt }}</p>
+                        </div>
                     @endif
 
                     @if($hotel->latitude && $hotel->longitude)
-                        <div style="margin-bottom: 24px;">
+                        <div class="hotel-map">
                             <iframe
-                                width="100%"
-                                height="320"
-                                style="border:0;border-radius:10px;"
                                 loading="lazy"
                                 allowfullscreen
                                 src="https://www.google.com/maps?q={{ $hotel->latitude }},{{ $hotel->longitude }}&output=embed">
@@ -234,19 +338,15 @@
                     @endif
 
                     @if($hotel->content)
-                        <div class="content hotel-editor-content">
+                        <div class="hotel-editor-content">
                             {!! $hotel->content !!}
                         </div>
                     @endif
-                </div>
+                </article>
 
                 <aside class="sidebar">
-                    <div class="hotel-widget">
-                        <h3>Search</h3>
-                        <form class="hotel-search-form" action="{{ route('hotel.index') }}" method="GET">
-                            <input type="text" name="q" placeholder="Search hotels...">
-                            <button type="submit">Search</button>
-                        </form>
+                    <div class="hotel-booking-box">
+                        <x-bookingbox/>
                     </div>
 
                     <div class="hotel-widget">
@@ -256,10 +356,11 @@
                             <div class="related-hotels">
                                 @foreach($relatedHotels as $item)
                                     <a class="related-hotel" href="{{ route('hotel.show', ltrim($item->slug, '/')) }}">
-                                            <img
-                                                src="{{ $item->image ? asset('storage/' . $item->image) : '/assets/img/hotels/client.jpg' }}"
-                                                alt="{{ $item->image_alt ?: $item->title }}"
-                                            >
+                                        <img
+                                            src="{{ $item->image ? asset('storage/' . $item->image) : '/assets/img/hotels/client.jpg' }}"
+                                            alt="{{ $item->image_alt ?: $item->title }}"
+                                        >
+
                                         <div>
                                             <h4>{{ $item->title }}</h4>
 
@@ -270,6 +371,8 @@
                                     </a>
                                 @endforeach
                             </div>
+                        @else
+                            <p style="margin:0;color:#5f6b7a;">More hotels coming soon.</p>
                         @endif
                     </div>
                 </aside>
