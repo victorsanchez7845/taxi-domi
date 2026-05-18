@@ -142,22 +142,43 @@
             @if($hotels->count())
                 <div class="hotels-grid">
                     @foreach($hotels as $hotel)
-                        <a class="hotel-card" href="{{ route('hotel.show.es', ltrim($hotel->slug, '/')) }}">
-                            <img
-                             src="{{ $hotel->image ? asset('storage/' . $hotel->image) : '/assets/img/hotels/client.jpg' }}"
-                            alt="{{ $hotel->title }}"
-                            >
+
+                        @php
+                            $hotelImage = $hotel->image ? trim($hotel->image) : null;
+
+                            if ($hotelImage && !\Illuminate\Support\Str::startsWith($hotelImage, ['http://', 'https://'])) {
+                                $hotelImage = asset('storage/' . ltrim($hotelImage, '/'));
+                            }
+
+                            $hotelImage = $hotelImage ?: '/assets/img/hotels/client.jpg';
+                        @endphp
+
+                        <div class="hotel-card">
+
+                            <a href="{{ route('hotel.show.es', ltrim($hotel->slug, '/')) }}">
+                                <img
+                                    src="{{ $hotelImage }}"
+                                    alt="{{ $hotel->title }}"
+                                >
+                            </a>
 
                             @if($hotel->address)
                                 <div class="eyebrow">{{ $hotel->address }}</div>
                             @else
-                                <div class="eyebrow">Tulum, Quintana Roo</div>
+                                <div class="eyebrow">República Dominicana</div>
                             @endif
 
-                            <h3>{{ $hotel->title }}</h3>
+                            <h3>
+                                <a
+                                    href="{{ route('hotel.show.es', ltrim($hotel->slug, '/')) }}"
+                                    style="color: inherit; text-decoration: none;"
+                                >
+                                    {{ $hotel->title }}
+                                </a>
+                            </h3>
 
                             <div class="rating">★★★★☆</div>
-                            <div class="reviews">4.5 / 5 - 1114 reviews</div>
+                            <div class="reviews">4.5 / 5 - 1114 reseñas</div>
 
                             @if($hotel->excerpt)
                                 <p>{{ \Illuminate\Support\Str::limit(strip_tags($hotel->excerpt), 95) }}</p>
@@ -170,7 +191,9 @@
                             @if($hotel->tag)
                                 <p>{{ ucfirst($hotel->tag) }}</p>
                             @endif
-                        </a>
+
+                        </div>
+
                     @endforeach
                 </div>
 

@@ -299,9 +299,19 @@
                         @endif
                     </div>
 
+                    @php
+                        $hotelImage = $hotel->image ? trim($hotel->image) : null;
+
+                        if ($hotelImage && !\Illuminate\Support\Str::startsWith($hotelImage, ['http://', 'https://'])) {
+                            $hotelImage = asset('storage/' . ltrim($hotelImage, '/'));
+                        }
+
+                        $hotelImage = $hotelImage ?: '/assets/img/hotels/client.jpg';
+                    @endphp
+
                     <img
                         class="hero"
-                        src="{{ $hotel->image ? asset('storage/' . $hotel->image) : '/assets/img/hotels/client.jpg' }}"
+                        src="{{ $hotelImage }}"
                         alt="{{ $hotel->image_alt ?: $hotel->title }}"
                         title="{{ $hotel->title }}"
                     >
@@ -355,9 +365,19 @@
                         @if($relatedHotels->count())
                             <div class="related-hotels">
                                 @foreach($relatedHotels as $item)
+                                    @php
+                                        $relatedImage = $item->image ? trim($item->image) : null;
+
+                                        if ($relatedImage && !\Illuminate\Support\Str::startsWith($relatedImage, ['http://', 'https://'])) {
+                                            $relatedImage = asset('storage/' . ltrim($relatedImage, '/'));
+                                        }
+
+                                        $relatedImage = $relatedImage ?: '/assets/img/hotels/client.jpg';
+                                    @endphp
+
                                     <a class="related-hotel" href="{{ route('hotel.show', ltrim($item->slug, '/')) }}">
                                         <img
-                                            src="{{ $item->image ? asset('storage/' . $item->image) : '/assets/img/hotels/client.jpg' }}"
+                                            src="{{ $relatedImage }}"
                                             alt="{{ $item->image_alt ?: $item->title }}"
                                         >
 
