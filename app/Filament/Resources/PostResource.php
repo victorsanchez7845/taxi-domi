@@ -9,69 +9,157 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Support\HtmlString;
 
 class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected static ?string $navigationLabel = 'Blog Posts';
+
+    protected static ?string $modelLabel = 'Post';
+
+    protected static ?string $pluralModelLabel = 'Posts';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
 
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
+                Section::make('General')
+                    ->schema([
 
-                Forms\Components\TextInput::make('language')
-                    ->required()
-                    ->maxLength(5)
-                    ->default('en'),
+                        Grid::make(2)->schema([
 
-                Forms\Components\TextInput::make('group_id')
-                    ->label('Group ID')
-                    ->maxLength(255),
+                            TextInput::make('title')
+                                ->label('Title')
+                                ->required()
+                                ->maxLength(255),
 
-                Forms\Components\Textarea::make('excerpt')
-                    ->columnSpanFull(),
+                            TextInput::make('featured_image')
+                                ->label('Featured Image URL')
+                                ->url()
+                                ->maxLength(2048)
+                                ->helperText('Paste the ImageKit.io image URL here'),
 
-                Forms\Components\Textarea::make('content')
-                    ->required()
-                    ->rows(18)
-                    ->autosize()
-                    ->columnSpanFull(),
+                            Forms\Components\Placeholder::make('featured_image_preview')
+                                ->label('Preview')
+                                ->content(fn ($get) => $get('featured_image')
+                                    ? new HtmlString(
+                                        '<img src="' . e($get('featured_image')) . '" 
+                                        style="max-width:250px;border-radius:12px;margin-top:10px;">'
+                                    )
+                                    : 'No image selected'),
 
-                Forms\Components\TextInput::make('featured_image')
-                    ->label('Featured Image URL')
-                    ->url()
-                    ->maxLength(2048)
-                    ->helperText('Paste the ImageKit.io image URL here'),
+                            TextInput::make('slug')
+                                ->label('Slug')
+                                ->required()
+                                ->maxLength(255)
+                                ->unique(ignoreRecord: true),
 
-                Forms\Components\Placeholder::make('featured_image_preview')
-                    ->label('Preview')
-                    ->content(fn ($get) => $get('featured_image')
-                        ? new HtmlString(
-                            '<img src="' . e($get('featured_image')) . '" 
-                            style="max-width:250px;border-radius:12px;margin-top:10px;">'
-                        )
-                        : 'No image selected'),
+                        ]),
 
-                Forms\Components\TextInput::make('meta_title')
-                    ->maxLength(255),
+                        Grid::make(2)->schema([
 
-                Forms\Components\Textarea::make('meta_description')
-                    ->columnSpanFull(),
+                            Select::make('language')
+                                ->label('Language')
+                                ->options([
+                                    'en' => 'English',
+                                    'es' => 'Español',
+                                ])
+                                ->default('en')
+                                ->required()
+                                ->live(),
 
-                Forms\Components\Toggle::make('is_published')
-                    ->required(),
+                            Hidden::make('group_id'),
 
-                Forms\Components\DateTimePicker::make('published_at'),
+                        ]),
+
+                        Select::make('translation_of')
+                            ->label('Traducción de')
+                            ->options(function () {
+                                return Post::where('language', 'en')
+                                    ->orderBy('title')
+                                    ->pluck('title', 'id');
+                            })
+                            ->searchable()
+                            ->preload()
+                            ->placeholder('Selecciona el artículo en inglés')
+                            ->visible(fn (Forms\Get $get): bool => $get('language') === 'es')
+                            ->rule(function (callable $get, ?Post $record) {
+                                return function (string $attribute, $value, \Closure $fail) use ($get, $record) {
+
+                                    if ($get('language') !== 'es' || empty($value)) {
+                                        return;
+                                    }
+
+                                    $original = Post::find($value);
+
+                                    if (! $original) {
+                                        return;
+                                    }
+
+                                    $groupId = $original->group_id ?: $original->id;
+
+                                    $query = Post::where('group_id', $groupId)
+                                        ->where('language', 'es');
+
+                                    if ($record) {
+                                        $query->where('id', '!=', $record->id);
+                                    }
+
+                                    if ($query->exists()) {
+                                        $fail('Ya existe una versión en español para este artículo.');
+                                    }
+                                };
+                            }),
+
+                        Toggle::make('is_published')
+                            ->label('Published')
+                            ->default(true),
+
+                    ]),
+
+                Section::make('Contenido')
+                    ->schema([
+
+                        Textarea::make('excerpt')
+                            ->label('Excerpt')
+                            ->rows(3),
+
+                        Forms\Components\Textarea::make('content')
+                            ->required()
+                            ->rows(18)
+                            ->autosize()
+                            ->columnSpanFull(),
+
+                    ]),
+
+                Section::make('SEO')
+                    ->schema([
+
+                        TextInput::make('meta_title')
+                            ->label('Meta Title')
+                            ->maxLength(255),
+
+                        Textarea::make('meta_description')
+                            ->label('Meta Description')
+                            ->rows(3),
+
+                    ]),
+
             ]);
     }
 
@@ -79,37 +167,36 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
 
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+                ImageColumn::make('featured_image')
+                    ->label('Image'),
 
-                Tables\Columns\TextColumn::make('language')
-                    ->searchable(),
+                TextColumn::make('title')
+                    ->searchable()
+                    ->sortable(),
 
-                Tables\Columns\ImageColumn::make('featured_image')
-                    ->label('Featured Image'),
+                TextColumn::make('language')
+                    ->badge()
+                    ->sortable(),
 
-                Tables\Columns\TextColumn::make('meta_title')
-                    ->searchable(),
+                TextColumn::make('group_id')
+                    ->label('Grupo')
+                    ->sortable(),
 
-                Tables\Columns\IconColumn::make('is_published')
+                IconColumn::make('is_published')
+                    ->label('Published')
                     ->boolean(),
 
-                Tables\Columns\TextColumn::make('published_at')
+                TextColumn::make('published_at')
+                    ->label('Published At')
                     ->dateTime()
                     ->sortable(),
 
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
+                    ->label('Created')
                     ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->sortable(),
 
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
