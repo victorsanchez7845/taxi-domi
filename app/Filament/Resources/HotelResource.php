@@ -137,9 +137,11 @@ class HotelResource extends Resource
                             ->label('Excerpt')
                             ->rows(3),
 
-                        RichEditor::make('content')
-                            ->label('Content')
-                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('content')
+                        ->required()
+                        ->rows(18)
+                        ->autosize()
+                        ->columnSpanFull(),
                     ]),
 
                 Section::make('SEO')
