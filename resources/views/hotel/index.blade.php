@@ -68,18 +68,6 @@
         text-decoration: none;
     }
 
-    .hotel-card .rating {
-        color: #f5c518;
-        font-size: 18px;
-        margin-bottom: 4px;
-    }
-
-    .hotel-card .reviews {
-        font-size: 13px;
-        color: #6b7280;
-        margin-bottom: 10px;
-    }
-
     .hotel-card p {
         font-size: 14px;
         line-height: 1.7;
@@ -288,9 +276,6 @@
                                 {{ $hotel->title }}
                             </a>
                         </h3>
-
-                        <div class="rating">★★★★☆</div>
-                        <div class="reviews">4.5 / 5 - 1114 reviews</div>
 
                         @if($hotel->excerpt)
                             <p>{{ \Illuminate\Support\Str::limit(strip_tags($hotel->excerpt), 95) }}</p>
