@@ -19,12 +19,14 @@
                     <h4>Información</h4>
                     <a href="/es/contacto" title="Contacto">Contacto</a>
                     <a href="/es/reserva" title="Consulta tu reservación">Consulta tu reservación</a>
+                    <a href="/es/blog" title="Blog">Blog</a>
                     <a href="/es/terminos-y-condiciones" title="Términos y condiciones">Términos y condiciones</a>
                     <a href="/es/privacidad" title="Política de privacidad">Política de privacidad</a>
                 @else
                     <h4>Information</h4>
                     <a href="/contact" title="Contact">Contact</a>
                     <a href="/booking" title="Check your reservation">Check your reservation</a>
+                    <a href="/blog" title="Blog">Blog</a>
                     <a href="/terms-and-conditions" title="Terms and conditions">Terms and conditions</a>
                     <a href="/privacy" title="Privacy policy">Privacy policy</a>
                 @endif
