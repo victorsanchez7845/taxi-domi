@@ -92,6 +92,48 @@
             justify-content: center;
         }
 
+        .hotels-pagination svg {
+            width: 18px !important;
+            height: 18px !important;
+            max-width: 18px !important;
+            max-height: 18px !important;
+        }
+
+        .hotels-pagination nav > div:first-child {
+            display: none !important;
+        }
+
+        .hotels-pagination nav > div:last-child {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .hotels-pagination nav > div:last-child > div:first-child {
+            display: none !important;
+        }
+
+        .hotels-pagination nav > div:last-child > div:last-child {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+        }
+
+        .hotels-pagination a,
+        .hotels-pagination span {
+            font-size: 14px !important;
+            line-height: 1 !important;
+        }
+
+        .hotels-pagination a[rel="prev"],
+        .hotels-pagination a[rel="next"],
+        .hotels-pagination span[aria-disabled="true"] {
+            width: 36px !important;
+            height: 36px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
         @media (max-width: 1024px) {
             .hotels-page .intro h2 {
                 font-size: 34px;
