@@ -45,22 +45,15 @@
         height: 220px;
         object-fit: cover;
         display: block;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
         border-radius: 14px;
     }
 
-    .hotel-card .eyebrow {
-        font-size: 13px;
-        line-height: 1.5;
-        color: #6b7280;
-        margin-bottom: 6px;
-    }
-
     .hotel-card h3 {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.35;
         color: #2f3550;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     .hotel-card h3 a {
@@ -261,12 +254,6 @@
                                 alt="{{ $hotel->title }}"
                             >
                         </a>
-
-                        @if($hotel->address)
-                            <div class="eyebrow">{{ $hotel->address }}</div>
-                        @else
-                            <div class="eyebrow">Dominican Republic</div>
-                        @endif
 
                         <h3>
                             <a
