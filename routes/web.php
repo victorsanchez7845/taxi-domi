@@ -8,6 +8,13 @@ use App\Http\Controllers\HotelsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\JobsController;
+use App\Http\Controllers\SitemapController;
+
+// Sitemaps
+Route::get('/sitemap.xml', [SitemapController::class, 'index']);
+Route::get('/sitemap-main.xml', [SitemapController::class, 'main']);
+Route::get('/sitemap-blog.xml', [SitemapController::class, 'blog']);
+Route::get('/sitemap-hotels.xml', [SitemapController::class, 'hotels']);
 
 Route::middleware('locale')->group(function () {
 
