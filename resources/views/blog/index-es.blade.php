@@ -66,7 +66,14 @@
                             Blog de viajes
                         </p>
 
-                        <h1>{{ $heroPost->title }}</h1>
+                        <h1>
+                            <a
+                                href="{{ route('blog.show.es', ltrim($heroPost->slug, '/')) }}"
+                                style="color: inherit; text-decoration: none;"
+                            >
+                                {{ $heroPost->title }}
+                            </a>
+                        </h1>
 
                         @if($heroPost->excerpt)
                             <p>{{ $heroPost->excerpt }}</p>
@@ -104,7 +111,14 @@
                         </div>
 
                         <div class="blog-featured-right">
-                            <h2>{{ $mainFeatured->title }}</h2>
+                            <h2>
+                                <a
+                                    href="{{ route('blog.show.es', ltrim($mainFeatured->slug, '/')) }}"
+                                    style="color: inherit; text-decoration: none;"
+                                >
+                                    {{ $mainFeatured->title }}
+                                </a>
+                            </h2>
 
                             @if($mainFeatured->excerpt)
                                 <p>{{ $mainFeatured->excerpt }}</p>
@@ -127,7 +141,14 @@
                                     <img src="/assets/img/hotels/client.jpg" alt="{{ $post->title }}">
                                 @endif
 
-                                <h3>{{ $post->title }}</h3>
+                                <h3>
+                                    <a
+                                        href="{{ route('blog.show.es', ltrim($post->slug, '/')) }}"
+                                        style="color: inherit; text-decoration: none;"
+                                    >
+                                        {{ $post->title }}
+                                    </a>
+                                </h3>
 
                                 @if($post->excerpt)
                                     <p>{{ \Illuminate\Support\Str::limit($post->excerpt, 90) }}</p>
@@ -150,7 +171,14 @@
                                 <img src="/assets/img/hotels/client.jpg" alt="{{ $post->title }}">
                             @endif
 
-                            <h4>{{ $post->title }}</h4>
+                            <h4>
+                                <a
+                                    href="{{ route('blog.show.es', ltrim($post->slug, '/')) }}"
+                                    style="color: inherit; text-decoration: none;"
+                                >
+                                    {{ $post->title }}
+                                </a>
+                            </h4>
 
                             @if($post->excerpt)
                                 <p>{{ \Illuminate\Support\Str::limit($post->excerpt, 95) }}</p>

@@ -117,7 +117,7 @@ class HotelController extends Controller
             "name" => "Home"
         ];
         $breadcrumbs[2] = [
-            "URL" => config('app.url') . '/hotels',
+            "URL" => config('app.url') . 'hotels',
             "name" => "Hotels"
         ];
         $breadcrumbs[3] = [
@@ -182,11 +182,11 @@ class HotelController extends Controller
 
         $breadcrumbs = [];
         $breadcrumbs[1] = [
-            "URL" => config('app.url') . '/es',
+            "URL" => config('app.url') . 'es',
             "name" => "Inicio"
         ];
         $breadcrumbs[2] = [
-            "URL" => config('app.url') . '/es/hoteles',
+            "URL" => config('app.url') . 'es/hoteles',
             "name" => "Hoteles"
         ];
         $breadcrumbs[3] = [
