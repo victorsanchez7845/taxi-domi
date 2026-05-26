@@ -87,7 +87,7 @@ class PostResource extends Resource
 
                         ]),
 
-                        Select::make('translation_of')
+                        Select::make('group_id')
                             ->label('Traducción de')
                             ->options(function () {
                                 return Post::where('language', 'en')
@@ -105,15 +105,7 @@ class PostResource extends Resource
                                         return;
                                     }
 
-                                    $original = Post::find($value);
-
-                                    if (! $original) {
-                                        return;
-                                    }
-
-                                    $groupId = $original->group_id ?: $original->id;
-
-                                    $query = Post::where('group_id', $groupId)
+                                    $query = Post::where('group_id', $value)
                                         ->where('language', 'es');
 
                                     if ($record) {
