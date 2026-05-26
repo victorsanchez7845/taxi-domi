@@ -135,7 +135,7 @@ $breadcrumbs[1] = [
     "name" => "Home"
 ];
 $breadcrumbs[2] = [
-    "URL" => config('app.url') . '/blog',
+    "URL" => config('app.url') . 'blog',
     "name" => "Blog"
 ];
 $breadcrumbs[3] = [
@@ -185,11 +185,11 @@ $breadcrumbs[3] = [
     // 🔥 BREADCRUMBS (ES)
     $breadcrumbs = [];
     $breadcrumbs[1] = [
-        "URL" => config('app.url') . '/es',
+        "URL" => config('app.url') . 'es',
         "name" => "Inicio"
     ];
     $breadcrumbs[2] = [
-        "URL" => config('app.url') . '/es/blog',
+        "URL" => config('app.url') . 'es/blog',
         "name" => "Blog"
     ];
     $breadcrumbs[3] = [
