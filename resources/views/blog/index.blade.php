@@ -280,7 +280,7 @@
                         <h1>
                             <a
                                 class="blog-link"
-                                href="{{ url(ltrim($heroPost->slug, '/')) }}"
+                                href="{{ route('blog.show', ltrim($heroPost->slug, '/')) }}"
                             >
                                 {{ $heroPost->title }}
                             </a>
@@ -296,7 +296,7 @@
 
                     <div class="blog-intro-image">
 
-                        <a href="{{ url(ltrim($heroPost->slug, '/')) }}">
+                        <a href="{route('blog.show', ltrim($mainFeatured->slug, '/'))">
 
                             @if($heroPost->featured_image)
 
@@ -341,7 +341,7 @@
 
                         <div class="blog-featured-left">
 
-                            <a href="{{ url(ltrim($mainFeatured->slug, '/')) }}">
+                            <a href="{{ route('blog.show', ltrim($mainFeatured->slug, '/')) }}">
 
                                 @if($mainFeatured->featured_image)
 
@@ -368,7 +368,7 @@
                             <h2>
                                 <a
                                     class="blog-link"
-                                    href="{{ url(ltrim($mainFeatured->slug, '/')) }}"
+                                    href="{{ route('blog.show', ltrim($mainFeatured->slug, '/')) }}"
                                 >
                                     {{ $mainFeatured->title }}
                                 </a>
@@ -384,7 +384,7 @@
 
                             <a
                                 class="blog-read-more"
-                                href="{{ url(ltrim($mainFeatured->slug, '/')) }}"
+                                href="{{ route('blog.show', ltrim($mainFeatured->slug, '/')) }}"
                             >
                                 Read more
                             </a>
@@ -406,7 +406,7 @@
 
                             <a
                                 class="blog-card-small"
-                                href="{{ url(ltrim($post->slug, '/')) }}"
+                                href="{{ route('blog.show', ltrim($post->slug, '/')) }}"
                             >
 
                                 @if($post->featured_image)
@@ -462,7 +462,7 @@
 
                         <a
                             class="blog-grid-post"
-                            href="{{ url(ltrim($post->slug, '/')) }}"
+                            href="{{ route('blog.show', ltrim($post->slug, '/')) }}"
                         >
 
                             @if($post->featured_image)
