@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @push("push-top")
-    {{-- CSS de la sección. Puedes dejar este mismo si el diseño ya funciona correctamente --}}
+    {{-- CSS de la sección --}}
     <link href="{{ mix('/assets/css/hotels/index.min.css') }}" rel="preload" as="style">
     <link href="{{ mix('/assets/css/hotels/index.min.css') }}" rel="stylesheet">
 @endpush
@@ -71,8 +71,10 @@
             {{-- Destino 1: Punta Cana --}}
             <div class="item">
                 <div class="one_">
-                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
-                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Punta Cana' : 'Hotels in Punta Cana' }}">
+                    <a
+                        href="{{ app()->getLocale() == 'es' ? '/es/traslados-aeropuerto-punta-cana' : '/punta-cana-airport-transfers' }}"
+                        title="{{ app()->getLocale() == 'es' ? 'Hoteles en Punta Cana' : 'Hotels in Punta Cana' }}"
+                    >
                         <picture>
                             <source srcset="/assets/img/destinations/punta-cana.webp" type="image/webp" />
                             <img
@@ -91,12 +93,22 @@
                     @if(app()->getLocale() == "es")
                         <p>República Dominicana</p>
                         <h3>Traslado a Punta Cana</h3>
-                        <a href="#" title="Hoteles en Punta Cana">Hoteles en Punta Cana</a>
+                        <a
+                            href="/es/traslados-aeropuerto-punta-cana"
+                            title="Hoteles en Punta Cana"
+                        >
+                            Hoteles en Punta Cana
+                        </a>
                         <p>Reserva desde <span>$29 USD</span></p>
                     @else
                         <p>Dominican Republic</p>
                         <h3>Shuttle to Punta Cana</h3>
-                        <a href="#" title="Hotels in Punta Cana">Hotels in Punta Cana</a>
+                        <a
+                            href="/punta-cana-airport-transfers"
+                            title="Hotels in Punta Cana"
+                        >
+                            Hotels in Punta Cana
+                        </a>
                         <p>Price from <span>$29 USD</span></p>
                     @endif
                 </div>
@@ -105,8 +117,10 @@
             {{-- Destino 2: Santo Domingo --}}
             <div class="item">
                 <div class="one_">
-                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
-                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Santo Domingo' : 'Hotels in Santo Domingo' }}">
+                    <a
+                        href="{{ app()->getLocale() == 'es' ? '/es/traslados-aeropuerto-santo-domingo' : '/santo-domingo-airport-transfers' }}"
+                        title="{{ app()->getLocale() == 'es' ? 'Hoteles en Santo Domingo' : 'Hotels in Santo Domingo' }}"
+                    >
                         <picture>
                             <source srcset="/assets/img/destinations/santo-domingo.webp" type="image/webp" />
                             <img
@@ -125,12 +139,22 @@
                     @if(app()->getLocale() == "es")
                         <p>República Dominicana</p>
                         <h3>Traslado a Santo Domingo</h3>
-                        <a href="#" title="Hoteles en Santo Domingo">Hoteles en Santo Domingo</a>
+                        <a
+                            href="/es/traslados-aeropuerto-santo-domingo"
+                            title="Hoteles en Santo Domingo"
+                        >
+                            Hoteles en Santo Domingo
+                        </a>
                         <p>Reserva desde <span>$149 USD</span></p>
                     @else
                         <p>Dominican Republic</p>
                         <h3>Shuttle to Santo Domingo</h3>
-                        <a href="#" title="Hotels in Santo Domingo">Hotels in Santo Domingo</a>
+                        <a
+                            href="/santo-domingo-airport-transfers"
+                            title="Hotels in Santo Domingo"
+                        >
+                            Hotels in Santo Domingo
+                        </a>
                         <p>Price from <span>$149 USD</span></p>
                     @endif
                 </div>
@@ -139,8 +163,10 @@
             {{-- Destino 3: La Romana --}}
             <div class="item">
                 <div class="one_">
-                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
-                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en La Romana' : 'Hotels in La Romana' }}">
+                    <a
+                        href="{{ app()->getLocale() == 'es' ? '/es/aeropuerto-punta-cana-a-la-romana' : '/punta-cana-airport-to-la-romana' }}"
+                        title="{{ app()->getLocale() == 'es' ? 'Hoteles en La Romana' : 'Hotels in La Romana' }}"
+                    >
                         <picture>
                             <source srcset="/assets/img/destinations/la-romana.webp" type="image/webp" />
                             <img
@@ -159,12 +185,22 @@
                     @if(app()->getLocale() == "es")
                         <p>República Dominicana</p>
                         <h3>Traslado a La Romana</h3>
-                        <a href="#" title="Hoteles en La Romana">Hoteles en La Romana</a>
+                        <a
+                            href="/es/aeropuerto-punta-cana-a-la-romana"
+                            title="Hoteles en La Romana"
+                        >
+                            Hoteles en La Romana
+                        </a>
                         <p>Reserva desde <span>$99 USD</span></p>
                     @else
                         <p>Dominican Republic</p>
                         <h3>Shuttle to La Romana</h3>
-                        <a href="#" title="Hotels in La Romana">Hotels in La Romana</a>
+                        <a
+                            href="/punta-cana-airport-to-la-romana"
+                            title="Hotels in La Romana"
+                        >
+                            Hotels in La Romana
+                        </a>
                         <p>Price from <span>$99 USD</span></p>
                     @endif
                 </div>
@@ -173,8 +209,10 @@
             {{-- Destino 4: Puerto Plata --}}
             <div class="item">
                 <div class="one_">
-                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
-                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Puerto Plata' : 'Hotels in Puerto Plata' }}">
+                    <a
+                        href="#"
+                        title="{{ app()->getLocale() == 'es' ? 'Hoteles en Puerto Plata' : 'Hotels in Puerto Plata' }}"
+                    >
                         <picture>
                             <source srcset="/assets/img/destinations/puerto-plata.webp" type="image/webp" />
                             <img
@@ -207,8 +245,10 @@
             {{-- Destino 5: Santiago --}}
             <div class="item">
                 <div class="one_">
-                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
-                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Santiago' : 'Hotels in Santiago' }}">
+                    <a
+                        href="#"
+                        title="{{ app()->getLocale() == 'es' ? 'Hoteles en Santiago' : 'Hotels in Santiago' }}"
+                    >
                         <picture>
                             <source srcset="/assets/img/destinations/santiago.webp" type="image/webp" />
                             <img
@@ -241,8 +281,10 @@
             {{-- Destino 6: Miches --}}
             <div class="item">
                 <div class="one_">
-                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
-                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Miches' : 'Hotels in Miches' }}">
+                    <a
+                        href="#"
+                        title="{{ app()->getLocale() == 'es' ? 'Hoteles en Miches' : 'Hotels in Miches' }}"
+                    >
                         <picture>
                             <source srcset="/assets/img/destinations/miches.webp" type="image/webp" />
                             <img
