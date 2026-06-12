@@ -1,19 +1,25 @@
 @extends('layout.master')
 
-@push("push-top")    
-    <link href="{{ mix('/assets/css/hotels/index.min.css') }}" rel="preload" as="style" >
+@push("push-top")
+    {{-- CSS de la sección. Puedes dejar este mismo si el diseño ya funciona correctamente --}}
+    <link href="{{ mix('/assets/css/hotels/index.min.css') }}" rel="preload" as="style">
     <link href="{{ mix('/assets/css/hotels/index.min.css') }}" rel="stylesheet">
 @endpush
-@push("push-bottom")    
+
+@push("push-bottom")
 @endpush
 
-@section('content')    
-    @include('layout.header.general',['link' => \App\Traits\GeneralTrait::getAlternate( $seo )])
+@section('content')
 
+    {{-- Header general con alternates SEO --}}
+    @include('layout.header.general', ['link' => \App\Traits\GeneralTrait::getAlternate($seo)])
+
+    {{-- Encabezado de la página --}}
     <div class="heading">
         <div class="container">
-            <div class="top">                
+            <div class="top">
                 <x-breadcrumb :breadcrumbs="$breadcrumbs"/>
+
                 @if(app()->getLocale() == "es")
                     <h1>Nuestros destinos</h1>
                 @else
@@ -23,94 +29,253 @@
         </div>
     </div>
 
+    {{-- Listado de destinos --}}
     <div class="container destinations-list">
+
+        {{-- Texto introductorio --}}
         <div class="top">
             @if(app()->getLocale() == "es")
-                <h2>Te llevamos a cualquier lugar de la Riviera Maya</h2>
-                <p>Tulum Airport Cab, adem&aacute;s de ofrecer sus servicios de traslado en el Aeropuerto de Tulum, tambi&eacute;n ofrece servicios de traslado a diferentes puntos de la Riviera Maya, ya sea desde el Aeropuerto de Tulum o desde el Aeropuerto de Canc&uacute;n, estamos siempre listos para llevarte a donde la aventura de llame.</p>
-                <p>Somos la primera empresa oficial en el Aeropuerto de Tulum, y por eso contamos con acceso a cualquier zona de la Riviera Maya, desde las atracciones m&aacute;s populares a los hoteles m&aacute;s exclusivos, te llevamos sin inconveniente, con las mejores tarifas y sin cargos ocultos a cualquier parte de la Pen&iacute;nsula de Yucat&aacute;n y la Riviera Maya. Te dejamos una lista para que encuentres tu destino favorito, si no encuentras el destino al que te diriges en esta lista, puedes consultar con un asesor, estamos siempre listos para atenderte.</p>
+                <h2>Destinos populares en República Dominicana</h2>
+
+                <p>
+                    Taxi Dominicana ofrece servicios de transporte privado hacia algunos de los destinos más visitados
+                    de República Dominicana, conectando aeropuertos, hoteles, playas, zonas turísticas y ciudades principales.
+                </p>
+
+                <p>
+                    Ya sea que viajes a Punta Cana, Santo Domingo, La Romana, Puerto Plata, Santiago o Miches,
+                    estamos listos para llevarte de forma segura, cómoda y puntual. Contamos con tarifas claras,
+                    sin cargos ocultos y conductores confiables para que tu traslado sea tranquilo desde el primer momento.
+                    Si no encuentras el destino que buscas, puedes consultar con un asesor.
+                </p>
             @else
-                <h2>We can take you anywhere in the Riviera Maya</h2>
-                <p>Tulum Airport Cab, besides offering transfer services at Tulum Airport, also offers transfer services to different points of the Riviera Maya, either from Tulum Airport or Cancun Airport, we are always ready to take you wherever the adventure calls.</p>
-                <p>We are the first official company at the Tulum Airport, and therefore we have access to any area of the Riviera Maya, from the most popular attractions to the most exclusive hotels, we take you without inconvenience, with the best rates and no hidden fees to any part of the Yucatan Peninsula and the Riviera Maya. We leave a list for you to find your favorite destination, if you don't find the destination you are looking for in this list, you can consult with an advisor, we are always ready to assist you.</p>
+                <h2>Popular destinations in the Dominican Republic</h2>
+
+                <p>
+                    Taxi Dominicana offers private transportation services to some of the most visited destinations
+                    in the Dominican Republic, connecting airports, hotels, beaches, tourist areas, and main cities.
+                </p>
+
+                <p>
+                    Whether you are traveling to Punta Cana, Santo Domingo, La Romana, Puerto Plata, Santiago, or Miches,
+                    we are ready to take you safely, comfortably, and on time. We offer clear rates, no hidden fees,
+                    and reliable drivers so your transfer is smooth from the moment you arrive. If you do not find
+                    your destination on this list, you can contact an advisor.
+                </p>
             @endif
         </div>
+
+        {{-- Tarjetas de destinos --}}
         <div class="bottom">
+
+            {{-- Destino 1: Punta Cana --}}
             <div class="item">
                 <div class="one_">
-                    <a href="@lang('link.silos_tulum')" title="{{ __('silos/index.tulum_title') }}">
+                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
+                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Punta Cana' : 'Hotels in Punta Cana' }}">
                         <picture>
-                            <source srcset="/assets/img/destinations/tulum.webp" type="image/webp" />
-                            <img src="/assets/img/destinations/tulum.jpg" alt="{{ __('silos/index.tulum_alt') }}" title="{{ __('silos/index.tulum_title') }}" loading="lazy" width="373" height="260" />
-                        </picture>                                                           
-                    </a>                    
+                            <source srcset="/assets/img/destinations/punta-cana.webp" type="image/webp" />
+                            <img
+                                src="/assets/img/destinations/punta-cana.jpg"
+                                alt="{{ app()->getLocale() == 'es' ? 'Traslado a Punta Cana' : 'Shuttle to Punta Cana' }}"
+                                title="{{ app()->getLocale() == 'es' ? 'Traslado a Punta Cana' : 'Shuttle to Punta Cana' }}"
+                                loading="lazy"
+                                width="373"
+                                height="260"
+                            />
+                        </picture>
+                    </a>
                 </div>
+
                 <div class="two_">
                     @if(app()->getLocale() == "es")
-                        <p>Quintana Roo, México</p>
-                        <h3>Traslado a Tulum</h3>
-                        <a href="@lang('link.silos_tulum')" title="Hoteles en Tulum">Hoteles en Tulum</a>
-                        <p>Reserva desde <span>$2,322 MXN</span></p>
+                        <p>República Dominicana</p>
+                        <h3>Traslado a Punta Cana</h3>
+                        <a href="#" title="Hoteles en Punta Cana">Hoteles en Punta Cana</a>
+                        <p>Reserva desde <span>$29 USD</span></p>
                     @else
-                        <p>Quintana Roo, México</p>
-                        <h3>Shuttle to Tulum</h3>
-                        <a href="@lang('link.silos_tulum')" title="Hotels in Tulum">Hotels in Tulum</a>
+                        <p>Dominican Republic</p>
+                        <h3>Shuttle to Punta Cana</h3>
+                        <a href="#" title="Hotels in Punta Cana">Hotels in Punta Cana</a>
+                        <p>Price from <span>$29 USD</span></p>
+                    @endif
+                </div>
+            </div>
+
+            {{-- Destino 2: Santo Domingo --}}
+            <div class="item">
+                <div class="one_">
+                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
+                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Santo Domingo' : 'Hotels in Santo Domingo' }}">
+                        <picture>
+                            <source srcset="/assets/img/destinations/santo-domingo.webp" type="image/webp" />
+                            <img
+                                src="/assets/img/destinations/santo-domingo.jpg"
+                                alt="{{ app()->getLocale() == 'es' ? 'Traslado a Santo Domingo' : 'Shuttle to Santo Domingo' }}"
+                                title="{{ app()->getLocale() == 'es' ? 'Traslado a Santo Domingo' : 'Shuttle to Santo Domingo' }}"
+                                loading="lazy"
+                                width="373"
+                                height="260"
+                            />
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="two_">
+                    @if(app()->getLocale() == "es")
+                        <p>República Dominicana</p>
+                        <h3>Traslado a Santo Domingo</h3>
+                        <a href="#" title="Hoteles en Santo Domingo">Hoteles en Santo Domingo</a>
+                        <p>Reserva desde <span>$149 USD</span></p>
+                    @else
+                        <p>Dominican Republic</p>
+                        <h3>Shuttle to Santo Domingo</h3>
+                        <a href="#" title="Hotels in Santo Domingo">Hotels in Santo Domingo</a>
+                        <p>Price from <span>$149 USD</span></p>
+                    @endif
+                </div>
+            </div>
+
+            {{-- Destino 3: La Romana --}}
+            <div class="item">
+                <div class="one_">
+                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
+                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en La Romana' : 'Hotels in La Romana' }}">
+                        <picture>
+                            <source srcset="/assets/img/destinations/la-romana.webp" type="image/webp" />
+                            <img
+                                src="/assets/img/destinations/la-romana.jpg"
+                                alt="{{ app()->getLocale() == 'es' ? 'Traslado a La Romana' : 'Shuttle to La Romana' }}"
+                                title="{{ app()->getLocale() == 'es' ? 'Traslado a La Romana' : 'Shuttle to La Romana' }}"
+                                loading="lazy"
+                                width="373"
+                                height="260"
+                            />
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="two_">
+                    @if(app()->getLocale() == "es")
+                        <p>República Dominicana</p>
+                        <h3>Traslado a La Romana</h3>
+                        <a href="#" title="Hoteles en La Romana">Hoteles en La Romana</a>
+                        <p>Reserva desde <span>$99 USD</span></p>
+                    @else
+                        <p>Dominican Republic</p>
+                        <h3>Shuttle to La Romana</h3>
+                        <a href="#" title="Hotels in La Romana">Hotels in La Romana</a>
+                        <p>Price from <span>$99 USD</span></p>
+                    @endif
+                </div>
+            </div>
+
+            {{-- Destino 4: Puerto Plata --}}
+            <div class="item">
+                <div class="one_">
+                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
+                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Puerto Plata' : 'Hotels in Puerto Plata' }}">
+                        <picture>
+                            <source srcset="/assets/img/destinations/puerto-plata.webp" type="image/webp" />
+                            <img
+                                src="/assets/img/destinations/puerto-plata.jpg"
+                                alt="{{ app()->getLocale() == 'es' ? 'Traslado a Puerto Plata' : 'Shuttle to Puerto Plata' }}"
+                                title="{{ app()->getLocale() == 'es' ? 'Traslado a Puerto Plata' : 'Shuttle to Puerto Plata' }}"
+                                loading="lazy"
+                                width="373"
+                                height="260"
+                            />
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="two_">
+                    @if(app()->getLocale() == "es")
+                        <p>República Dominicana</p>
+                        <h3>Traslado a Puerto Plata</h3>
+                        <a href="#" title="Hoteles en Puerto Plata">Hoteles en Puerto Plata</a>
+                        <p>Reserva desde <span>$249 USD</span></p>
+                    @else
+                        <p>Dominican Republic</p>
+                        <h3>Shuttle to Puerto Plata</h3>
+                        <a href="#" title="Hotels in Puerto Plata">Hotels in Puerto Plata</a>
+                        <p>Price from <span>$249 USD</span></p>
+                    @endif
+                </div>
+            </div>
+
+            {{-- Destino 5: Santiago --}}
+            <div class="item">
+                <div class="one_">
+                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
+                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Santiago' : 'Hotels in Santiago' }}">
+                        <picture>
+                            <source srcset="/assets/img/destinations/santiago.webp" type="image/webp" />
+                            <img
+                                src="/assets/img/destinations/santiago.jpg"
+                                alt="{{ app()->getLocale() == 'es' ? 'Traslado a Santiago' : 'Shuttle to Santiago' }}"
+                                title="{{ app()->getLocale() == 'es' ? 'Traslado a Santiago' : 'Shuttle to Santiago' }}"
+                                loading="lazy"
+                                width="373"
+                                height="260"
+                            />
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="two_">
+                    @if(app()->getLocale() == "es")
+                        <p>República Dominicana</p>
+                        <h3>Traslado a Santiago</h3>
+                        <a href="#" title="Hoteles en Santiago">Hoteles en Santiago</a>
+                        <p>Reserva desde <span>$199 USD</span></p>
+                    @else
+                        <p>Dominican Republic</p>
+                        <h3>Shuttle to Santiago</h3>
+                        <a href="#" title="Hotels in Santiago">Hotels in Santiago</a>
+                        <p>Price from <span>$199 USD</span></p>
+                    @endif
+                </div>
+            </div>
+
+            {{-- Destino 6: Miches --}}
+            <div class="item">
+                <div class="one_">
+                    {{-- URL pendiente. Reemplazar # cuando exista la página --}}
+                    <a href="#" title="{{ app()->getLocale() == 'es' ? 'Hoteles en Miches' : 'Hotels in Miches' }}">
+                        <picture>
+                            <source srcset="/assets/img/destinations/miches.webp" type="image/webp" />
+                            <img
+                                src="/assets/img/destinations/miches.jpg"
+                                alt="{{ app()->getLocale() == 'es' ? 'Traslado a Miches' : 'Shuttle to Miches' }}"
+                                title="{{ app()->getLocale() == 'es' ? 'Traslado a Miches' : 'Shuttle to Miches' }}"
+                                loading="lazy"
+                                width="373"
+                                height="260"
+                            />
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="two_">
+                    @if(app()->getLocale() == "es")
+                        <p>República Dominicana</p>
+                        <h3>Traslado a Miches</h3>
+                        <a href="#" title="Hoteles en Miches">Hoteles en Miches</a>
+                        <p>Reserva desde <span>$129 USD</span></p>
+                    @else
+                        <p>Dominican Republic</p>
+                        <h3>Shuttle to Miches</h3>
+                        <a href="#" title="Hotels in Miches">Hotels in Miches</a>
                         <p>Price from <span>$129 USD</span></p>
                     @endif
                 </div>
             </div>
 
-            <div class="item">
-                <div class="one_">
-                    <a href="#" title="{{ __('silos/index.cancun_title') }}">
-                        <picture>
-                            <source srcset="/assets/img/destinations/cancun.webp" type="image/webp" />
-                            <img src="/assets/img/destinations/cancun.jpg" alt="{{ __('silos/index.cancun_alt') }}" title="{{ __('silos/index.cancun_title') }}" loading="lazy" width="373" height="260" />
-                        </picture>                        
-                    </a>                    
-                </div>
-                <div class="two_">
-                    @if(app()->getLocale() == "es")
-                        <p>Quintana Roo, México</p>
-                        <h3>Traslados a Cancún</h3>
-                        <a href="#" title="Hoteles en Cancún">Hoteles en Cancún</a>
-                        <p>Reserva desde <span>$539 MXN</span></p>
-                    @else
-                        <p>Quintana Roo, México</p>
-                        <h3>Transportation to Cancun</h3>
-                        <a href="#" title="Hotels in Cancún">Hotels in Cancun</a>
-                        <p>Price from <span>$29 USD</span></p>
-                    @endif
-                </div>
-            </div>
-            
-            <div class="item">
-                <div class="one_">
-                    <a href="#" title="{{ __('silos/index.pdc_title') }}">
-                        <picture>
-                            <source srcset="/assets/img/destinations/playa-del-carmen.webp" type="image/webp" />
-                            <img src="/assets/img/destinations/playa-del-carmen.jpg" alt="{{ __('silos/index.pdc_alt') }}" title="{{ __('silos/index.pdc_title') }}" loading="lazy" width="373" height="260" />
-                        </picture>                                          
-                    </a>                    
-                </div>
-                <div class="two_">
-                    @if(app()->getLocale() == "es")
-                        <p>Quintana Roo, México</p>
-                        <h3>Traslados a Playa del Carmen</h3>
-                        <a href="#" title="Hoteles en Playa del Carmen">Hoteles en Playa del Carmen</a>
-                        <p>Reserva desde <span>$1,259 MXN</span></p>
-                    @else
-                        <p>Quintana Roo, México</p>
-                        <h3>Shuttle to Playa del Carmen</h3>
-                        <a href="#" title="Hotels in Playa del Carmen">Hotels in Playa del Carmen</a>
-                        <p>Price from <span>$69.99 USD</span></p>
-                    @endif
-                </div>
-            </div>            
-
         </div>
     </div>
 
-
+    {{-- Footer general --}}
     @include('layout.footer.general')
+
 @endsection
