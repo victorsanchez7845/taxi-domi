@@ -9,7 +9,7 @@
 @endpush
 @push("push-bottom")
     <script defer src="{{ mix('/assets/js/bookingbox/index.min.js') }}"></script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCouVvCmA_7Eps6o7UwByPNatiA22SIpkk"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvClfOixmQTxXslNfUqiYIprUdynaP7sY"></script>
     <script defer src="{{ mix('/assets/js/process/listing.min.js') }}"></script>
     <x-analytics/>
     <x-hotjar/>
