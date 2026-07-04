@@ -81,70 +81,138 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="two">
-                                @if(in_array( $item['id'], [1,4] ))
-                                    @if(app()->getLocale() == "es")
-                                        <p>Viaje cómodamente en un servicio totalmente privado, equipado, para hasta {{ $item['passengers'] }} pasajeros. El servicio es privado, sin tiempo de espera, ni paradas continuas.</p>
+                                <div class="two">
+
+                                    {{-- ===========================
+                                        VAN / SEDAN / MINIVAN
+                                        Cancún: 1 (Van), 4 (Sedan)
+                                        Punta Cana: 15 (Minivan)
+                                    ============================ --}}
+                                    @if(in_array($item['id'], [1,4,15]))
+
+                                        @if(app()->getLocale() == "es")
+                                            <p>
+                                                Viaje cómodamente en un servicio totalmente privado, equipado,
+                                                para hasta {{ $item['passengers'] }} pasajeros.
+                                                El servicio es privado, sin tiempo de espera,
+                                                ni paradas continuas.
+                                            </p>
+
                                             <ul>
-                                            <li>Servicio Privado</li>
-                                            <li>Incluye impuestos del Aeropuerto y Seguro de Viajero</li>
-                                            <li>Este servicio esta disponible todos los días</li>
-                                            <li>Horario de atención 24 x 7</li>
-                                            <li>Servicio disponible todos los días, 24/7</li>
-                                        </ul>
+                                                <li>Servicio Privado</li>
+                                                <li>Incluye impuestos del Aeropuerto y Seguro de Viajero</li>
+                                                <li>Este servicio está disponible todos los días</li>
+                                                <li>Horario de atención 24 x 7</li>
+                                                <li>Servicio disponible todos los días, 24/7</li>
+                                            </ul>
+                                        @endif
+
+                                        @if(app()->getLocale() == "en")
+                                            <p>
+                                                Travel comfortably in a fully equipped private service
+                                                for up to {{ $item['passengers'] }} passengers.
+                                                The service is private, with no waiting time
+                                                or continuous stops.
+                                            </p>
+
+                                            <ul>
+                                                <li>Private Service</li>
+                                                <li>Includes airport taxes and traveler's insurance</li>
+                                                <li>This service is available every day</li>
+                                                <li>Attention hours 24 x 7</li>
+                                                <li>Service available every day, 24/7</li>
+                                            </ul>
+                                        @endif
+
                                     @endif
-                                    @if(app()->getLocale() == "en")
-                                        <p>Travel comfortably in a fully equipped private service for up to {{ $item['passengers'] }} passengers. The service is private, with no waiting time or continuous stops.</p>
-                                        <ul>
-                                            <li>Private Service</li>
-                                            <li>Includes airport taxes and traveler's insurance</li>
-                                            <li>This service is available every day</li>
-                                            <li>Attention hours 24 x 7</li>
-                                            <li>Service available every day, 24/7</li>
-                                        </ul>
+
+
+                                    {{-- ===========================
+                                        SUBURBAN
+                                        Cancún: 2
+                                        Punta Cana: 14
+                                    ============================ --}}
+                                    @if(in_array($item['id'], [2,14]))
+
+                                        @if(app()->getLocale() == "es")
+                                            <p>
+                                                Viaje en una Suburban de lujo.
+                                                Ideal para grupos pequeños, parejas o familias de hasta
+                                                {{ $item['passengers'] }} personas.
+                                                Totalmente equipada, la mejor opción para su traslado
+                                                del aeropuerto a su hotel.
+                                            </p>
+
+                                            <ul>
+                                                <li>Incluye impuestos del Aeropuerto y Seguros</li>
+                                                <li>Servicio Privado, sin tiempos de espera, ni paradas continuas</li>
+                                                <li>Incluye una silla para niños gratis, cuando es solicitada</li>
+                                                <li>Vehículo sujeto a disponibilidad</li>
+                                            </ul>
+                                        @endif
+
+                                        @if(app()->getLocale() == "en")
+                                            <p>
+                                                Travel in a luxury Suburban.
+                                                Ideal for small groups, couples or families up to
+                                                {{ $item['passengers'] }} people.
+                                                Fully equipped, the best option for your airport transfer.
+                                            </p>
+
+                                            <ul>
+                                                <li>Includes airport taxes and insurance</li>
+                                                <li>Private service, no waiting time or continuous stops</li>
+                                                <li>Includes a free child seat upon request</li>
+                                                <li>Vehicle subject to availability</li>
+                                            </ul>
+                                        @endif
+
                                     @endif
-                                @endif
-                                @if($item['id'] == 2)
-                                    @if(app()->getLocale() == "es")
-                                        <p>Viaje en una Suburban de lujo. Ideal para grupos pequeños, parejas o familias de hasta 5 personas. Totalmente equipada, la mejor opción para su traslado de aeropuerto a su hotel.</p>
-                                        <ul>
-                                            <li>Incluye impuestos del Aeropuerto y Seguros</li>
-                                            <li>Servicio Privado, sin tiempos de espera, ni paradas continuas</li>
-                                            <li>Incluye una silla para niños gratis, cuando es solicitada</li>
-                                            <li>Vehículo sujeto a disponibilidad</li>
-                                        </ul>
+
+
+                                    {{-- ===========================
+                                        CRAFTER / SPRINTER
+                                        Cancún: 3
+                                        Punta Cana: 16
+                                    ============================ --}}
+                                    @if(in_array($item['id'], [3,16]))
+
+                                        @if(app()->getLocale() == "es")
+                                            <p>
+                                                Viaje en una Sprinter/Crafter,
+                                                ideal para grupos grandes, parejas o familias de hasta
+                                                {{ $item['passengers'] }} personas.
+                                                Totalmente equipada, la mejor opción para su traslado
+                                                del aeropuerto a su hotel.
+                                            </p>
+
+                                            <ul>
+                                                <li>Incluye impuestos del Aeropuerto y Seguros</li>
+                                                <li>Servicio Privado, sin tiempos de espera, ni paradas continuas</li>
+                                                <li>Incluye una silla para niños gratis, cuando es solicitada</li>
+                                                <li>Servicio disponible todos los días, 24/7</li>
+                                            </ul>
+                                        @endif
+
+                                        @if(app()->getLocale() == "en")
+                                            <p>
+                                                Travel in a Sprinter/Crafter,
+                                                ideal for large groups, couples or families up to
+                                                {{ $item['passengers'] }} passengers.
+                                                Fully equipped, the best option for your airport transfer.
+                                            </p>
+
+                                            <ul>
+                                                <li>Includes airport taxes and insurance</li>
+                                                <li>Private service, no waiting time or continuous stops</li>
+                                                <li>Includes a free child seat upon request</li>
+                                                <li>Service available every day, 24/7</li>
+                                            </ul>
+                                        @endif
+
                                     @endif
-                                    @if(app()->getLocale() == "en")
-                                        <p>Travel in a luxury Suburban. Ideal for small groups, couples or families up to 5 people. Fully equipped, the best option for your transfer from the airport to your hotel.</p>
-                                        <ul>
-                                            <li>Includes airport taxes and insurance</li>
-                                            <li>Private service, no waiting time, no continuous stops.</li>
-                                            <li>Includes a free child seat, when requested</li>
-                                            <li>Vehicle subject to availability</li>
-                                        </ul>
-                                    @endif
-                                @endif
-                                @if($item['id'] == 3)
-                                    @if(app()->getLocale() == "es")
-                                        <p>Viaje en una Crafter Ideal para grupos grandes, parejas o familias de hasta 15 personas. Totalmente equipada, la mejor opción para su traslado de aeropuerto a su hotel.</p>
-                                        <ul>
-                                            <li>Incluye impuestos del Aeropuerto y Seguros</li>
-                                            <li>Servicio Privado, sin tiempos de espera, ni paradas continuas</li>
-                                            <li>Incluye una silla para niños gratis, cuando es solicitada</li>
-                                            <li>Servicio disponible todos los días, 24/7</li>
-                                        </ul>
-                                    @endif
-                                    @if(app()->getLocale() == "en")
-                                        <p>Travel in a Crafter Ideal for large groups, couples or families up to 15 people. Fully equipped, the best option for your transfer from the airport to your hotel.</p>
-                                        <ul>
-                                            <li>Includes airport taxes and insurance</li>
-                                            <li>Private service, no waiting time, no continuous stops.</li>
-                                            <li>Includes a free child seat, when requested</li>
-                                            <li>Service available every day, 24/7</li>
-                                        </ul>
-                                    @endif
-                                @endif
-                            </div>
+
+                                </div>
                             <div class="three">
                                 <div class="top">
                                     <p>{{ __('quote/search.price_from') }}</p>
