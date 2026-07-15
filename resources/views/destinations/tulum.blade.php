@@ -131,13 +131,13 @@
             @if(app()->getLocale() == "en")
                 <h1>Punta Cana Airport Transfers</h1>
                 <h2>Private Punta Cana Airport Transfers at Great Rates</h2>
-                <p>Looking for reliable, safe, and affordable Punta Cana Airport Transfers? Taxi Dominicana is ready to help. We provide private transportation from Punta Cana International Airport to hotels and resorts throughout Bávaro, Cap Cana, Uvero Alto, Macao, and nearby areas. Book ahead and enjoy a smooth arrival with direct service to your destination.</p>
+                <p>Looking for reliable, safe, and affordable Punta Cana Airport Transfers? Taxi Dominicana is ready to help. We provide private transportation from Punta Cana International Airport to hotels and resorts throughout Bávaro, Cap Cana, Uvero Alto, La Romana, and nearby areas. Book ahead and enjoy a smooth arrival with direct service to your destination.</p>
                 <p>At Taxi Dominicana, we understand how important comfort and peace of mind are after a flight. Our professional drivers and well-maintained vehicles provide dependable service from the moment you leave the terminal. Your Punta Cana airport transfer is planned around your arrival, helping you travel comfortably while enjoying the tropical scenery of the Dominican Republic.</p>
                 <p>Along with dependable service, we offer competitive rates for couples, families, and groups. With Taxi Dominicana, you receive clear pricing, private transportation, and practical options for different party sizes. Reserve your Punta Cana Airport Transfers before traveling and reach your hotel safely, comfortably, and without dealing with unexpected transportation costs.</p>
             @else
                 <h1>Traslados en Punta Cana</h1>
                 <h2>Traslados al Aeropuerto de Punta Cana al Mejor Precio</h2>
-                <p>&iquest;Buscas traslados en Punta Cana confiables, seguros y a buen precio? Taxi Dominicana es tu mejor opci&oacute;n. Ofrecemos transporte privado desde el Aeropuerto Internacional de Punta Cana hacia hoteles y resorts de B&aacute;varo, Cap Cana, Uvero Alto, Macao y zonas cercanas. Reserva con anticipaci&oacute;n y disfruta una llegada directa, c&oacute;moda y sin complicaciones.</p>
+                <p>&iquest;Buscas traslados en Punta Cana confiables, seguros y a buen precio? Taxi Dominicana es tu mejor opci&oacute;n. Ofrecemos transporte privado desde el Aeropuerto Internacional de Punta Cana hacia hoteles y resorts de B&aacute;varo, Cap Cana, Uvero Alto, La Romana y zonas cercanas. Reserva con anticipaci&oacute;n y disfruta una llegada directa, c&oacute;moda y sin complicaciones.</p>
                 <p>En Taxi Dominicana entendemos la importancia de viajar con tranquilidad despu&eacute;s de un vuelo. Contamos con conductores profesionales y veh&iacute;culos en buenas condiciones para ofrecer un servicio puntual desde la terminal. Nuestro objetivo es que tus traslados en Punta Cana sean c&oacute;modos y sencillos mientras disfrutas del paisaje tropical de Rep&uacute;blica Dominicana.</p>
                 <p>Adem&aacute;s de un servicio confiable, ofrecemos tarifas competitivas para parejas, familias y grupos. Con Taxi Dominicana recibes precios claros, transporte privado y opciones para distintos n&uacute;meros de pasajeros. Reserva tus traslados al Aeropuerto de Punta Cana antes de viajar y llega a tu hotel de forma segura, c&oacute;moda y sin cargos inesperados.</p>
             @endif
@@ -220,10 +220,10 @@
         <div class="top">
             @if(app()->getLocale() == "en")
                 <h2>How to Get from Punta Cana Airport to Your Hotel</h2>
-                <p>When traveling from Punta Cana Airport to your hotel, several transportation options are available. Here are the main ways to reach resorts across Punta Cana.</p>
+                <p>When traveling from Punta Cana Airport to your hotel, several transportation options are available. Review our <a href="https://taxidominicana.com/how-to-get-to-punta-cana">guide on how to get to Punta Cana</a> and compare the main ways to reach resorts across the area.</p>
             @else
                 <h2>Cómo llegar del Aeropuerto de Punta Cana a tu hotel</h2>
-                <p>Al viajar del Aeropuerto de Punta Cana a tu hotel, existen varias opciones de transporte. Estas son las principales formas de llegar a los resorts de la zona.</p>
+                <p>Al viajar del Aeropuerto de Punta Cana a tu hotel, existen varias opciones de transporte. Consulta nuestra gu&iacute;a sobre <a href="https://taxidominicana.com/es/como-llegar-a-punta-cana">c&oacute;mo llegar a Punta Cana</a> y compara las principales alternativas.</p>
             @endif
         </div>
         <div class="bottom">
@@ -279,10 +279,10 @@
             <div class="top">
                 @if(app()->getLocale() == "en")
                     <h2>Punta Cana Airport Transportation Services</h2>
-                    <p>Choose from private Punta Cana airport transportation options designed around your travel needs, preferences, luggage, and group size.</p>
+                    <p>Choose from private Punta Cana airport transportation options designed around your travel needs, preferences, luggage, and group size. You can also review our complete <a href="https://taxidominicana.com/fleet">vehicle fleet</a>.</p>
                 @else
                     <h2>Servicios de traslados en Punta Cana</h2>
-                    <p>Elige entre opciones de traslados en Punta Cana adaptadas a tus necesidades, preferencias, equipaje y al n&uacute;mero de personas de tu grupo.</p>
+                    <p>Elige entre opciones de traslados en Punta Cana adaptadas a tus necesidades, preferencias, equipaje y al n&uacute;mero de personas de tu grupo. Tambi&eacute;n puedes consultar nuestra <a href="https://taxidominicana.com/es/flota">flota de veh&iacute;culos</a>.</p>
                 @endif
             </div>
             <div class="bottom">
@@ -393,24 +393,27 @@
         <div class="top">
             @if(app()->getLocale() == "en")
                 <h2>Punta Cana Airport Transfer Rates</h2>
-                <p>Explore competitive Punta Cana Airport Transfer rates for popular hotel areas, with practical options that maintain comfort, privacy, and dependable service.</p>
+                <p>Explore our <a href="https://taxidominicana.com/transportation-price-punta-cana">Punta Cana transportation prices</a> for popular hotel areas, with practical options that maintain comfort, privacy, and dependable service.</p>
             @else
                 <h2>Tarifas de traslados en Punta Cana</h2>
-                <p>Consulta tarifas competitivas de traslados en Punta Cana hacia las principales zonas hoteleras, sin sacrificar comodidad, privacidad ni un servicio confiable.</p>
+                <p>Consulta nuestros <a href="https://taxidominicana.com/es/precio-traslado-punta-cana">precios de traslados en Punta Cana</a> hacia las principales zonas hoteleras, sin sacrificar comodidad, privacidad ni un servicio confiable.</p>
             @endif
         </div>
         <div class="bottom">
             @if(app()->getLocale() == "es")
                 <table class="table table-striped table-responsive">
-                    <caption>Precios de traslados privados desde el Aeropuerto de Punta Cana</caption>
+                    <caption>Tarifas de traslados privados desde el Aeropuerto de Punta Cana (PUJ)</caption>
                     <thead>
                         <tr>
                             <th rowspan="2" scope="col" class="destino">Destino</th>
-                            <th colspan="2">Taxi Privado<br> 1-8 pasajeros</th>
-                            <th colspan="2">Taxi de Lujo<br> 1-5 pasajeros</th>
-                            <th colspan="2">Taxi para Grupos<br> 1-16 pasajeros</th>
+                            <th colspan="2">1-2 pasajeros</th>
+                            <th colspan="2">3-6 pasajeros</th>
+                            <th colspan="2">7-10 pasajeros</th>
+                            <th colspan="2">11-15 pasajeros</th>
                         </tr>
                         <tr>
+                            <th>Sencillo</th>
+                            <th>Redondo</th>
                             <th>Sencillo</th>
                             <th>Redondo</th>
                             <th>Sencillo</th>
@@ -421,189 +424,87 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Punta Cana</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(1, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(1, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(1, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(1, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(1, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(1, 2, 'USD', true) }} USD</td>
+                            <td><strong>Hoteles de Punta Cana</strong></td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Sencillo">$32.00 USD</td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Redondo">$60.00 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Sencillo">$62.10 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Redondo">$120.00 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Sencillo">$74.25 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Redondo">$150.00 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Sencillo">$74.25 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Redondo">$150.00 USD</td>
                         </tr>
                         <tr>
-                            <td><strong>Bávaro</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(1, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(1, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(1, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(1, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(1, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(1, 2, 'USD', true) }} USD</td>
+                            <td><strong><a href="https://taxidominicana.com/es/aeropuerto-punta-cana-a-bavaro">Bávaro</a></strong></td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Sencillo">$32.00 USD</td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Redondo">$60.00 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Sencillo">$62.10 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Redondo">$120.00 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Sencillo">$74.25 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Redondo">$150.00 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Sencillo">$74.25 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Redondo">$150.00 USD</td>
                         </tr>
                         <tr>
-                            <td><strong>Cap Cana</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(5, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(5, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(5, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(5, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(5, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(5, 2, 'USD', true) }} USD</td>
+                            <td><strong><a href="https://taxidominicana.com/es/aeropuerto-punta-cana-a-cap-cana">Cap Cana</a></strong></td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Sencillo">$32.00 USD</td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Redondo">$60.00 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Sencillo">$62.10 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Redondo">$120.00 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Sencillo">$74.25 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Redondo">$150.00 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Sencillo">$74.25 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Redondo">$150.00 USD</td>
                         </tr>
                         <tr>
-                            <td><strong>Uvero Alto</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(21, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(21, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(21, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(21, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(21, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(21, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Macao</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(3, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(3, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(3, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(3, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(3, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(3, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cabeza de Toro</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(6, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(6, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(6, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(6, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(6, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(6, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Arena Gorda</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(4, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(4, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(4, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(4, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(4, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(4, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>El Cortecito</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(6, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(6, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(6, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(6, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(6, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(6, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Los Corales</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(8, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(8, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(8, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(8, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(8, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(8, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Bávaro Beach</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(9, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(9, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(9, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(9, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(9, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(9, 2, 'USD', true) }} USD</td>
+                            <td><strong><a href="https://taxidominicana.com/es/aeropuerto-punta-cana-a-uvero-alto">Uvero Alto</a></strong></td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Sencillo">$61.00 USD</td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Redondo">$120.00 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Sencillo">$94.50 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Redondo">$190.00 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Sencillo">$121.50 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Redondo">$240.00 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Sencillo">$121.50 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Redondo">$240.00 USD</td>
                         </tr>
                         <tr>
                             <td><strong>Miches</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(10, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(10, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(10, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(10, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(10, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(10, 2, 'USD', true) }} USD</td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Sencillo">$157.00 USD</td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Redondo">$310.00 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Sencillo">$202.50 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Redondo">$410.00 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Sencillo">$229.50 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Redondo">$460.00 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Sencillo">$229.50 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Redondo">$460.00 USD</td>
                         </tr>
                         <tr>
-                            <td><strong>Bayahíbe</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(20, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(20, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(20, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(20, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(20, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(20, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>La Romana</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(17, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(17, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(17, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(17, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(17, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(17, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Santo Domingo</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(16, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(16, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(16, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(16, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(16, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(16, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Juan Dolio</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(19, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(19, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(19, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(19, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(19, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(19, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Boca Chica</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(20, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(20, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(20, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(20, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(20, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(20, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Puerto Plata</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(16, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(16, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(16, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(16, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(16, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(16, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Aeropuerto de Punta Cana</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(11, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(11, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">${{ PricesTrait::price(11, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">${{ PricesTrait::price(11, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">${{ PricesTrait::price(11, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">${{ PricesTrait::price(11, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Hoteles de Punta Cana</strong></td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Sencillo)">${{ PricesTrait::price(22, 1, 'USD') }} USD</td>
-                            <td data-label="Taxi Privado" data-sublabel="1 - 8 Pasajeros (Redondo)">${{ PricesTrait::price(22, 1, 'USD', true) }} USD</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Sencillo)">N/A</td>
-                            <td data-label="Taxi de Lujo" data-sublabel="1 - 5 Pasajeros (Redondo)">N/A</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Sencillo)">N/A</td>
-                            <td data-label="Taxi para Grupos" data-sublabel="1 - 15 Pasajeros (Redondo)">N/A</td>
+                            <td><strong><a href="https://taxidominicana.com/es/aeropuerto-punta-cana-a-bayahibe">Bayahíbe</a></strong></td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Sencillo">$95.00 USD</td>
+                            <td data-label="1 - 2 Pasajeros" data-sublabel="Redondo">$190.00 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Sencillo">$190.00 USD</td>
+                            <td data-label="3 - 6 Pasajeros" data-sublabel="Redondo">$380.00 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Sencillo">$227.00 USD</td>
+                            <td data-label="7 - 10 Pasajeros" data-sublabel="Redondo">$450.00 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Sencillo">$227.00 USD</td>
+                            <td data-label="11 - 15 Pasajeros" data-sublabel="Redondo">$450.00 USD</td>
                         </tr>
                     </tbody>
                 </table>
             @else
                 <table class="table table-striped table-responsive">
-                    <caption>Punta Cana Airport transfer prices may vary by season*</caption>
+                    <caption>Private transfer rates from Punta Cana International Airport (PUJ)</caption>
                     <thead>
                         <tr>
                             <th rowspan="2" scope="col" class="destino">Destination</th>
-                            <th colspan="2">Private Taxi<br> 1-8 passengers</th>
-                            <th colspan="2">Luxury Taxi<br> 1-5 passengers</th>
-                            <th colspan="2">Taxi for Groups<br> 1-16 passengers</th>
+                            <th colspan="2">1-2 passengers</th>
+                            <th colspan="2">3-6 passengers</th>
+                            <th colspan="2">7-10 passengers</th>
+                            <th colspan="2">11-15 passengers</th>
                         </tr>
                         <tr>
+                            <th>One Way</th>
+                            <th>Round Trip</th>
                             <th>One Way</th>
                             <th>Round Trip</th>
                             <th>One Way</th>
@@ -614,268 +515,78 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Punta Cana</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(1, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(1, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(1, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(1, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(1, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(1, 2, 'USD', true) }} USD</td>
+                            <td><strong>Punta Cana Hotels</strong></td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="One Way">$32.00 USD</td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="Round Trip">$60.00 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="One Way">$62.10 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="Round Trip">$120.00 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="One Way">$74.25 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="Round Trip">$150.00 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="One Way">$74.25 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="Round Trip">$150.00 USD</td>
                         </tr>
                         <tr>
-                            <td><strong>Bavaro</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(1, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(1, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(1, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(1, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(1, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(1, 2, 'USD', true) }} USD</td>
+                            <td><strong><a href="https://taxidominicana.com/punta-cana-airport-to-bavaro">Bavaro</a></strong></td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="One Way">$32.00 USD</td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="Round Trip">$60.00 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="One Way">$62.10 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="Round Trip">$120.00 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="One Way">$74.25 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="Round Trip">$150.00 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="One Way">$74.25 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="Round Trip">$150.00 USD</td>
                         </tr>
                         <tr>
-                            <td><strong>Cap Cana</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(5, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(5, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(5, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(5, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(5, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(5, 2, 'USD', true) }} USD</td>
+                            <td><strong><a href="https://taxidominicana.com/punta-cana-airport-to-cap-cana">Cap Cana</a></strong></td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="One Way">$32.00 USD</td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="Round Trip">$60.00 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="One Way">$62.10 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="Round Trip">$120.00 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="One Way">$74.25 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="Round Trip">$150.00 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="One Way">$74.25 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="Round Trip">$150.00 USD</td>
                         </tr>
                         <tr>
-                            <td><strong>Uvero Alto</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(21, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(21, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(21, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(21, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(21, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(21, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Macao</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(3, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(3, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(3, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(3, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(3, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(3, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cabeza de Toro</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(6, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(6, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(6, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(6, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(6, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(6, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Arena Gorda</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(4, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(4, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(4, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(4, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(4, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(4, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>El Cortecito</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(6, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(6, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(6, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(6, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(6, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(6, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Los Corales</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(8, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(8, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(8, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(8, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(8, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(8, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Bavaro Beach</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(9, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(9, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(9, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(9, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(9, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(9, 2, 'USD', true) }} USD</td>
+                            <td><strong><a href="https://taxidominicana.com/punta-cana-airport-to-uvero-alto">Uvero Alto</a></strong></td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="One Way">$61.00 USD</td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="Round Trip">$120.00 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="One Way">$94.50 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="Round Trip">$190.00 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="One Way">$121.50 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="Round Trip">$240.00 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="One Way">$121.50 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="Round Trip">$240.00 USD</td>
                         </tr>
                         <tr>
                             <td><strong>Miches</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(10, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(10, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(10, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(10, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(10, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(10, 2, 'USD', true) }} USD</td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="One Way">$157.00 USD</td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="Round Trip">$310.00 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="One Way">$202.50 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="Round Trip">$410.00 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="One Way">$229.50 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="Round Trip">$460.00 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="One Way">$229.50 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="Round Trip">$460.00 USD</td>
                         </tr>
                         <tr>
-                            <td><strong>Bayahibe</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(20, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(20, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(20, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(20, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(20, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(20, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>La Romana</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(17, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(17, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(17, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(17, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(17, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(17, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Santo Domingo</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(16, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(16, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(16, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(16, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(16, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(16, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Juan Dolio</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(19, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(19, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(19, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(19, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(19, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(19, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Boca Chica</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(20, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(20, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(20, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(20, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(20, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(20, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Puerto Plata</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(16, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(16, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(16, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(16, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(16, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(16, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Punta Cana Airport</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(11, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(11, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">${{ PricesTrait::price(11, 2, 'USD') }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">${{ PricesTrait::price(11, 2, 'USD', true) }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">${{ PricesTrait::price(11, 2, 'USD') }} USD</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">${{ PricesTrait::price(11, 2, 'USD', true) }} USD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Punta Cana Hotels</strong></td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (One Way)">${{ PricesTrait::price(22, 1, 'USD') }} USD</td>
-                            <td data-label="Private Taxi" data-sublabel="1 - 8 Passengers (Round Trip)">${{ PricesTrait::price(22, 1, 'USD', true) }} USD</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (One Way)">N/A</td>
-                            <td data-label="Luxury Taxi" data-sublabel="1 - 5 Passengers (Round Trip)">N/A</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (One Way)">N/A</td>
-                            <td data-label="Taxi for Groups" data-sublabel="1 - 15 Passengers (Round Trip)">N/A</td>
+                            <td><strong><a href="https://taxidominicana.com/punta-cana-airport-to-bayahibe">Bayahibe</a></strong></td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="One Way">$95.00 USD</td>
+                            <td data-label="1 - 2 Passengers" data-sublabel="Round Trip">$190.00 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="One Way">$190.00 USD</td>
+                            <td data-label="3 - 6 Passengers" data-sublabel="Round Trip">$380.00 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="One Way">$227.00 USD</td>
+                            <td data-label="7 - 10 Passengers" data-sublabel="Round Trip">$450.00 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="One Way">$227.00 USD</td>
+                            <td data-label="11 - 15 Passengers" data-sublabel="Round Trip">$450.00 USD</td>
                         </tr>
                     </tbody>
                 </table>
-            @endif            
-        </div>
-    </div>
-
-    <div class="bg_blue_two">
-        <div class="container content_four">
-            <div class="left">
-                @if(app()->getLocale() == "en")
-                    <h2>What Customers Say About Our Punta Cana Transfers</h2>
-                    <p>Discover why travelers choose Taxi Dominicana for Punta Cana Airport Transfers and let our team make your arrival more comfortable, organized, and satisfying.</p>
-                @else
-                    <h2>Opiniones sobre nuestros traslados en Punta Cana</h2>
-                    <p>Conoce por qu&eacute; nuestros viajeros eligen Taxi Dominicana para sus traslados en Punta Cana y permite que nuestro equipo haga tu llegada m&aacute;s c&oacute;moda y organizada.</p>
-                @endif
-                <div>
-                    <picture>
-                        <source srcset="/assets/img/reviews/clients-list.webp" type="image/webp" />
-                        <img src="/assets/img/reviews/clients-list.jpg" alt="{{ __('website/home.comment_general') }}" title="{{ __('website/home.comment_general') }}" loading="lazy" width="60" height="60" />
-                    </picture>
-                    <div>
-                        @if(app()->getLocale() == "en")
-                            <p>4.9 Rating</p>
-                            <p>+180 Users</p>
-                        @else
-                            <p>4.9 Calificación</p>
-                            <p>+180 Usuarios</p>
-                        @endif
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <div>
-                    <picture>
-                        <source srcset="/assets/img/reviews/1.webp" type="image/webp" />
-                        <img src="/assets/img/reviews/1.jpg" alt="{{ __('website/home.comment_title',['name' => 'Jennifer S.']) }}" title="{{ __('website/home.comment_title',['name' => 'Jennifer S.']) }}" loading="lazy" width="60" height="60" />
-                    </picture>                        
-                    <div>
-                        <p>Jennifer S. <span>4.5</span></p>
-                        @if(app()->getLocale() == "en")
-                            <p>Booking with Taxi Dominicana was the best decision for our Punta Cana vacation. The private airport transfer was convenient, and our driver was friendly and professional. The vehicle was comfortable, the pickup was organized, and I will gladly use the service again on my next visit to the Dominican Republic.</p>
-                        @else
-                            <p>Reservar con Taxi Dominicana fue una excelente decisi&oacute;n para nuestras vacaciones en Punta Cana. El traslado privado fue muy c&oacute;modo, el conductor fue amable y profesional, y la recogida estuvo bien organizada. Definitivamente volver&eacute; a usar el servicio en mi pr&oacute;xima visita a Rep&uacute;blica Dominicana.</p>
-                        @endif
-                    </div>
-                </div>
-                <div>
-                    <picture>
-                        <source srcset="/assets/img/reviews/2.webp" type="image/webp" />
-                        <img src="/assets/img/reviews/2.jpg" alt="{{ __('website/home.comment_title',['name' => 'Michael J.']) }}" title="{{ __('website/home.comment_title',['name' => 'Michael J.']) }}" loading="lazy" width="60" height="60" />
-                    </picture>                        
-                    <div>
-                        <p>Michael J. <span>4.5</span></p>
-                        @if(app()->getLocale() == "en")
-                            <p>I highly recommend Taxi Dominicana. From the moment we landed at Punta Cana Airport, everything was simple. Our private transfer to Bávaro was comfortable and stress-free. Communication with the team was excellent, and they accommodated our flight schedule. Thank you for making our arrival so easy!</p>
-                        @else
-                            <p>Recomiendo ampliamente Taxi Dominicana. Desde que aterrizamos en el Aeropuerto de Punta Cana, todo fue sencillo. Nuestro traslado privado a B&aacute;varo fue c&oacute;modo y sin estr&eacute;s. La comunicaci&oacute;n fue excelente y se adaptaron al horario del vuelo. &iexcl;Gracias por facilitar nuestra llegada!</p>
-                        @endif                        
-                    </div>
-                </div>
-                <div>
-                    <picture>
-                        <source srcset="/assets/img/reviews/3.webp" type="image/webp" />
-                        <img src="/assets/img/reviews/3.jpg" alt="{{ __('website/home.comment_title',['name' => 'Sarah W.']) }}" title="{{ __('website/home.comment_title',['name' => 'Sarah W.']) }}" loading="lazy" width="60" height="60" />
-                    </picture>                        
-                    <div>
-                        <p>Sarah W. <span>4.5</span></p>
-                        @if(app()->getLocale() == "en")
-                            <p>My friends and I chose the group transfer with Taxi Dominicana, and it was perfect for our needs. The vehicle was clean and comfortable, and our driver was excellent. He also shared useful recommendations for restaurants and activities in Punta Cana. Overall, it was a great experience from arrival to hotel drop-off!</p>
-                        @else
-                            <p>Mis amigos y yo elegimos el traslado para grupos con Taxi Dominicana y fue perfecto. El veh&iacute;culo estaba limpio y c&oacute;modo, y el conductor fue excelente. Tambi&eacute;n comparti&oacute; recomendaciones de restaurantes y actividades en Punta Cana. En general, fue una gran experiencia desde el aeropuerto hasta el hotel.</p>
-                        @endif                         
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container content_destinations">
-        <div class="top">
-            @if(app()->getLocale() == "en")
-                <h2>Explore Punta Cana with Convenient Private Transfers</h2>
-                <p>Discover Punta Cana and its most popular resort areas with Taxi Dominicana. From the beaches of Bávaro and Cap Cana to the peaceful hotels of Uvero Alto, our private transportation services connect you comfortably with the region’s main destinations.</p>
-            @else
-                <h2>Explora Punta Cana con traslados privados y cómodos</h2>
-                <p>Descubre Punta Cana y sus zonas hoteleras m&aacute;s populares con Taxi Dominicana. Desde las playas de B&aacute;varo y Cap Cana hasta los tranquilos hoteles de Uvero Alto, nuestros traslados privados te conectan c&oacute;modamente con los principales destinos de la regi&oacute;n.</p>
             @endif
         </div>
         <div class="bottom">
             <div>
-                <a href="#" title="{{ __('destinations/tulum.destination_tulum_title') }}" class="image">
+                <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/transfers-to-bavaro' : 'https://taxidominicana.com/es/traslados-a-bavaro' }}" title="{{ __('destinations/tulum.destination_tulum_title') }}" class="image">
                     <div class="mask"></div>
                     <picture>
                         <source srcset="/assets/img/destinations/tulum.webp" type="image/webp" />
@@ -899,12 +610,12 @@
                     </div>
                     <div>
                         <p>{{ __('destinations/tulum.per_person') }}</p>
-                        <a href="#" class="btn" alt="{{ __('destinations/tulum.view_rates') }}" title="{{ __('destinations/tulum.view_rates') }}"></a>
+                        <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/punta-cana-airport-to-bavaro' : 'https://taxidominicana.com/es/aeropuerto-punta-cana-a-bavaro' }}" class="btn" alt="{{ __('destinations/tulum.view_rates') }}" title="{{ __('destinations/tulum.view_rates') }}"></a>
                     </div>
                 </div>
             </div>
             <div>
-                <a href="#" title="{{ __('destinations/tulum.destination_cancun_title') }}" class="image">
+                <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/transfers-to-cap-cana' : 'https://taxidominicana.com/es/traslados-a-cap-cana' }}" title="{{ __('destinations/tulum.destination_cancun_title') }}" class="image">
                     <div class="mask"></div>
                     <picture>
                         <source srcset="/assets/img/destinations/cancun.webp" type="image/webp" />
@@ -928,12 +639,12 @@
                     </div>
                     <div>
                         <p>{{ __('destinations/tulum.per_person') }}</p>
-                        <a href="#" class="btn" alt="{{ __('destinations/tulum.view_rates') }}" title="{{ __('destinations/tulum.view_rates') }}"></a>
+                        <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/punta-cana-airport-to-cap-cana' : 'https://taxidominicana.com/es/aeropuerto-punta-cana-a-cap-cana' }}" class="btn" alt="{{ __('destinations/tulum.view_rates') }}" title="{{ __('destinations/tulum.view_rates') }}"></a>
                     </div>
                 </div>
             </div>
             <div>
-                <a href="#" title="{{ __('destinations/tulum.destination_pdc_title') }}" class="image">
+                <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/transfers-to-uvero-alto' : 'https://taxidominicana.com/es/traslados-a-uvero-alto' }}" title="{{ __('destinations/tulum.destination_pdc_title') }}" class="image">
                     <div class="mask"></div>
                     <picture>
                         <source srcset="/assets/img/destinations/playa-del-carmen.webp" type="image/webp" />
@@ -957,23 +668,23 @@
                     </div>
                     <div>
                         <p>{{ __('destinations/tulum.per_person') }}</p>
-                        <a href="#" class="btn" alt="{{ __('destinations/tulum.view_rates') }}" title="{{ __('destinations/tulum.view_rates') }}"></a>
+                        <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/punta-cana-airport-to-uvero-alto' : 'https://taxidominicana.com/es/aeropuerto-punta-cana-a-uvero-alto' }}" class="btn" alt="{{ __('destinations/tulum.view_rates') }}" title="{{ __('destinations/tulum.view_rates') }}"></a>
                     </div>
                 </div>
             </div>
             <div>
-                <a href="#" title="{{ __('destinations/tulum.destination_akumal_title') }}" class="image">
+                <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/punta-cana-airport-to-la-romana' : 'https://taxidominicana.com/es/aeropuerto-punta-cana-a-la-romana' }}" title="{{ __('destinations/tulum.destination_akumal_title') }}" class="image">
                     <div class="mask"></div>
                     <picture>
                         <source srcset="/assets/img/destinations/akumal.webp" type="image/webp" />
                         <img src="/assets/img/destinations/akumal.jpg" alt="{{ __('destinations/tulum.destination_akumal_alt') }}" title="{{ __('destinations/tulum.destination_akumal_title') }}" loading="lazy" width="150" height="100"/>
                     </picture>
-                    <p>Macao</p>
+                    <p>La Romana</p>
                 </a>
                 @if(app()->getLocale() == "en")
-                    <p>Macao is known for its natural beach, surf-friendly waves, and local atmosphere. Our Punta Cana transfers provide convenient transportation between the airport and hotels near this coastal area.</p>
+                    <p>La Romana is known for its resorts, golf courses, marina, and access to nearby Bayahíbe. Our private transfers provide direct transportation from Punta Cana Airport to hotels in this popular destination.</p>
                 @else
-                    <p>Macao es conocida por su playa natural, sus olas para surf y su ambiente local. Nuestros traslados conectan el aeropuerto con hoteles cercanos a esta zona costera.</p>
+                    <p>La Romana es conocida por sus resorts, campos de golf, marina y cercan&iacute;a con Bayah&iacute;be. Nuestros traslados privados ofrecen transporte directo desde el Aeropuerto de Punta Cana.</p>
                 @endif
                 <div class="information">
                     <div>
@@ -986,7 +697,7 @@
                     </div>
                     <div>
                         <p>{{ __('destinations/tulum.per_person') }}</p>
-                        <a href="#" class="btn" alt="{{ __('destinations/tulum.view_rates') }}" title="{{ __('destinations/tulum.view_rates') }}"></a>
+                        <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/punta-cana-airport-to-la-romana' : 'https://taxidominicana.com/es/aeropuerto-punta-cana-a-la-romana' }}" class="btn" alt="{{ __('destinations/tulum.view_rates') }}" title="{{ __('destinations/tulum.view_rates') }}"></a>
                     </div>
                 </div>
             </div>
@@ -998,37 +709,38 @@
             <div class="top">
                 @if(app()->getLocale() == "en")
                     <h2>Punta Cana Airport Transfers FAQs</h2>
-                    <p>Helpful answers for planning your private airport transportation</p>
+                    <p>Helpful answers for planning your private airport transportation. Visit our <a href="https://taxidominicana.com/faq">complete FAQ page</a> for more information.</p>
                 @else
                     <h2>Preguntas frecuentes sobre traslados en Punta Cana</h2>
-                    <p>Respuestas útiles para organizar tu transporte privado desde el aeropuerto</p>
+                    <p>Respuestas útiles para organizar tu transporte privado desde el aeropuerto. Consulta nuestra p&aacute;gina de <a href="https://taxidominicana.com/es/preguntas-frecuentes">preguntas frecuentes</a>.</p>
                 @endif
             </div>
             <div class="bottom">
                 @if(app()->getLocale() == "en")
                     <div><h3>How do Punta Cana Airport Transfers work?</h3><div><p>After booking, you receive confirmation with your pickup details. For airport arrivals, your driver follows the scheduled flight information and meets you at the designated area outside the terminal. You then travel directly in a private vehicle to your hotel, resort, villa, or accommodation in Punta Cana.</p></div></div>
-                    <div><h3>Which areas can I reach from Punta Cana Airport?</h3><div><p>Private transfers are available to the main hotel areas, including Bávaro, Cap Cana, Cabeza de Toro, Arena Gorda, El Cortecito, Los Corales, Macao, and Uvero Alto. Longer-distance transportation may also be arranged for destinations such as Bayahíbe, La Romana, Miches, Juan Dolio, and Santo Domingo.</p></div></div>
-                    <div><h3>How long does a transfer from Punta Cana Airport take?</h3><div><p>Travel time depends on the location of your hotel and current road conditions. Hotels in Punta Cana, Cap Cana, and Cabeza de Toro are generally closer to the airport, while Bávaro, Macao, and Uvero Alto require a longer drive. Your reservation should include the correct hotel name to help plan the route.</p></div></div>
+                    <div><h3>Which areas can I reach from Punta Cana Airport?</h3><div><p>Private transfers are available to the main hotel areas, including Bávaro, Cap Cana, Cabeza de Toro, Arena Gorda, El Cortecito, Los Corales, Punta Cana Village, and Uvero Alto. Longer-distance transportation may also be arranged for destinations such as Bayahíbe, La Romana, Miches, Juan Dolio, and Santo Domingo.</p></div></div>
+                    <div><h3>How long does a transfer from Punta Cana Airport take?</h3><div><p>Travel time depends on the location of your hotel and current road conditions. Hotels in Punta Cana, Cap Cana, and Cabeza de Toro are generally closer to the airport, while Bávaro, Bayahíbe, and Uvero Alto require a longer drive. Your reservation should include the correct hotel name to help plan the route.</p></div></div>
                     <div><h3>Are Punta Cana airport transfers private?</h3><div><p>Yes. A private transfer is reserved for you and the passengers included in your booking. You do not need to wait for unrelated travelers or make multiple hotel stops. This provides a more direct, comfortable, and predictable trip from Punta Cana International Airport to your destination.</p></div></div>
                     <div><h3>What information is needed to make a reservation?</h3><div><p>Please provide your arrival or departure date, flight number, airline, hotel or accommodation, number of passengers, and the amount of luggage. Accurate information helps coordinate the correct pickup time, vehicle capacity, and route for your Punta Cana Airport Transfer.</p></div></div>
                     <div><h3>What happens if my flight is delayed?</h3><div><p>Flight information allows the transportation team to review changes to your scheduled arrival. If the airline changes your flight number, arrival date, or route, contact the team as soon as possible so the reservation can be updated and your pickup can be coordinated correctly.</p></div></div>
-                    <div><h3>What types of vehicles are available?</h3><div><p>Vehicle options may include sedans, SUVs, minivans, passenger vans, and larger vehicles for groups. The assigned option depends on the number of passengers, luggage, service selected, and availability. Always include children and all suitcases when choosing the appropriate vehicle.</p></div></div>
+                    <div><h3>What types of vehicles are available?</h3><div><p>You can review our <a href="https://taxidominicana.com/fleet">vehicle fleet</a>, which may include sedans, SUVs, minivans, passenger vans, and larger vehicles for groups. The assigned option depends on the number of passengers, luggage, service selected, and availability. Always include children and all suitcases when choosing the appropriate vehicle.</p></div></div>
                     <div><h3>Can I book a return transfer to Punta Cana Airport?</h3><div><p>Yes. You can reserve one-way transportation or a round trip. For departures, the pickup time is scheduled early enough to account for the distance from your hotel, possible traffic, airline check-in, and the recommended arrival time at Punta Cana International Airport.</p></div></div>
                     <div><h3>Are child seats available?</h3><div><p>Child-seat availability should be requested before completing the reservation. Include the child's age and the type of seat required so the team can confirm whether the appropriate equipment is available. Local availability and vehicle compatibility may affect confirmation.</p></div></div>
-                    <div><h3>How can I book Punta Cana Airport Transfers?</h3><div><p>You can complete your reservation through the booking form on this website. Select the airport, hotel area, date, passengers, and service, then review the displayed rate and trip details. For questions or special arrangements, contact Taxi Dominicana before your travel date.</p></div></div>
+                    <div><h3>How can I book Punta Cana Airport Transfers?</h3><div><p>You can complete your reservation through the booking form on this website. Select the airport, hotel area, date, passengers, and service, then review the displayed rate and trip details. For questions or special arrangements, <a href="https://taxidominicana.com/contact">contact Taxi Dominicana</a> before your travel date.</p></div></div>
                 @else
                     <div><h3>¿Cómo funcionan los traslados desde el Aeropuerto de Punta Cana?</h3><div><p>Después de reservar recibirás la confirmación con los datos de recogida. En llegadas, el conductor revisa la información del vuelo y te espera en el punto indicado fuera de la terminal. Después viajarás directamente en un vehículo privado hacia tu hotel, resort, villa o alojamiento.</p></div></div>
-                    <div><h3>¿A qué zonas puedo viajar desde el Aeropuerto de Punta Cana?</h3><div><p>Ofrecemos traslados hacia las principales zonas hoteleras, incluyendo Bávaro, Cap Cana, Cabeza de Toro, Arena Gorda, El Cortecito, Los Corales, Macao y Uvero Alto. También pueden organizarse servicios de mayor distancia hacia Bayahíbe, La Romana, Miches, Juan Dolio y Santo Domingo.</p></div></div>
-                    <div><h3>¿Cuánto dura un traslado desde el Aeropuerto de Punta Cana?</h3><div><p>El tiempo depende de la ubicación del hotel y de las condiciones de la carretera. Punta Cana, Cap Cana y Cabeza de Toro suelen estar más cerca del aeropuerto, mientras que Bávaro, Macao y Uvero Alto requieren un recorrido mayor. Incluye el nombre correcto del hotel al reservar.</p></div></div>
+                    <div><h3>¿A qué zonas puedo viajar desde el Aeropuerto de Punta Cana?</h3><div><p>Ofrecemos traslados hacia las principales zonas hoteleras, incluyendo Bávaro, Cap Cana, Cabeza de Toro, Arena Gorda, El Cortecito, Los Corales, Punta Cana Village y Uvero Alto. También pueden organizarse servicios de mayor distancia hacia Bayahíbe, La Romana, Miches, Juan Dolio y Santo Domingo.</p></div></div>
+                    <div><h3>¿Cuánto dura un traslado desde el Aeropuerto de Punta Cana?</h3><div><p>El tiempo depende de la ubicación del hotel y de las condiciones de la carretera. Punta Cana, Cap Cana y Cabeza de Toro suelen estar más cerca del aeropuerto, mientras que Bávaro, Bayahíbe y Uvero Alto requieren un recorrido mayor. Incluye el nombre correcto del hotel al reservar.</p></div></div>
                     <div><h3>¿Los traslados en Punta Cana son privados?</h3><div><p>Sí. El vehículo se reserva para ti y para los pasajeros incluidos en tu reservación. No tendrás que esperar a viajeros ajenos ni realizar múltiples paradas en hoteles. Esto permite un trayecto más directo, cómodo y predecible desde el aeropuerto hasta tu destino.</p></div></div>
                     <div><h3>¿Qué información necesito para reservar?</h3><div><p>Debes proporcionar la fecha de llegada o salida, número de vuelo, aerolínea, hotel o alojamiento, número de pasajeros y cantidad de equipaje. La información correcta permite coordinar el horario, la capacidad del vehículo y la ruta de tus traslados en Punta Cana.</p></div></div>
                     <div><h3>¿Qué sucede si mi vuelo se retrasa?</h3><div><p>La información del vuelo permite revisar cambios en la llegada programada. Si la aerolínea modifica el número de vuelo, la fecha o la ruta, comunícate con el equipo lo antes posible para actualizar la reservación y coordinar correctamente la recogida.</p></div></div>
-                    <div><h3>¿Qué tipos de vehículos están disponibles?</h3><div><p>Las opciones pueden incluir sedanes, SUVs, minivans, vans de pasajeros y vehículos para grupos. La unidad asignada depende del número de pasajeros, equipaje, servicio elegido y disponibilidad. Incluye a los niños y todas las maletas al seleccionar el vehículo.</p></div></div>
+                    <div><h3>¿Qué tipos de vehículos están disponibles?</h3><div><p>Consulta nuestra <a href="https://taxidominicana.com/es/flota">flota de veh&iacute;culos</a>, que puede incluir sedanes, SUVs, minivans, vans de pasajeros y unidades para grupos. La unidad asignada depende del número de pasajeros, equipaje, servicio elegido y disponibilidad. Incluye a los niños y todas las maletas al seleccionar el vehículo.</p></div></div>
                     <div><h3>¿Puedo reservar el traslado de regreso al aeropuerto?</h3><div><p>Sí. Puedes reservar un servicio sencillo o viaje redondo. Para las salidas, la hora de recogida se programa considerando la distancia desde el hotel, el posible tráfico, el proceso de documentación y el tiempo recomendado de llegada al Aeropuerto Internacional de Punta Cana.</p></div></div>
                     <div><h3>¿Hay asientos infantiles disponibles?</h3><div><p>La disponibilidad de asientos infantiles debe solicitarse antes de completar la reservación. Indica la edad del menor y el tipo de asiento requerido para que el equipo confirme el equipo disponible. La compatibilidad del vehículo puede influir en la confirmación.</p></div></div>
-                    <div><h3>¿Cómo puedo reservar traslados en Punta Cana?</h3><div><p>Puedes completar la reservación mediante el formulario de este sitio. Selecciona el aeropuerto, zona hotelera, fecha, pasajeros y servicio; después revisa la tarifa y los datos del viaje. Para solicitudes especiales, contacta a Taxi Dominicana antes de tu fecha de viaje.</p></div></div>
+                    <div><h3>¿Cómo puedo reservar traslados en Punta Cana?</h3><div><p>Puedes completar la reservación mediante el formulario de este sitio. Selecciona el aeropuerto, zona hotelera, fecha, pasajeros y servicio; después revisa la tarifa y los datos del viaje. Para solicitudes especiales, <a href="https://taxidominicana.com/es/contacto">contacta a Taxi Dominicana</a> antes de tu fecha de viaje.</p></div></div>
                 @endif
             </div>
+        </div>
         <div class="right">
             <picture>
                 <source srcset="/assets/img/faqs/faqs-client.webp" type="image/webp" />
@@ -1038,4 +750,5 @@
     </div>
 
     @include('layout.footer.general')
+
 @endsection
