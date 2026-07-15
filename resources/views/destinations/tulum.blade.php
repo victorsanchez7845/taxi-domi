@@ -584,6 +584,18 @@
                 </table>
             @endif
         </div>
+    </div>
+
+    <div class="container content_destinations">
+        <div class="top">
+            @if(app()->getLocale() == "en")
+                <h2>Explore Punta Cana and Nearby Destinations</h2>
+                <p>Discover the main resort areas and destinations served by our private Punta Cana Airport Transfers, with direct transportation to hotels in Bávaro, Cap Cana, Uvero Alto, La Romana, and other popular locations.</p>
+            @else
+                <h2>Explora Punta Cana y sus principales destinos</h2>
+                <p>Descubre las principales zonas tur&iacute;sticas atendidas por nuestros traslados en Punta Cana, con transporte privado hacia hoteles de B&aacute;varo, Cap Cana, Uvero Alto, La Romana y otros destinos populares.</p>
+            @endif
+        </div>
         <div class="bottom">
             <div>
                 <a href="{{ app()->getLocale() == 'en' ? 'https://taxidominicana.com/transfers-to-bavaro' : 'https://taxidominicana.com/es/traslados-a-bavaro' }}" title="{{ __('destinations/tulum.destination_tulum_title') }}" class="image">
