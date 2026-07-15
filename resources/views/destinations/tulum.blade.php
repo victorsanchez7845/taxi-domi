@@ -1029,7 +1029,13 @@
                     <div><h3>¿Cómo puedo reservar traslados en Punta Cana?</h3><div><p>Puedes completar la reservación mediante el formulario de este sitio. Selecciona el aeropuerto, zona hotelera, fecha, pasajeros y servicio; después revisa la tarifa y los datos del viaje. Para solicitudes especiales, contacta a Taxi Dominicana antes de tu fecha de viaje.</p></div></div>
                 @endif
             </div>
+        <div class="right">
+            <picture>
+                <source srcset="/assets/img/faqs/faqs-client.webp" type="image/webp" />
+                <img src="/assets/img/faqs/faqs-client.jpg" alt="{{ __('destinations/tulum.faqs_client_alt') }}" title="{{ __('destinations/tulum.faqs_client_title') }}" loading="lazy" width="60" height="60" />
+            </picture>
         </div>
     </div>
 
+    @include('layout.footer.general')
 @endsection
