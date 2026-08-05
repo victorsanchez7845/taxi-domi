@@ -65,14 +65,18 @@
         }
 
         .payment-summary-message {
-            margin: 14px 0 8px;
+            margin: 24px 0 20px;
+            padding-left: 28px;
             color: #ffffff;
-            font-size: 13px;
-            line-height: 1.45;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: left;
         }
 
         .payment-summary-description {
             margin: 0;
+            padding-left: 28px;
+            text-align: left;
         }
 
         @media (max-width: 600px) {
