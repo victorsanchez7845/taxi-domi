@@ -65,18 +65,19 @@
         }
 
         .payment-summary-message {
-            margin: 24px 0 20px;
-            padding-left: 28px;
+            margin: 18px 0 0;
             color: #ffffff;
             font-size: 14px;
             line-height: 1.5;
             text-align: left;
         }
 
-        .payment-summary-description {
-            margin: 0;
-            padding-left: 28px;
-            text-align: left;
+        .vehicle .vehicle-resume {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(36, 63, 89, 0.12);
+            font-weight: 600;
+            line-height: 1.45;
         }
 
         @media (max-width: 600px) {
@@ -570,9 +571,11 @@
 
                                 <ul>
                                     <li>✅ Guaranteed security</li>
+
                                     <li>
                                         ✅ Pay with card or PayPal account
                                     </li>
+
                                     <li>✅ Hassle-free</li>
                                 </ul>
 
@@ -587,9 +590,11 @@
 
                                 <ul>
                                     <li>✅ Seguridad garantizada</li>
+
                                     <li>
                                         ✅ Paga con tarjeta o cuenta PayPal
                                     </li>
+
                                     <li>✅ Sin complicaciones</li>
                                 </ul>
 
@@ -716,6 +721,14 @@
 
                             {{ $data['places']['one_way']['end']['name'] }}
                         </li>
+
+                        <li class="vehicle-resume">
+                            {{ __('quote/checkout.resume', [
+                                "vehicles" => $data['items']['vehicles'],
+                                "type" => $data['items']['name'],
+                                "pax" => $data['items']['passengers']
+                            ]) }}
+                        </li>
                     </ul>
 
                 </div>
@@ -779,14 +792,6 @@
                         Pay only this amount now to secure your reservation.
                         The remaining balance is paid at arrival.
                     @endif
-                </p>
-
-                <p class="payment-summary-description">
-                    {{ __('quote/checkout.resume', [
-                        "vehicles" => $data['items']['vehicles'],
-                        "type" => $data['items']['name'],
-                        "pax" => $data['items']['passengers']
-                    ]) }}
                 </p>
 
             </div>
