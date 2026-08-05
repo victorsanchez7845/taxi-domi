@@ -32,7 +32,15 @@
 
                 @if(isset($data['items']))
 
-                    <h1>{{ __('quote/search.title') }}</h1>
+                    @if(app()->getLocale() == 'es')
+                        <h1>
+                            Resultados — Reserva ahora sin pagar el monto completo por adelantado.
+                        </h1>
+                    @else
+                        <h1>
+                            Results — Reserve now without paying the full amount upfront.
+                        </h1>
+                    @endif
 
                     <h2>
                         {{ __('quote/search.items_heading', [
@@ -43,17 +51,17 @@
 
                     @if(app()->getLocale() == 'es')
                         <p>
-                            ¡Descubre el viaje perfecto con nosotros! Selecciona el vehículo
-                            que se adapte a tu estilo y prepárate para una experiencia
-                            inolvidable llena de comodidad, seguridad y diversión.
-                            ¡Tu aventura empieza con la elección de tu vehículo ideal! 🚗✨
+                            Sabemos que pagar el monto completo por adelantado puede generar
+                            desconfianza. Con nosotros, solo pagas una pequeña parte para asegurar
+                            tu reservación y el saldo restante se paga cuando llegues.
+                            Viaja con confianza desde el momento en que reservas.
                         </p>
                     @else
                         <p>
-                            Discover the perfect trip with us! Select the vehicle that suits
-                            your style and get ready for an unforgettable experience full
-                            of comfort, safety and fun - your adventure starts with choosing
-                            your ideal vehicle! 🚗✨
+                            We know paying the full amount upfront can feel risky.
+                            With us, you only pay a small portion to secure your reservation,
+                            and the remaining balance is paid when you arrive.
+                            Travel with confidence from the moment you book.
                         </p>
                     @endif
 
@@ -188,7 +196,16 @@
                             }
 
                             $before = ($item['price'] * 100) / 70;
+
                             $vehicleName = strtolower(trim($item['name']));
+
+                            $totalPrice = (float) ($item['price'] ?? 0);
+
+                            $payNow = isset($item['pay_now'])
+                                ? (float) $item['pay_now']
+                                : $totalPrice;
+
+                            $currency = $item['currency'] ?? 'USD';
                         @endphp
 
                         <div class="item">
@@ -477,19 +494,32 @@
 
                                 <div class="top">
 
-                                    <p>{{ __('quote/search.price_from') }}</p>
+                                    <p></p>
 
                                     <p>
                                         ${{ number_format($before, 2) }}
-                                        {{ $item['currency'] }}
+                                        {{ $currency }}
                                     </p>
 
                                     <p>
-                                        ${{ number_format($item['price'], 2) }}
-                                        {{ $item['currency'] }}
+                                        ${{ number_format($totalPrice, 2) }}
+                                        {{ $currency }}
                                     </p>
 
-                                    <p>{{ __('quote/search.price_from') }}</p>
+                                    <p></p>
+
+                                    <p>
+                                        ${{ number_format($payNow, 2) }}
+                                        {{ $currency }}
+                                    </p>
+
+                                    <p>
+                                        @if(app()->getLocale() == 'es')
+                                            PAGA SOLO AHORA
+                                        @else
+                                            JUST PAY NOW
+                                        @endif
+                                    </p>
 
                                 </div>
 
