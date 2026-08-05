@@ -14,7 +14,7 @@
 
     <style>
         .payment-summary-box {
-            padding: 22px;
+            padding: 18px 22px;
         }
 
         .payment-summary-line {
@@ -22,7 +22,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 15px;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
             color: #ffffff;
         }
 
@@ -43,7 +43,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 15px;
-            margin-top: 16px;
+            margin-top: 10px;
             padding: 16px;
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.2);
@@ -65,7 +65,7 @@
         }
 
         .payment-summary-message {
-            margin: 18px 0 0;
+            margin: 14px 0 0;
             color: #ffffff;
             font-size: 14px;
             line-height: 1.5;
@@ -156,12 +156,6 @@
                 : '',
         ];
 
-        /*
-        |--------------------------------------------------------------------------
-        | Resumen de pago
-        |--------------------------------------------------------------------------
-        */
-
         $totalPrice = (float) (
             $data['items']['price'] ?? 0
         );
@@ -197,36 +191,36 @@
         >
 
         @if(isset($_GET['code']))
-
             <div class="badge-error">
                 <p>
                     <strong>{{ $_GET['code'] }}</strong>:
                     {{ $_GET['message'] }}
                 </p>
             </div>
-
         @endif
 
         <div class="left">
 
             <div class="arrival-information">
 
-                <h1>
-                    Datos de <strong>Reservación</strong>
-                </h1>
+                @if(app()->getLocale() == "es")
+                    <h1>
+                        Datos de <strong>Reservación</strong>
+                    </h1>
+                @else
+                    <h1>
+                        Reservation <strong>Details</strong>
+                    </h1>
+                @endif
 
                 @if(app()->getLocale() == "es")
-
                     <h2>
                         <strong>Información</strong> de llegada
                     </h2>
-
                 @else
-
                     <h2>
                         <strong>Arrival</strong> information
                     </h2>
-
                 @endif
 
                 <div
@@ -346,17 +340,13 @@
                 @endif
 
                 @if(app()->getLocale() == "es")
-
                     <h2>
                         <strong>Información</strong> del viajero
                     </h2>
-
                 @else
-
                     <h2>
                         <strong>Passenger</strong> information
                     </h2>
-
                 @endif
 
                 <div class="client-information">
@@ -400,9 +390,7 @@
                     <div class="two">
 
                         <div>
-                            <label>
-                                E-mail
-                            </label>
+                            <label>E-mail</label>
 
                             <input
                                 type="text"
@@ -466,11 +454,11 @@
 
                 <h3>
                     @if(app()->getLocale() == "es")
-                        Utilizamos encriptación SSL para pagos seguros
-                        respaldados por las mejores plataformas de pago.
+                        Utilizamos encriptación SSL para pagos seguros respaldados
+                        por las mejores plataformas de pago.
                     @else
-                        We use SSL encryption for secure payments backed by
-                        the best payment platforms.
+                        We use SSL encryption for secure payments backed by the
+                        best payment platforms.
                     @endif
                 </h3>
 
@@ -571,11 +559,7 @@
 
                                 <ul>
                                     <li>✅ Guaranteed security</li>
-
-                                    <li>
-                                        ✅ Pay with card or PayPal account
-                                    </li>
-
+                                    <li>✅ Pay with card or PayPal account</li>
                                     <li>✅ Hassle-free</li>
                                 </ul>
 
@@ -584,17 +568,13 @@
                                 <p>
                                     Aceptamos pagos con
                                     <strong>PayPal</strong> y
-                                    <strong>Stripe</strong>, dos de las
-                                    plataformas más confiables a nivel mundial.
+                                    <strong>Stripe</strong>, dos de las plataformas
+                                    más confiables a nivel mundial.
                                 </p>
 
                                 <ul>
                                     <li>✅ Seguridad garantizada</li>
-
-                                    <li>
-                                        ✅ Paga con tarjeta o cuenta PayPal
-                                    </li>
-
+                                    <li>✅ Paga con tarjeta o cuenta PayPal</li>
                                     <li>✅ Sin complicaciones</li>
                                 </ul>
 
