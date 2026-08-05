@@ -13,105 +13,82 @@
     >
 
     <style>
-    .payment-summary-box {
-        padding: 28px 30px;
-        text-align: left;
-    }
-
-    .payment-summary-line,
-    .payment-summary-highlight {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-        column-gap: 22px;
-        width: 100%;
-    }
-
-    .payment-summary-line {
-        margin-bottom: 18px;
-        color: #ffffff;
-    }
-
-    .payment-summary-label {
-        font-size: 17px;
-        font-weight: 700;
-        text-align: right;
-    }
-
-    .payment-summary-value {
-        min-width: 170px;
-        font-size: 18px;
-        font-weight: 800;
-        text-align: left;
-        white-space: nowrap;
-    }
-
-    .payment-summary-highlight {
-        margin-top: 22px;
-        padding: 18px 22px;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.22);
-        color: #ffffff;
-    }
-
-    .payment-summary-highlight-label {
-        font-size: 18px;
-        font-weight: 900;
-        text-align: right;
-        text-transform: uppercase;
-    }
-
-    .payment-summary-highlight-value {
-        min-width: 170px;
-        font-size: 30px;
-        line-height: 1;
-        font-weight: 900;
-        text-align: left;
-        white-space: nowrap;
-    }
-
-    .payment-summary-message,
-    .payment-summary-description {
-        max-width: 430px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .payment-summary-message {
-        margin-top: 24px;
-        margin-bottom: 22px;
-        color: #ffffff;
-        font-size: 14px;
-        line-height: 1.5;
-        text-align: left;
-    }
-
-    .payment-summary-description {
-        margin-top: 0;
-        margin-bottom: 0;
-        text-align: left;
-    }
-
-    @media (max-width: 600px) {
         .payment-summary-box {
-            padding: 22px 20px;
+            padding: 22px;
         }
 
-        .payment-summary-line,
+        .payment-summary-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .payment-summary-label {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .payment-summary-value {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: right;
+            white-space: nowrap;
+        }
+
         .payment-summary-highlight {
-            grid-template-columns: 1fr;
-            row-gap: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 16px;
+            padding: 16px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
         }
 
-        .payment-summary-label,
-        .payment-summary-highlight-label,
-        .payment-summary-value,
-        .payment-summary-highlight-value {
-            min-width: 0;
-            text-align: left;
+        .payment-summary-highlight-label {
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
         }
-    }
-</style>
+
+        .payment-summary-highlight-value {
+            font-size: 28px;
+            line-height: 1.1;
+            font-weight: 900;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .payment-summary-message {
+            margin: 14px 0 8px;
+            color: #ffffff;
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        .payment-summary-description {
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            .payment-summary-line,
+            .payment-summary-highlight {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .payment-summary-value,
+            .payment-summary-highlight-value {
+                text-align: left;
+            }
+        }
+    </style>
 
     <script>
         const item_config = {
