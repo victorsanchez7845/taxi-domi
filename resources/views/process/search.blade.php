@@ -4,6 +4,237 @@
     <link href="{{ mix('/assets/css/process/search.min.css') }}" rel="preload" as="style">
     <link href="{{ mix('/assets/css/process/search.min.css') }}" rel="stylesheet">
 
+    <style>
+        /* =========================================================
+           PAY NOW HIGHLIGHT
+        ========================================================= */
+
+        .pay-now-highlight {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            max-width: 185px;
+            min-height: 74px;
+
+            margin: 12px auto 0;
+            padding: 12px 16px;
+
+            background: linear-gradient(
+                135deg,
+                #f2fff3 0%,
+                #e7f8eb 100%
+            );
+
+            border: 2px solid #59b94f;
+            border-radius: 13px;
+
+            box-sizing: border-box;
+            text-align: center;
+
+            box-shadow:
+                0 7px 18px rgba(85, 184, 77, 0.18),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .pay-now-label {
+            display: block;
+            margin-bottom: 5px;
+
+            color: #39763b;
+            font-size: 12px;
+            font-weight: 800;
+            line-height: 1.2;
+
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .pay-now-amount {
+            display: block;
+
+            color: #174e25;
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 1.2;
+
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           PAYMENT CONFIDENCE BOX
+        ========================================================= */
+
+        .payment-confidence-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+
+            margin-top: 18px;
+            padding: 20px;
+
+            background: linear-gradient(
+                135deg,
+                #f1fff5 0%,
+                #e8f8ff 100%
+            );
+
+            border: 1px solid #ccebd5;
+            border-left: 5px solid #55b84d;
+            border-radius: 12px;
+
+            box-sizing: border-box;
+
+            box-shadow: 0 8px 22px rgba(34, 86, 60, 0.10);
+        }
+
+        .payment-confidence-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex: 0 0 46px;
+            width: 46px;
+            height: 46px;
+
+            border-radius: 50%;
+            background: #55b84d;
+            color: #ffffff;
+
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .payment-confidence-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .payment-confidence-content h3 {
+            margin: 0 0 6px;
+
+            color: #2f4a67;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        .payment-confidence-content p {
+            margin: 0;
+
+            color: #53697f;
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        /* =========================================================
+           TABLETS
+        ========================================================= */
+
+        @media screen and (max-width: 992px) {
+            .pay-now-highlight {
+                max-width: 170px;
+                min-height: 72px;
+                padding: 11px 14px;
+            }
+
+            .pay-now-amount {
+                font-size: 19px;
+            }
+
+            .payment-confidence-box {
+                padding: 17px;
+            }
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media screen and (max-width: 768px) {
+            .pay-now-highlight {
+                width: 100%;
+                max-width: 100%;
+                min-height: 70px;
+
+                margin: 12px 0 0;
+                padding: 11px 14px;
+
+                border-radius: 11px;
+            }
+
+            .pay-now-label {
+                font-size: 11px;
+                letter-spacing: 0.6px;
+            }
+
+            .pay-now-amount {
+                font-size: 20px;
+            }
+
+            .payment-confidence-box {
+                gap: 12px;
+                margin-top: 15px;
+                padding: 16px;
+            }
+
+            .payment-confidence-icon {
+                flex-basis: 42px;
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+
+            .payment-confidence-content h3 {
+                font-size: 17px;
+            }
+
+            .payment-confidence-content p {
+                font-size: 13px;
+            }
+        }
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+        @media screen and (max-width: 480px) {
+            .pay-now-highlight {
+                min-height: 66px;
+                padding: 10px 12px;
+            }
+
+            .pay-now-label {
+                margin-bottom: 4px;
+                font-size: 10px;
+                letter-spacing: 0.5px;
+            }
+
+            .pay-now-amount {
+                font-size: 18px;
+            }
+
+            .payment-confidence-box {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                padding: 15px;
+            }
+
+            .payment-confidence-content h3 {
+                font-size: 16px;
+            }
+
+            .payment-confidence-content p {
+                font-size: 13px;
+            }
+        }
+    </style>
+
     <script>
         const availability = parseInt(`{!! isset($data['error']) ? 0 : 1 !!}`);
     </script>
@@ -147,42 +378,24 @@
                 @php
                     /*
                     |--------------------------------------------------------------------------
-                    | Orden de vehículos
+                    | Ordenar servicios por precio total
                     |--------------------------------------------------------------------------
-                    | 1. Sedan
-                    | 2. Minivan
-                    | 3. Nissan Urban / Nissan Urvan
-                    | 4. Suburban
+                    |
+                    | El servicio con el precio total más bajo aparece primero.
+                    |
                     */
 
                     $orderedItems = $data['items'];
 
                     usort($orderedItems, function ($firstItem, $secondItem) {
+                        $firstPrice = (float) ($firstItem['price'] ?? 0);
+                        $secondPrice = (float) ($secondItem['price'] ?? 0);
 
-                        $vehicleOrder = [
-                            'sedan' => 1,
-                            'minivan' => 2,
-                            'nissan urban' => 3,
-                            'nissan urvan' => 3,
-                            'suburban' => 4,
-                        ];
-
-                        $firstName = strtolower(trim($firstItem['name']));
-                        $secondName = strtolower(trim($secondItem['name']));
-
-                        $firstPosition = isset($vehicleOrder[$firstName])
-                            ? $vehicleOrder[$firstName]
-                            : 999;
-
-                        $secondPosition = isset($vehicleOrder[$secondName])
-                            ? $vehicleOrder[$secondName]
-                            : 999;
-
-                        if ($firstPosition == $secondPosition) {
+                        if ($firstPrice == $secondPrice) {
                             return 0;
                         }
 
-                        return $firstPosition < $secondPosition ? -1 : 1;
+                        return $firstPrice < $secondPrice ? -1 : 1;
                     });
                 @endphp
 
@@ -508,18 +721,20 @@
 
                                     <p></p>
 
-                                    <p>
-                                        ${{ number_format($payNow, 2) }}
-                                        {{ $currency }}
-                                    </p>
+                                    <div class="pay-now-highlight">
+                                        <span class="pay-now-label">
+                                            @if(app()->getLocale() == 'es')
+                                                PAGA SOLO AHORA
+                                            @else
+                                                JUST PAY NOW
+                                            @endif
+                                        </span>
 
-                                    <p>
-                                        @if(app()->getLocale() == 'es')
-                                            PAGA SOLO AHORA
-                                        @else
-                                            JUST PAY NOW
-                                        @endif
-                                    </p>
+                                        <span class="pay-now-amount">
+                                            ${{ number_format($payNow, 2) }}
+                                            {{ $currency }}
+                                        </span>
+                                    </div>
 
                                 </div>
 
@@ -586,6 +801,32 @@
                     <x-bookingbox/>
                 </div>
 
+            </div>
+
+            <div class="payment-confidence-box">
+                <div class="payment-confidence-icon">
+                    ✓
+                </div>
+
+                <div class="payment-confidence-content">
+                    @if(app()->getLocale() == 'es')
+                        <h3>Reserva con confianza</h3>
+
+                        <p>
+                            Asegura tu servicio pagando solo una parte ahora
+                            y paga el saldo restante al llegar.
+                            Queremos que viajes con confianza y tranquilidad.
+                        </p>
+                    @else
+                        <h3>Book with confidence</h3>
+
+                        <p>
+                            Secure your service by paying only a portion now
+                            and pay the remaining balance when you arrive.
+                            We want you to travel with confidence and peace of mind.
+                        </p>
+                    @endif
+                </div>
             </div>
 
         </div>
