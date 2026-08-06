@@ -233,6 +233,23 @@
                 font-size: 13px;
             }
         }
+
+                .three .top .pay-now-highlight {
+            margin-top: 12px !important;
+            margin-bottom: 18px !important;
+        }
+
+        .three form {
+            display: block;
+            width: 100%;
+            margin-top: 0 !important;
+        }
+
+        @media screen and (max-width: 768px) {
+            .three .top .pay-now-highlight {
+                margin-bottom: 14px !important;
+            }
+        }
     </style>
 
     <script>
